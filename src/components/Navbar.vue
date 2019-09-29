@@ -1,55 +1,46 @@
 <template>
-    <div class="make-bg-transparent">
-        <nav class="navbar navbar-expand-lg navbar-light bg-ligh">
-        <router-link class="navbar-brand" to="/"><img class="navbar-logo" src="/img/logo.png"></router-link>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<b-navbar toggleable="md" type="none" variant="none"  fixed="top">
+    <b-navbar-brand href="#"><b-img class="navbar-logo" src="\img\logo.png" fluid></b-img></b-navbar-brand>
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+    <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                   <router-link class="nav-link" to="/"> Home <span class="sr-only">(current)</span></router-link> 
-                </li>
-                <li class="nav-item">
-                    <router-link class="nav-link" to="/about"> About <span class="sr-only">(current)</span></router-link> 
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    </div>
+        </b-navbar-nav>
+        <!-- Right aligned nav items -->
+        <b-navbar-nav class="ml-auto">
+            <router-link id="nav-link" tag="b-nav-item" class="nav-btn-black" to="/about">about</router-link>
+            <router-link id="nav-link" tag="b-nav-item" class="nav-btn-black" to="/">work</router-link>
+        </b-navbar-nav>
+    </b-collapse>
+</b-navbar>
 </template>
+
 <script>
 export default {
     name: 'Navbar',
-    data(){
-        return{
+    data() {
+        return {
 
         }
     }
-    
+
 }
 </script>
+
 <style>
-.navbar-logo{
-    width:130px;
+.navbar-logo {
+    width: 130px;
 }
-.make-bg-transparent{
-    position:fixed !important;
-    background:transparent !important;
+
+.make-bg-transparent {
+    position: fixed !important;
 }
-a.nav-link{
-    color:white;
+
+ .nav-btn-white > a.nav-link{
+    color: white;
 }
+ .nav-btn-black > a.nav-link{
+    color: black;
+}
+
 </style>
