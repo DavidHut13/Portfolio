@@ -2,7 +2,10 @@
 <b-container class="bg-color" fluid>
     <b-row>
         <b-col class="homepage_background">
-            <h1 class="slogan text-center">Stand out.</h1>
+            <div class="flexCenter">
+                <h1 class="slogan text-center">Be Bold.</h1>
+            </div>
+
         </b-col>
     </b-row>
     <b-row>
@@ -22,29 +25,28 @@ export default {
 
 <style scoped>
 .homepage_background {
-    color: white;
-    align-items: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
+    background-image: url(/img/AdobeStock_275693862.jpeg);
+}
+
+.bg-color {
+    background: black;
+
+}
+
+
+.slogan {
+    height:100vh;
     display: flex;
     justify-content: center;
-    /* overrides color with nothingness */
-    -webkit-text-fill-color: transparent;
-    height: 100vh;
-    /* remember non WebKit browsers will see all of this EXCEPT the text */
-    background: url(/img/vlad-busuioc-xyPxcqh8Tt8-unsplash.jpg) no-repeat;
-    /* the magic */
-    -webkit-background-clip: text;
-}
-
-.bg-color{
-    background:black;
-    
-}
-
-.slogan{
-    font: bold 100px Impact, Sans-Serif; 
+    align-items: center;
+    font: bold 100px Impact, Sans-Serif;
     color: white;
-    font-size: 170px;
+    font-size: 12em;
 }
 
 .content {
