@@ -10,8 +10,8 @@
         <b-navbar-nav>
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">
-            <router-link id="navLink" tag="b-nav-item" class="nav-btn-black" to="/about">about</router-link>
             <router-link id="navLink" tag="b-nav-item" class="nav-btn-black" to="/work">work</router-link>
+             <router-link id="navLink" tag="b-nav-item" class="nav-btn-black" to="/work">contact</router-link>
         </b-navbar-nav>
     </b-collapse>
 </b-navbar>
