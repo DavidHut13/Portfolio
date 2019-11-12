@@ -55,7 +55,7 @@ a.nav-link {
 }
 
 .navbar-background {
-    background: rgba(255, 255, 255, 0.815);
+    background: white;
     -webkit-box-shadow: 0px 10px 18px -19px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 10px 18px -19px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 10px 18px -19px rgba(0, 0, 0, 0.75);

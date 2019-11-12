@@ -7,9 +7,9 @@
             <h5><i class="fas fa-phone"></i> 682-559-2836</h5>
         </b-col>
          <b-col>
-            <i class="fab fa-facebook-square fa-3x mx-2"></i>
-            <i class="fab fa-linkedin fa-3x mx-2"></i>
-            <i class="fab fa-github-square fa-3x mx-2"></i>
+            <i class="socialIcon fab fa-facebook-square fa-3x mx-2"></i>
+            <i class="socialIcon fab fa-linkedin fa-3x mx-2"></i>
+            <i class="socialIcon fab fa-github-square fa-3x mx-2"></i>
         </b-col>
     </b-row>
 </b-container>
@@ -32,5 +32,11 @@ export default {
 .color{
     color:white;
     background-color:black;
+}
+
+.socialIcon:hover{
+ background-image: -webkit-linear-gradient( #266ed8, #009aff, #00beea, #00d99f, #1feb28);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 </style>
