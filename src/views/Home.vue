@@ -1,5 +1,5 @@
 <template>
-    <b-container class="bg-color" fluid>
+    <b-container  class="bg-color" fluid>
         <b-row>
             <b-col class="homepage_background">
                 <div class="flexCenter">
@@ -105,7 +105,7 @@ export default {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    background-image: url(/img/AdobeStock_275693862.jpeg);
+    background-image: url(/img/vlad-busuioc-xyPxcqh8Tt8-unsplash.jpg);
 }
 
 .bg-color {

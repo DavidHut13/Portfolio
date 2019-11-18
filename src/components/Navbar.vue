@@ -17,19 +17,28 @@
 </b-navbar> -->
 <b-container fluid>
     <b-row>
-        <b-col cols="1">
-            <div @click="toggleNav" target="nav-collapse" class="hamburgerButton">
-                <div class="mt-1 bar1"></div>
-                <div class="mt-1 bar2"></div>
-                <div class="mt-1 bar3"></div>
+        <b-col class="p-0">
+            <div id="navbar">
+                <div @click="toggleNav" target="nav-collapse" class="hamburgerButton">
+                    <div id="bar" :class="{active: navOpen }" class="mt-1 bar1"></div>
+                    <div id="bar" :class="{active: navOpen }" class="mt-1 bar2"></div>
+                    <div id="bar" :class="{active: navOpen }" class="mt-1 bar3"></div>
+                </div>
+                <router-link class="logoWrapper" to="/">
+                    <!-- <img  class="navbar-logo" src="/img/logoWhite.png" fluid> -->
+                    <!-- <img  class="navbar-logo" src="/img/signatureWhite.png" fluid> -->
+                    <h5 class="signature">David Hutto</h5>
+                </router-link>
+                <b-nav id="navbarWrapper" vertical class="navbarWrapper">
+                    <div class="linkWrapper">
+                        <router-link id="navLink" tag="b-nav-item" class="topNavItem" to="/work">work</router-link>
+                        <router-link id="navLink" tag="b-nav-item" class="mb-5" to="/work">contact</router-link>
+                        <i class="socialIcon fab fa-facebook-square fa-3x ml-4 mx-2"></i>
+                        <i class="socialIcon fab fa-linkedin fa-3x mx-2"></i>
+                        <i class="socialIcon fab fa-github-square fa-3x mx-2"></i>
+                    </div>
+                </b-nav>
             </div>
-        </b-col>
-        <b-col offset="8">
-            <b-nav id="navbarWrapper" vertical class="navbarWrapper">
-                <b-nav-item class="topNavItem" active>Active</b-nav-item>
-                <b-nav-item>Link</b-nav-item>
-                <b-nav-item>Another Link</b-nav-item>
-            </b-nav>
         </b-col>
     </b-row>
 </b-container>
@@ -41,43 +50,90 @@ export default {
     data() {
         return {
             windowTop: window.top.scrollYm,
-            navOpen: false
+            navOpen: false,
+            whiteLogo: false
         }
     },
     created() {
-
-        //Look into this. helps with performance
-        // this.handleDebouncedScroll = debounce(this.handleScroll, 100);
-        // window.addEventListener('scroll', this.navBarTransition)
+        window.addEventListener('scroll', this.monitorScroll)
     },
     methods: {
         toggleNav() {
             this.navOpen = !this.navOpen
-
-            if (this.navOpen) {
-                document.getElementById("navbarWrapper").style.width = "0px";
-            }
             if (!this.navOpen) {
-                document.getElementById("navbarWrapper").style.width = "250px";
+                document.getElementById("navbarWrapper").style.opacity = "0";
+                $('body').css('overflow', 'auto')
             }
-
+            if (this.navOpen) {
+                document.getElementById("navbarWrapper").style.opacity = "1";
+                $('body').css('overflow', 'hidden')
+            }
+        },
+        monitorScroll(event) {
+            if ($(window).scrollTop() > 980) {
+                $(navbar).addClass("navBackground");
+            }
+            if ($(window).scrollTop() <= 980) {
+                $(navbar).removeClass("navBackground");
+            }
         }
-        // navBarTransition(event) {
-        //     if ($(window).scrollTop() > 300) {
-        //         $(navbar).addClass("navbar-background");
-        //         // $(navLink).addClass("nav-btn-black");
-        //         // $(navLink).removeClass("nav-btn-white");
-        //     } else {
-        //         $(navbar).removeClass("navbar-background");
-        //         // $(navLink).removeClass("nav-btn-black");
-        //         // $(navLink).addClass("nav-btn-white")
-        //     }
     }
-
 }
 </script>
 
 <style lang="scss">
+.signature {
+    font-family: 'Mrs Sheppards', cursive;
+    font-size: 3em;
+    color: #90E876;
+    text-decoration: none;
+}
+
+
+.navBackground {
+    z-index: 5;
+    position: fixed;
+    height: 10vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.589);
+}
+
+.logoWrapper {
+    position: fixed;
+    top: 25px;
+    left: 2%;
+    z-index: 2;
+    text-decoration: none;
+}
+.logoWrapper:hover {
+    text-decoration: none;
+}
+
+.linkWrapper {
+    width: 35vw;
+}
+
+.bar1.active {
+    top: 10px;
+    background-color: white;
+    -webkit-transform: rotate(-135deg);
+    -webkit-transition: all .5s ease-in;
+}
+
+.bar2.active {
+    left: 0px;
+    background-color: transparent;
+    -webkit-transition: all 0.2s ease-in;
+
+}
+
+.bar3.active {
+    top: 10px;
+    background-color: white;
+    -webkit-transform: rotate(135deg);
+    -webkit-transition: all .5s ease-in;
+}
+
 .topNavItem {
     margin-top: 100px;
 }
@@ -85,13 +141,25 @@ export default {
 .bar1,
 .bar2,
 .bar3 {
+    position: absolute;
     display: block;
     font-size: 10px;
     padding: 0;
     width: 40px;
-    height: 6px;
+    height: 3px;
     border-radius: 7px;
-    background-color: black;
+    -webkit-appearance: none;
+    -webkit-transition: all 0.2s ease-in;
+    -webkit-transform: rotate(0deg);
+    background-color: rgb(255, 255, 255);
+}
+
+.bar2 {
+    top: 10px;
+}
+
+.bar3 {
+    top: 20px;
 }
 
 .hamburgerButton {
@@ -106,63 +174,33 @@ export default {
 
 .navbarWrapper {
     position: fixed;
+    display: flex;
+    align-items: flex-end;
     z-index: 1;
+    opacity: 0;
     width: 100vw;
     height: 100vh;
-    overflow-x: hidden;
+    overflow-y: scroll;
     transition: .5s;
-    background: grey;
+    background: #111517;
 }
 
 a.nav-link {
     font-family: 'Staatliches', cursive;
-    font-size: 2.75em;
+    font-size: 5em;
+    color: white;
 }
 
-.navbar-background {
-    background: white;
-    -webkit-box-shadow: 0px 10px 18px -19px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 10px 18px -19px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 10px 18px -19px rgba(0, 0, 0, 0.75);
+a.nav-link:hover,
+.socialIcon:hover {
+    color: red;
+}
+
+.socialIcon {
+    color: white;
 }
 
 .navbar-logo {
     width: 160px;
-}
-
-.make-bg-transparent {
-    position: fixed !important;
-}
-
-.nav-btn-white>a.nav-link {
-    color: black;
-}
-
-.nav-btn-black>a.nav-link {
-    color: black;
-}
-
-.nav-btn-black>a.nav-link:after {
-    background: none repeat scroll 0 0 transparent;
-    bottom: 0;
-    content: "";
-    display: block;
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: #fff;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-}
-
-a:hover:after {
-    width: 100%;
-    left: 0;
-}
-
-@media screen and (max-height: 300px) {
-    ul {
-        margin-top: 40px;
-    }
 }
 </style>
