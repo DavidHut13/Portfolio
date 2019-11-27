@@ -8,8 +8,8 @@
             </b-col>
         </b-row>
          <b-row class="mt-5 aboutPageWrapper d-flex justify-content-center align-items-center">
-             <b-col cols="10" offset="1" class="aboutWrapper">
-                <h1 class="aboutHeader">about</h1>
+             <b-col cols="10" offset="1" class="aboutHeader">
+                <h1 class="sectionHeader aboutWrapper">about</h1>
             </b-col>
             <b-col cols="4" offset="2">
                 <div>
@@ -23,11 +23,30 @@
             </b-col>
         </b-row>
         <b-row class="pb-5">
-            <b-col cols="10" offset="1" class="skillsWrapper">
-                <h1 class="skillsHeader">Skills</h1>
+            <b-col cols="10" offset="1">
+                <h1 class="sectionHeader skillsHeader">Skills</h1>
             </b-col>
             <b-col cols="10" offset="1">
-                <h1 class="skillsHeader">Tools</h1>
+                <h4>Front end Development</h4>
+            </b-col>
+            <b-col cols="10" offset="1">
+                <h4>Graphic Design</h4>
+            </b-col>
+             <b-col cols="10" offset="1">
+                 <h4>Marketing</h4>
+            </b-col>
+             <b-col cols="5" offset="1" class="d-flex justify-content-center align-items-center">
+                <h3 class="skillsHeader">Video and 3d Software</h3>
+            </b-col>
+            <b-col cols="5">
+                <b-img src="/img/home/BlenderScreenShot.jpg"></b-img>
+            </b-col>
+
+
+
+            <!-- Tools Icons Section/ Programming language Icons -->
+            <b-col cols="10" offset="1">
+                <h1 class="sectionHeader toolsHeader">Tools</h1>
             </b-col>
             <b-col class="my-3" cols="2" offset="1">
                 <b-img class="skillLogo" src="/img/langIcons/npm-logo-red.svg"></b-img>
@@ -56,7 +75,6 @@
              <b-col class="my-3" cols="2" offset="1">
                 <b-img class="skillLogo" src="/img/langIcons/Creative_Cloud.svg"></b-img>
             </b-col>
-
         </b-row>
     </b-container>
 </template>
@@ -74,10 +92,8 @@ export default {
     width: 8em;
 }
 
-.skillsHeader, .aboutHeader{
-   background-image: -webkit-linear-gradient( #266ed8, #009aff, #00beea, #00d99f, #1feb28);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.sectionHeader{
+color:#292F36;
     font-size:5em;
 }
 .skillsWrapper{
@@ -98,7 +114,7 @@ export default {
 }
 
 .bg-color {
-    background: black;
+    background: white;
 
 }
 
