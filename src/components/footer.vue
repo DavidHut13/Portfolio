@@ -30,8 +30,8 @@ export default {
 
 <style scoped>
 .color{
-    color:white;
-    background-color:black;
+    color:black;
+    background-color:white;
 }
 
 .socialIcon:hover{
