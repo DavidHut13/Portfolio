@@ -48,10 +48,12 @@ export default {
             this.navOpen = !this.navOpen
             if (!this.navOpen) {
                 document.getElementById("navbarWrapper").style.opacity = "0";
+                document.getElementById("navbarWrapper").style.visibility ="hidden";
                 $('body').css('overflow', 'auto')
             }
             if (this.navOpen) {
                 document.getElementById("navbarWrapper").style.opacity = "1";
+                document.getElementById("navbarWrapper").style.visibility ="visible";
                 $('body').css('overflow', 'hidden')
             }
         },
@@ -172,6 +174,7 @@ box-shadow: 0px 0px 25px -9px rgba(0,0,0,0.75);
     overflow-y: scroll;
     transition: .5s;
     background: #111517;
+    visibility:hidden;
 }
 
 a.nav-link {

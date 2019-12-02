@@ -12,18 +12,24 @@
             <i class="socialIcon fab fa-linkedin fa-3x mx-2"></i>
             <i class="socialIcon fab fa-github-square fa-3x mx-2"></i>
         </b-col> -->
-        <b-col >
-              <h4>Links</h4>
+        <b-col>
+            <h4>Links</h4>
             <b-row>
-                <b-col cols="2">
+                <b-col cols="3">
                     <p class="m-1">Facebook</p>
                     <p class="m-1">Linkden</p>
                 </b-col>
-                <b-col cols="2">
+                <b-col cols="3">
                     <p class="m-1">Github</p>
                     <p class="m-1">code Pen</p>
                 </b-col>
+
             </b-row>
+        </b-col>
+        <b-col cols="12" class="text-right">
+             <b-link class="madeWithVue"   href="https://www.williamsauction.com" target="_blank">
+                <p>made with <b-img class="vueLogo" src="/img/langIcons/256px-Vue.js_Logo_2.svg.png"></b-img></p>
+            </b-link>
         </b-col>
     </b-row>
 </b-container>
@@ -31,12 +37,12 @@
 
 <script>
 export default {
-    name: "footer",
+    name: "appFooter",
     data() {
         return {
-
+    
         }
-    }
+    },
 }
 </script>
 
@@ -44,6 +50,22 @@ export default {
 .color {
     color: black;
     background-color: white;
+}
+
+.vueLogo {
+    height: 1em;
+}
+.testing:hover{
+color:red;
+}
+::v-deep .madeWithVue{
+    color: #3EBA84 ;
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .socialIcon:hover {

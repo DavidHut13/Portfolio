@@ -1,11 +1,40 @@
 <template>
 <div>
-    <b-container class="bg-color" fluid>
+    <b-container fluid>
         <b-row>
             <b-col class="homepage_background">
                 <div class="flexCenter">
                     <h1 class="slogan text-center">Be Bold.</h1>
                 </div>
+            </b-col>
+        </b-row>
+        <b-row class="toolsWrapper flexCenter">
+            <b-col offset="1">
+                <b-img class="skillLogo" src="/img/langIcons/npm-logo-red.svg"></b-img>
+            </b-col>
+            <b-col>
+                <b-img class="skillLogo" src="/img/langIcons/Git-Logo-Black.png"></b-img>
+            </b-col>
+            <b-col>
+                <b-img class="skillLogo" src="/img/langIcons/256px-Vue.js_Logo_2.svg.png"></b-img>
+            </b-col>
+            <b-col>
+                <b-img class="skillLogo" src="/img/langIcons/javascript.svg"></b-img>
+            </b-col>
+            <!-- <b-col class="my-3" cols="2" offset="1">
+                <b-img class="skillLogo" src="/img/langIcons/react.svg"></b-img>
+            </b-col> -->
+            <b-col>
+                <b-img class="skillLogo" src="/img/langIcons/react.svg"></b-img>
+            </b-col>
+            <b-col>
+                <b-img class="skillLogo" src="/img/langIcons/css3-logo.png"></b-img>
+            </b-col>
+            <b-col>
+                <b-img class="skillLogo" src="/img/langIcons/icon_512.67aef2.png"></b-img>
+            </b-col>
+            <b-col>
+                <b-img class="skillLogo" src="/img/langIcons/Creative_Cloud.svg"></b-img>
             </b-col>
         </b-row>
     </b-container>
@@ -29,62 +58,53 @@
             <b-col cols="12">
                 <h1 class="sectionHeader skillsHeader">Skills</h1>
             </b-col>
-            <b-col class="flexCenter">
-                <h2 class="mx-3 chartLabelDevelop">Development</h2>
-                <h2 class="mx-3 chartLabelDesign">Design</h2>
-                <h2 class="mx-3 chartLabelMarketing">Marketing</h2>
+
+            <!-- Front end Skill Section -->
+            <b-col cols="6">
+                <div>
+                    <h4>Frontend Development</h4>
+                    <p>Typewriter flexitarian iceland normcore seitan twee, narwhal sriracha hella irony iPhone cornhole godard. Pop-up actually before they sold out retro forage tacos. Bicycle rights retro everyday carry you probably haven't heard of them iPhone woke squid. </p>
+                </div>
             </b-col>
-            <b-col cols="12">
-                <canvas id="skillsChart"></canvas>
+            <b-col cols="6">
+
             </b-col>
 
-            <!-- <b-col cols="10" offset="1">
-                <h4>Front end Development</h4>
-            </b-col> -->
-            <!-- <b-col cols="10" offset="1">
-                <h4>Graphic Design</h4>
+            <!-- Graphic Design Skill Section -->
+            <b-col cols="6">
+
             </b-col>
-            <b-col cols="10" offset="1">
-                <h4>Marketing</h4>
+            <b-col cols="6">
+                <div>
+                    <h4>Graphic Design</h4>
+                    <p>Pickled live-edge brunch mumblecore, adaptogen shaman fingerstache cray ennui cronut YOLO mixtape.</p>
+                </div>
             </b-col>
-            <b-col cols="5" offset="1" class="d-flex justify-content-center align-items-center">
-                <h3 class="skillsHeader">Video and 3d Software</h3>
+
+            <!-- Marketing Skill Section -->
+            <b-col cols="6">
+                <div>
+                    <h4>Marketing</h4>
+                    <p> Food truck before they sold out 8-bit, ramps asymmetrical brooklyn man bun knausgaard DIY woke taxidermy chia banh mi raclette. </p>
+                </div>
             </b-col>
-            <b-col cols="5">
+            <b-col cols="6">
+            
+            </b-col>
+
+            <!-- Video and 3D editing -->
+            <b-col cols="6" class="flexCenter">
+                <div>
+                    <h3>Video and 3d Software</h3>
+                    <p>Viral humblebrag cray chambray hoodie photo booth cronut church-key flannel meditation. </p>
+                </div>
+            </b-col>
+            <b-col cols="6">
                 <b-img src="/img/home/BlenderScreenShot.jpg"></b-img>
-            </b-col> -->
+            </b-col>
 
             <!-- Tools Icons Section/ Programming language Icons -->
-            <b-col cols="10">
-                <h1 class="sectionHeader toolsHeader">Tools</h1>
-            </b-col>
-            <b-col class="my-5" cols="2" offset="1">
-                <b-img class="skillLogo" src="/img/langIcons/npm-logo-red.svg"></b-img>
-            </b-col>
-            <b-col class="my-5" cols="2" offset="1">
-                <b-img class="skillLogo" src="/img/langIcons/Git-Logo-Black.png"></b-img>
-            </b-col>
-            <b-col class="my-5" cols="2" offset="1">
-                <b-img class="skillLogo" src="/img/langIcons/256px-Vue.js_Logo_2.svg.png"></b-img>
-            </b-col>
-            <b-col class="my-5" cols="2" offset="1">
-                <b-img class="skillLogo" src="/img/langIcons/javascript.svg"></b-img>
-            </b-col>
-            <!-- <b-col class="my-3" cols="2" offset="1">
-                <b-img class="skillLogo" src="/img/langIcons/react.svg"></b-img>
-            </b-col> -->
-            <b-col class="my-5" cols="2" offset="1">
-                <b-img class="skillLogo" src="/img/langIcons/react.svg"></b-img>
-            </b-col>
-            <b-col class="my-5" cols="2" offset="1">
-                <b-img class="skillLogo" src="/img/langIcons/css3-logo.png"></b-img>
-            </b-col>
-            <b-col class="my-5" cols="2" offset="1">
-                <b-img class="skillLogo" src="/img/langIcons/icon_512.67aef2.png"></b-img>
-            </b-col>
-            <b-col class="my-5" cols="2" offset="1">
-                <b-img class="skillLogo" src="/img/langIcons/Creative_Cloud.svg"></b-img>
-            </b-col>
+
         </b-row>
     </b-container>
 
@@ -101,19 +121,6 @@ export default {
             planetChartData: planetChartData,
         }
     },
-    methods: {
-        createChart(chartId, chartData) {
-            const ctx = document.getElementById(chartId);
-            const myChart = new Chart(ctx, {
-                type: chartData.type,
-                data: chartData.data,
-                options: chartData.options,
-            });
-        }
-    },
-    mounted() {
-        this.createChart('skillsChart', this.planetChartData);
-    }
 
 }
 </script>
@@ -127,6 +134,16 @@ export default {
     .aboutPic {
         order: 1;
     }
+}
+
+.toolsWrapper {
+    background: rgba(231, 231, 231, 0.562);
+    height: 130px;
+}
+
+.skillLogo {
+    width: 3.5em;
+    filter: grayscale(.75);
 }
 
 .chartLabelDevelop {
@@ -159,16 +176,12 @@ export default {
 
 .aboutName {
     color: #292F36;
-    font-weight:bold;
+    font-weight: bold;
 
 }
 
 .profileImg {
     border-radius: 300px;
-}
-
-.skillLogo {
-    width: 8em;
 }
 
 .sectionHeader {
@@ -192,11 +205,7 @@ export default {
     background-size: cover;
     height: 100vh;
     background-image: url(/img/vlad-busuioc-xyPxcqh8Tt8-unsplash.jpg);
-}
-
-.bg-color {
-    background: rgba(230, 60, 148, 0.719);
-
+    z-index:-1;
 }
 
 .slogan {
