@@ -9,7 +9,7 @@
                     <div id="bar" :class="{active: navOpen }" class="mt-1 bar3"></div>
                 </div>
                 <router-link class="logoWrapper" to="/">
-                    <img  class="navbar-logo" src="/img/VividDigitalLogoColor.png" fluid>
+                    <img class="navbar-logo" src="/img/VividDigitalLogoColor.png" fluid>
                     <!-- <img  class="navbar-logo" src="/img/signatureWhite.png" fluid> -->
                     <!-- <h5 class="signature">David Hutto</h5> -->
                 </router-link>
@@ -48,20 +48,20 @@ export default {
             this.navOpen = !this.navOpen
             if (!this.navOpen) {
                 document.getElementById("navbarWrapper").style.opacity = "0";
-                document.getElementById("navbarWrapper").style.visibility ="hidden";
-                $('body').css('overflow', 'auto')
+                document.getElementById("navbarWrapper").style.visibility = "hidden";
+                // $('body').css('overflow', 'auto')
             }
             if (this.navOpen) {
                 document.getElementById("navbarWrapper").style.opacity = "1";
-                document.getElementById("navbarWrapper").style.visibility ="visible";
-                $('body').css('overflow', 'hidden')
+                document.getElementById("navbarWrapper").style.visibility = "visible";
+                // $('body').css('overflow', 'hidden')
             }
         },
         monitorScroll(event) {
-            if ($(window).scrollTop() > 980) {
+            if ($(window).scrollTop() > 700) {
                 $(navbar).addClass("navBackground");
             }
-            if ($(window).scrollTop() <= 980) {
+            if ($(window).scrollTop() <= 700) {
                 $(navbar).removeClass("navBackground");
             }
         }
@@ -77,16 +77,15 @@ export default {
     text-decoration: none;
 }
 
-
 .navBackground {
     z-index: 5;
     position: fixed;
     height: 100px;
     width: 80vw;
     background: white;
--webkit-box-shadow: 0px 0px 25px -9px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 0px 25px -9px rgba(0,0,0,0.75);
-box-shadow: 0px 0px 25px -9px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.75);
 }
 
 .logoWrapper {
@@ -96,12 +95,14 @@ box-shadow: 0px 0px 25px -9px rgba(0,0,0,0.75);
     z-index: 2;
     text-decoration: none;
 }
+
 .logoWrapper:hover {
     text-decoration: none;
 }
 
 .linkWrapper {
     width: 35vw;
+
 }
 
 .bar1.active {
@@ -142,7 +143,7 @@ box-shadow: 0px 0px 25px -9px rgba(0,0,0,0.75);
     -webkit-appearance: none;
     -webkit-transition: all 0.2s ease-in;
     -webkit-transform: rotate(0deg);
-    background-color:black;
+    background-color: black;
 }
 
 .bar2 {
@@ -171,18 +172,20 @@ box-shadow: 0px 0px 25px -9px rgba(0,0,0,0.75);
     opacity: 0;
     width: 100%;
     height: 100vh;
-    overflow-y: scroll;
     transition: .5s;
     background: #111517;
-    visibility:hidden;
+    overflow:inherit;
+
 }
+
+
 
 a.nav-link {
     font-family: 'Staatliches', cursive;
     font-size: 5em;
     color: white;
-    padding:0;
-    display:inline-block;
+    padding: 0;
+    display: inline-block;
 }
 
 a.nav-link:hover,

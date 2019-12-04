@@ -8,7 +8,73 @@
                 </div>
             </b-col>
         </b-row>
-        <b-row class="toolsWrapper flexCenter">
+    </b-container>
+    <b-container>
+        <b-row class="mt-5 aboutPageWrapper">
+            <b-col cols="12" class="aboutHeader">
+                <h1 class="sectionHeader">about</h1>
+            </b-col>
+            <b-col cols="12" lg="6" class="aboutWrapper mt-5">
+                <div>
+                    <h1 class="aboutName">David Hutto</h1>
+                    <h3 class="aboutTitle"> Web Developer & Designer</h3>
+                    <p class="aboutPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </b-col>
+            <b-col cols="12" lg="6" class="aboutPic mt-5">
+                <b-img class="profileImg" src="/img/Hutto_David_DFW_Web Maintenance_500.jpg"></b-img>
+            </b-col>
+        </b-row>
+        <b-row class="mb-5">
+            <b-col cols="12">
+                <h1 class="sectionHeader skillsHeader mb-5">Skills</h1>
+            </b-col>
+
+            <!-- Front end Skill Section -->
+            <b-col cols="12" md="4">
+                <b-card class="flexCenter skillCard">
+                    <div class="flexCenter">
+                        <div class="text-center">
+                            <i class="fas fa-code fa-4x my-2"></i>
+                            <h4 class="my-2">Frontend Development</h4>
+                        </div>
+
+                    </div>
+                    <p>Typewriter flexitarian iceland normcore seitan twee, narwhal sriracha hella irony iPhone cornhole godard. Pop-up actually before they sold out retro forage tacos. Bicycle rights retro everyday carry you probably haven't heard of them iPhone woke squid. </p>
+                </b-card>
+            </b-col>
+
+            <!-- Graphic Design Skill Section -->
+            <b-col cols="12" md="4">
+                <b-card class="skillCard">
+                    <div class="flexCenter">
+                        <div class="text-center">
+                            <i class="fab fa-adobe fa-4x my-2"></i>
+                            <h4 class="my-2">Design</h4>
+                        </div>
+                    </div>
+                    <p>Pickled live-edge brunch mumblecore, adaptogen shaman fingerstache cray ennui cronut YOLO mixtape.</p>
+                </b-card>
+            </b-col>
+
+            <!-- Marketing Skill Section -->
+            <b-col cols="12" md="4">
+                <b-card class="flexCenter skillCard">
+                    <div class="flexCenter">
+                        <div class="text-center">
+                            <i class="fas fa-ad fa-4x my-2"></i>
+                            <h4 class="my-2">Marketing</h4>
+                        </div>
+                    </div>
+                    <p> Food truck before they sold out 8-bit, ramps asymmetrical brooklyn man bun knausgaard DIY woke taxidermy chia banh mi raclette. </p>
+                </b-card>
+            </b-col>
+
+            <!-- Tools Icons Section/ Programming language Icons -->
+        </b-row>
+    </b-container>
+    <b-container fluid>
+        <b-row class="toolsWrapper flexCenter mb-1">
             <b-col offset="1">
                 <b-img class="skillLogo" src="/img/langIcons/npm-logo-red.svg"></b-img>
             </b-col>
@@ -38,75 +104,6 @@
             </b-col>
         </b-row>
     </b-container>
-    <b-container>
-        <b-row class="mt-5 aboutPageWrapper">
-            <b-col cols="12" class="aboutHeader">
-                <h1 class="sectionHeader">about</h1>
-            </b-col>
-            <b-col cols="12" lg="6" class="aboutWrapper mt-5">
-                <div>
-                    <h1 class="aboutName">David Hutto</h1>
-                    <h3 class="aboutTitle"> Web Developer & Designer</h3>
-                    <p class="aboutPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            </b-col>
-            <b-col cols="12" lg="6" class="aboutPic mt-5">
-                <b-img class="profileImg" src="/img/Hutto_David_DFW_Web Maintenance_500.jpg"></b-img>
-            </b-col>
-        </b-row>
-        <b-row class="pb-5">
-            <b-col cols="12">
-                <h1 class="sectionHeader skillsHeader">Skills</h1>
-            </b-col>
-
-            <!-- Front end Skill Section -->
-            <b-col cols="6">
-                <div>
-                    <h4>Frontend Development</h4>
-                    <p>Typewriter flexitarian iceland normcore seitan twee, narwhal sriracha hella irony iPhone cornhole godard. Pop-up actually before they sold out retro forage tacos. Bicycle rights retro everyday carry you probably haven't heard of them iPhone woke squid. </p>
-                </div>
-            </b-col>
-            <b-col cols="6">
-
-            </b-col>
-
-            <!-- Graphic Design Skill Section -->
-            <b-col cols="6">
-
-            </b-col>
-            <b-col cols="6">
-                <div>
-                    <h4>Graphic Design</h4>
-                    <p>Pickled live-edge brunch mumblecore, adaptogen shaman fingerstache cray ennui cronut YOLO mixtape.</p>
-                </div>
-            </b-col>
-
-            <!-- Marketing Skill Section -->
-            <b-col cols="6">
-                <div>
-                    <h4>Marketing</h4>
-                    <p> Food truck before they sold out 8-bit, ramps asymmetrical brooklyn man bun knausgaard DIY woke taxidermy chia banh mi raclette. </p>
-                </div>
-            </b-col>
-            <b-col cols="6">
-            
-            </b-col>
-
-            <!-- Video and 3D editing -->
-            <b-col cols="6" class="flexCenter">
-                <div>
-                    <h3>Video and 3d Software</h3>
-                    <p>Viral humblebrag cray chambray hoodie photo booth cronut church-key flannel meditation. </p>
-                </div>
-            </b-col>
-            <b-col cols="6">
-                <b-img src="/img/home/BlenderScreenShot.jpg"></b-img>
-            </b-col>
-
-            <!-- Tools Icons Section/ Programming language Icons -->
-
-        </b-row>
-    </b-container>
 
 </div>
 </template>
@@ -126,6 +123,13 @@ export default {
 </script>
 
 <style scoped>
+.skillCard {
+    -webkit-box-shadow: 0px 0px 12px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 12px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 12px -6px rgba(0, 0, 0, 0.75);
+    height: 450px;
+}
+
 @media (max-width:992px) {
     .aboutWrapper {
         order: 2;
@@ -137,7 +141,7 @@ export default {
 }
 
 .toolsWrapper {
-    background: rgba(231, 231, 231, 0.562);
+    background: rgba(255, 255, 255, 0.562);
     height: 130px;
 }
 
@@ -205,7 +209,7 @@ export default {
     background-size: cover;
     height: 100vh;
     background-image: url(/img/vlad-busuioc-xyPxcqh8Tt8-unsplash.jpg);
-    z-index:-1;
+    z-index: -1;
 }
 
 .slogan {
