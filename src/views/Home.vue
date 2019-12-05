@@ -32,15 +32,16 @@
 
             <!-- Front end Skill Section -->
             <b-col cols="12" md="4">
-                <b-card class="flexCenter skillCard">
+                <b-card class="skillCard skillParagraph">
                     <div class="flexCenter">
                         <div class="text-center">
-                            <i class="fas fa-code fa-4x my-2"></i>
+                            <i class="fas fa-code fa-4x my-5"></i>
                             <h4 class="my-2">Frontend Development</h4>
                         </div>
-
                     </div>
-                    <p>Typewriter flexitarian iceland normcore seitan twee, narwhal sriracha hella irony iPhone cornhole godard. Pop-up actually before they sold out retro forage tacos. Bicycle rights retro everyday carry you probably haven't heard of them iPhone woke squid. </p>
+                    
+                        <p >Typewriter flexitarian iceland normcore seitan twee, narwhal sriracha hella irony iPhone cornhole godard. Pop-up actually before they sold out retro forage tacos. Bicycle rights retro everyday carry you probably haven't heard of them iPhone woke squid. </p>
+                    
                 </b-card>
             </b-col>
 
@@ -49,7 +50,7 @@
                 <b-card class="skillCard">
                     <div class="flexCenter">
                         <div class="text-center">
-                            <i class="fab fa-adobe fa-4x my-2"></i>
+                            <i class="fab fa-adobe fa-4x my-5"></i>
                             <h4 class="my-2">Design</h4>
                         </div>
                     </div>
@@ -62,7 +63,7 @@
                 <b-card class="flexCenter skillCard">
                     <div class="flexCenter">
                         <div class="text-center">
-                            <i class="fas fa-ad fa-4x my-2"></i>
+                            <i class="fas fa-ad fa-4x my-5"></i>
                             <h4 class="my-2">Marketing</h4>
                         </div>
                     </div>
@@ -123,6 +124,11 @@ export default {
 </script>
 
 <style scoped>
+.skillParagraph{
+    display:flex;
+    /* justify-content:flex-end; */
+    align-items:flex-end;
+}
 .skillCard {
     -webkit-box-shadow: 0px 0px 12px -6px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 12px -6px rgba(0, 0, 0, 0.75);
