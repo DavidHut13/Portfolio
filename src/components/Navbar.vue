@@ -58,13 +58,13 @@ export default {
             }
         },
         monitorScroll(event) {
-            if ($(window).scrollTop() > 700) {
+            if ($(window).scrollTop() > 300) {
                 $(navbar).addClass("navBackground");
             }
-            if ($(window).scrollTop() <= 700) {
+            if ($(window).scrollTop() <= 300) {
                 $(navbar).removeClass("navBackground");
             }
-        }
+        },
     }
 }
 </script>
@@ -175,6 +175,7 @@ export default {
     transition: .5s;
     background: #111517;
     overflow:inherit;
+    visibility: hidden;
 
 }
 

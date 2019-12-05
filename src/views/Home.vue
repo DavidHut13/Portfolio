@@ -32,29 +32,30 @@
 
             <!-- Front end Skill Section -->
             <b-col cols="12" md="4">
-                <b-card class="skillCard skillParagraph">
+                <b-card class="skillCard ">
                     <div class="flexCenter">
                         <div class="text-center">
                             <i class="fas fa-code fa-4x my-5"></i>
                             <h4 class="my-2">Frontend Development</h4>
                         </div>
                     </div>
-                    
-                        <p >Typewriter flexitarian iceland normcore seitan twee, narwhal sriracha hella irony iPhone cornhole godard. Pop-up actually before they sold out retro forage tacos. Bicycle rights retro everyday carry you probably haven't heard of them iPhone woke squid. </p>
-                    
+                    <p>Typewriter flexitarian iceland normcore seitan twee, narwhal sriracha hella irony iPhone cornhole godard. Pop-up actually before they sold out retro forage tacos. Bicycle rights retro everyday carry you probably haven't heard of them iPhone woke squid. </p>
                 </b-card>
             </b-col>
 
             <!-- Graphic Design Skill Section -->
             <b-col cols="12" md="4">
-                <b-card class="skillCard">
+                <b-card class="skillCard ">
                     <div class="flexCenter">
                         <div class="text-center">
                             <i class="fab fa-adobe fa-4x my-5"></i>
                             <h4 class="my-2">Design</h4>
                         </div>
                     </div>
-                    <p>Pickled live-edge brunch mumblecore, adaptogen shaman fingerstache cray ennui cronut YOLO mixtape.</p>
+                    <div class='skillParagraph'>
+                        <p>Pickled live-edge brunch mumblecore, adaptogen shaman fingerstache cray ennui cronut YOLO mixtape.</p>
+                    </div>
+
                 </b-card>
             </b-col>
 
@@ -62,10 +63,21 @@
             <b-col cols="12" md="4">
                 <b-card class="flexCenter skillCard">
                     <div class="flexCenter">
+                        <!-- ==============  Testing Progress Pie ============== -->
                         <div class="text-center">
-                            <i class="fas fa-ad fa-4x my-5"></i>
+                            <div class="progress-chart-wrapper">
+                                <div  class="progress-circle">
+                                    <div class="progress-fill"></div>
+                                </div>
+                                <div class="inner-content">
+                                    <div class="inner-content-wrapper">
+                                        <i class="fas fa-ad fa-4x my-5"></i>
+                                    </div>
+                                </div>
+                            </div>
                             <h4 class="my-2">Marketing</h4>
                         </div>
+                        <!-- ==============  Testing Progress Pie ============== -->
                     </div>
                     <p> Food truck before they sold out 8-bit, ramps asymmetrical brooklyn man bun knausgaard DIY woke taxidermy chia banh mi raclette. </p>
                 </b-card>
@@ -116,19 +128,89 @@ export default {
     name: 'home',
     data() {
         return {
-            planetChartData: planetChartData,
+
         }
     },
-
+    methods: {
+        skillsProgress() {
+            var $ppc = $('.progress-chart-wrapper')
+            var percent = 30;
+            var deg = 360 * percent / 100;
+            if (percent > 50) {
+                $ppc.addClass('gt-50');
+            }
+            $('.progress-fill').css('transform', 'rotate(' + deg + 'deg)');
+        }
+    },
+    created() {
+        this.skillsProgress()
+    }
 }
 </script>
 
-<style scoped>
-.skillParagraph{
-    display:flex;
-    /* justify-content:flex-end; */
-    align-items:flex-end;
+<style lang="scss" scoped>
+/* progress circle chart */
+$size:200px;
+
+@mixin circle($size) {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50% - #{$size/2});
+    top: calc(50% - #{$size/2});
+    width: $size;
+    height: $size;
 }
+
+.progress-chart-wrapper {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background-color: rgb(248, 248, 248);
+    position: relative;
+    &.gt-50 {
+    background-color: #81CE97;
+  }
+}
+
+.progress-circle {
+    @include circle($size);
+    clip: rect(0, $size, $size, #{$size/2});
+    .progress-fill {
+        @include circle($size);
+        clip: rect(0, #{$size/2}, $size, 0);
+        background: rgb(230, 60, 148);
+        transform: rotate(60deg);
+        -webkit-box-shadow: inset 0px 0px 13px -4px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: inset 0px 0px 13px -4px rgba(0, 0, 0, 0.75);
+        box-shadow: inset 0px 0px 13px -4px rgba(0, 0, 0, 0.75);
+    }
+    .gt-50 & {
+        clip: rect(0, #{$size/2}, $size, 0);
+        .progress-fill {
+            clip: rect(0, $size, $size, #{$size/2});
+            background: rgb(248, 248, 248);
+        }
+    }
+}
+
+.inner-content {
+    @include circle(#{$size/1.25});
+    background: #fff;
+    text-align: center;
+    display: table;
+    -webkit-box-shadow: 0px 0px 13px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 13px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 13px -4px rgba(0, 0, 0, 0.75);
+}
+
+.inner-content-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* progress circle chart */
+
 .skillCard {
     -webkit-box-shadow: 0px 0px 12px -6px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 12px -6px rgba(0, 0, 0, 0.75);

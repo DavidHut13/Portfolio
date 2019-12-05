@@ -3,19 +3,17 @@ export const planetChartData = {
   data: {
     datasets: [
       { // one line graph
-        data: [25, 25, 50],
+        data: [25, 75],
         backgroundColor: [
-          '#56b7e7',
+          '#E5E5E5',
           '#37B34A',
-          '#E63C94',
         ],
         borderColor: [
-          'white',
-          'white',
-          'white',
+          '#E5E5E5',
+          '#37B34A'
         ],
         borderWidth: 3,
-        hoverBorderColor: ['#EEE82C','#EEE82C','#EEE82C'],
+        hoverBorderColor: ['#EEE82C','#EEE82C'],
         hoverBackgroundColor: '#EEE82C'
       },
     ]
