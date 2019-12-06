@@ -61,28 +61,21 @@
 
             <!-- Marketing Skill Section -->
             <b-col cols="12" md="4">
-                <b-card class="flexCenter skillCard">
-                    <div class="flexCenter">
-                        <!-- ==============  Testing Progress Pie ============== -->
-                        <div class="text-center">
-                            <div class="progress-chart-wrapper">
-                                <div  class="progress-circle">
-                                    <div class="progress-fill"></div>
-                                </div>
-                                <div class="inner-content">
-                                    <div class="inner-content-wrapper">
-                                        <i class="fas fa-ad fa-4x my-5"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <h4 class="my-2">Marketing</h4>
-                        </div>
-                        <!-- ==============  Testing Progress Pie ============== -->
+                <!-- ==============  Testing Progress Pie ============== -->
+                <div class="progress-chart-wrapper">
+                    <div class="progress-circle">
+                        <div class="progress-fill"></div>
                     </div>
-                    <p> Food truck before they sold out 8-bit, ramps asymmetrical brooklyn man bun knausgaard DIY woke taxidermy chia banh mi raclette. </p>
-                </b-card>
+                    <div class="inner-content">
+                        <div class="inner-content-wrapper">
+                            <i class="fas fa-ad fa-4x my-5"></i>
+                        </div>
+                    </div>
+                </div>
+                <h4 class="my-2">Marketing</h4>
+                <!-- ==============  Testing Progress Pie ============== -->
+                <p> Food truck before they sold out 8-bit, ramps asymmetrical brooklyn man bun knausgaard DIY woke taxidermy chia banh mi raclette. </p>
             </b-col>
-
             <!-- Tools Icons Section/ Programming language Icons -->
         </b-row>
     </b-container>
@@ -128,21 +121,22 @@ export default {
     name: 'home',
     data() {
         return {
-
+            myPercent: '70'
         }
     },
     methods: {
         skillsProgress() {
-            var $ppc = $('.progress-chart-wrapper')
-            var percent = 30;
-            var deg = 360 * percent / 100;
+            var $ppc = $('.progress-chart-wrapper'),
+                percent = 75,
+                deg = 360 * percent / 100;
             if (percent > 50) {
                 $ppc.addClass('gt-50');
             }
             $('.progress-fill').css('transform', 'rotate(' + deg + 'deg)');
+            $('.inner-content span').html(percent + '%');
         }
     },
-    created() {
+    mounted() {
         this.skillsProgress()
     }
 }
@@ -150,8 +144,6 @@ export default {
 
 <style lang="scss" scoped>
 /* progress circle chart */
-$size:200px;
-
 @mixin circle($size) {
     content: "";
     position: absolute;
@@ -162,51 +154,67 @@ $size:200px;
     height: $size;
 }
 
+$size: 200px;
+
 .progress-chart-wrapper {
     width: $size;
     height: $size;
     border-radius: 50%;
-    background-color: rgb(248, 248, 248);
+    background-color: #e5e5e5;
     position: relative;
+
     &.gt-50 {
-    background-color: #81CE97;
-  }
+        background-color: #81ce97;
+    }
 }
 
 .progress-circle {
     @include circle($size);
     clip: rect(0, $size, $size, #{$size/2});
+
     .progress-fill {
         @include circle($size);
         clip: rect(0, #{$size/2}, $size, 0);
-        background: rgb(230, 60, 148);
+        background: #81ce97;
         transform: rotate(60deg);
-        -webkit-box-shadow: inset 0px 0px 13px -4px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: inset 0px 0px 13px -4px rgba(0, 0, 0, 0.75);
-        box-shadow: inset 0px 0px 13px -4px rgba(0, 0, 0, 0.75);
     }
+
     .gt-50 & {
         clip: rect(0, #{$size/2}, $size, 0);
+
         .progress-fill {
             clip: rect(0, $size, $size, #{$size/2});
-            background: rgb(248, 248, 248);
+            background: #e5e5e5;
         }
     }
 }
 
 .inner-content {
-    @include circle(#{$size/1.25});
+    @include circle(#{$size/1.15});
     background: #fff;
     text-align: center;
     display: table;
-    -webkit-box-shadow: 0px 0px 13px -4px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 13px -4px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 13px -4px rgba(0, 0, 0, 0.75);
+
+    span {
+        display: block;
+        font-size: 2.6em;
+        font-weight: bold;
+        color: #81ce97;
+    }
 }
 
 .inner-content-wrapper {
     display: table-cell;
     vertical-align: middle;
+}
+
+body {
+    font-family: Arial;
+    background: #f7f7f7;
+}
+
+.progress-chart-wrapper {
+    margin: 50px auto 0;
 }
 
 /* progress circle chart */
