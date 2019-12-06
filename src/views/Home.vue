@@ -62,6 +62,8 @@
             <!-- Marketing Skill Section -->
             <b-col cols="12" md="4">
                 <!-- ==============  Testing Progress Pie ============== -->
+                <div class="flexCenter">
+                        <div class="text-center">
                 <div class="progress-chart-wrapper">
                     <div class="progress-circle">
                         <div class="progress-fill"></div>
