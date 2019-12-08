@@ -32,49 +32,65 @@
 
             <!-- Front end Skill Section -->
             <b-col cols="12" md="4">
-                <b-card class="skillCard ">
-                    <div class="flexCenter">
-                        <div class="text-center">
-                            <i class="fas fa-code fa-4x my-5"></i>
-                            <h4 class="my-2">Frontend Development</h4>
+                <div class="flexCenter">
+                    <div class="text-center">
+                        <div class="progress-chart-wrapper development">
+                            <div class="progress-circle">
+                                <div class="progress-fill development-fill"></div>
+                            </div>
+                            <div class="inner-content">
+                                <div class="inner-content-wrapper">
+                                    <i class="fas fa-code fa-4x my-5"></i>
+                                </div>
+                            </div>
                         </div>
+                        <h4 class="my-2">Frontend Development</h4>
                     </div>
-                    <p>Typewriter flexitarian iceland normcore seitan twee, narwhal sriracha hella irony iPhone cornhole godard. Pop-up actually before they sold out retro forage tacos. Bicycle rights retro everyday carry you probably haven't heard of them iPhone woke squid. </p>
-                </b-card>
+                </div>
+                <!-- ==============  Testing Progress Pie ============== -->
+                <p> Food truck before they sold out 8-bit, ramps asymmetrical brooklyn man bun knausgaard DIY woke taxidermy chia banh mi raclette. </p>
             </b-col>
 
             <!-- Graphic Design Skill Section -->
             <b-col cols="12" md="4">
-                <b-card class="skillCard ">
-                    <div class="flexCenter">
-                        <div class="text-center">
-                            <i class="fab fa-adobe fa-4x my-5"></i>
-                            <h4 class="my-2">Design</h4>
+                <div class="flexCenter">
+                    <div class="text-center">
+                        <div class="progress-chart-wrapper design">
+                            <div class="progress-circle">
+                                <div class="progress-fill design-fill "></div>
+                            </div>
+                            <div class="inner-content">
+                                <div class="inner-content-wrapper">
+                                    <i class="fab fa-adobe fa-4x my-5"></i>
+                                </div>
+                            </div>
                         </div>
+                        <h4 class="my-2">Design</h4>
                     </div>
-                    <div class='skillParagraph'>
-                        <p>Pickled live-edge brunch mumblecore, adaptogen shaman fingerstache cray ennui cronut YOLO mixtape.</p>
-                    </div>
-
-                </b-card>
+                </div>
+                <!-- ==============  Testing Progress Pie ============== -->
+                <p> Food truck before they sold out 8-bit, ramps asymmetrical brooklyn man bun knausgaard DIY woke taxidermy chia banh mi raclette. </p>
             </b-col>
 
             <!-- Marketing Skill Section -->
             <b-col cols="12" md="4">
                 <!-- ==============  Testing Progress Pie ============== -->
                 <div class="flexCenter">
-                        <div class="text-center">
-                <div class="progress-chart-wrapper">
-                    <div class="progress-circle">
-                        <div class="progress-fill"></div>
-                    </div>
-                    <div class="inner-content">
-                        <div class="inner-content-wrapper">
-                            <i class="fas fa-ad fa-4x my-5"></i>
+                    <div class="text-center">
+                        <div class="progress-chart-wrapper marketing">
+                            <div class="progress-circle">
+                                <div class="progress-fill marketing-fill"></div>
+                            </div>
+                            <div class="inner-content">
+                                <div class="inner-content-wrapper">
+                                    <i class="fas fa-ad fa-4x"></i>
+                                    <h6 class="m-0 p-0">500hrs</h6>
+                                </div>
+                            </div>
                         </div>
+                        <h4 class="my-2">Marketing</h4>
                     </div>
                 </div>
-                <h4 class="my-2">Marketing</h4>
                 <!-- ==============  Testing Progress Pie ============== -->
                 <p> Food truck before they sold out 8-bit, ramps asymmetrical brooklyn man bun knausgaard DIY woke taxidermy chia banh mi raclette. </p>
             </b-col>
@@ -128,14 +144,27 @@ export default {
     },
     methods: {
         skillsProgress() {
-            var $ppc = $('.progress-chart-wrapper'),
-                percent = 75,
-                deg = 360 * percent / 100;
-            if (percent > 50) {
-                $ppc.addClass('gt-50');
+            var $develop = $('.development')
+            var $design = $('.design')
+            var $marketing = $('.marketing')
+            var developmentPercent = 70;
+            var marketingPercent = 45;
+            var designPercent = 35;
+            var designDeg = 360 * designPercent / 100;
+            var marketDeg = 360 * marketingPercent / 100;
+            var devDeg = 360 * developmentPercent / 100;
+            if (developmentPercent > 50) {
+                $develop.addClass('gt-50');
             }
-            $('.progress-fill').css('transform', 'rotate(' + deg + 'deg)');
-            $('.inner-content span').html(percent + '%');
+            if (designPercent > 50) {
+                $design.addClass('gt-50');
+            }
+            if (marketingPercent > 50) {
+                $marketing.addClass('gt-50');
+            }
+            $('.development-fill').css('transform', 'rotate(' + devDeg + 'deg)');
+            $('.design-fill').css('transform', 'rotate(' + designDeg + 'deg)');
+            $('.marketing-fill').css('transform', 'rotate(' + marketDeg + 'deg)');
         }
     },
     mounted() {
@@ -158,16 +187,23 @@ export default {
 
 $size: 200px;
 
+.development, .devlopment-fill {
+   background-image: linear-gradient(to right top, #52b7e8, #0eaaf2, #009bfa, #008bff, #0077ff, #0080ff, #0088ff, #0090ff, #00b1ff, #00ceff, #00e8ff, #60fff8);
+}
+
+.design-fill {
+  background-image: linear-gradient(to right top, #e73b94, #ed3b8e, #f23c88, #f63d82, #fa3f7c, #fc4e7f, #fe5a82, #ff6686, #ff7c94, #ff90a2, #ffa3b1, #ffb5bf);
+}
+
+.marketing-fill {
+   background-image: linear-gradient(to right top, #37b34a, #48c161, #58cf77, #68de8d, #79eca3, #7bf2a7, #7ef9ab, #80ffaf, #76ffa1, #6dff92, #65ff81, #60ff6e);
+}
+
 .progress-chart-wrapper {
     width: $size;
     height: $size;
     border-radius: 50%;
-    background-color: #e5e5e5;
     position: relative;
-
-    &.gt-50 {
-        background-color: #81ce97;
-    }
 }
 
 .progress-circle {
@@ -177,18 +213,20 @@ $size: 200px;
     .progress-fill {
         @include circle($size);
         clip: rect(0, #{$size/2}, $size, 0);
-        background: #81ce97;
+
         transform: rotate(60deg);
     }
 
     .gt-50 & {
         clip: rect(0, #{$size/2}, $size, 0);
-
+ border:none;
         .progress-fill {
             clip: rect(0, $size, $size, #{$size/2});
-            background: #e5e5e5;
+            background: white;
+           
         }
     }
+
 }
 
 .inner-content {
@@ -196,13 +234,9 @@ $size: 200px;
     background: #fff;
     text-align: center;
     display: table;
-
-    span {
-        display: block;
-        font-size: 2.6em;
-        font-weight: bold;
-        color: #81ce97;
-    }
+    -webkit-box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.75);
 }
 
 .inner-content-wrapper {
@@ -210,10 +244,6 @@ $size: 200px;
     vertical-align: middle;
 }
 
-body {
-    font-family: Arial;
-    background: #f7f7f7;
-}
 
 .progress-chart-wrapper {
     margin: 50px auto 0;
@@ -246,21 +276,6 @@ body {
 .skillLogo {
     width: 3.5em;
     filter: grayscale(.75);
-}
-
-.chartLabelDevelop {
-    color: #E63C94;
-    font-family: 'Staatliches', cursive;
-}
-
-.chartLabelDesign {
-    color: #37B34A;
-    font-family: 'Staatliches', cursive;
-}
-
-.chartLabelMarketing {
-    color: #56b7e7;
-    font-family: 'Staatliches', cursive;
 }
 
 .aboutWrapper,
