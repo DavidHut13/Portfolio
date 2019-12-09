@@ -4,7 +4,7 @@
         <b-row>
             <b-col class="homepage_background">
                 <div class="flexCenter">
-                    <h1 class="slogan text-center">Be Bold.</h1>
+                    <h1 class="slogan text-center">Front-end Developer | Designer</h1>
                 </div>
             </b-col>
         </b-row>
@@ -316,12 +316,11 @@ $size: 200px;
 }
 
 .homepage_background {
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    background-image: url(/img/vlad-busuioc-xyPxcqh8Tt8-unsplash.jpg);
+    background-image: url(/img/AdobeStock_275693862.jpeg);
     z-index: -1;
 }
 
@@ -330,9 +329,9 @@ $size: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font: bold 100px Impact, Sans-Serif;
+    // font: bold 100px Impact, Sans-Serif;
     color: white;
-    font-size: 12em;
+    font-size: 3.5em;
 }
 
 .content {
