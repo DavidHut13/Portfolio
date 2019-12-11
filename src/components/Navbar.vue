@@ -22,82 +22,170 @@ export default {
     name: 'Navbar',
     data() {
         return {
-            windowTop: window.top.scrollY
+            windowTop: window.top.scrollYm,
+            navOpen: false,
+            whiteLogo: false
         }
     },
     created() {
-
-        //Look into this. helps with performance
-        // this.handleDebouncedScroll = debounce(this.handleScroll, 100);
-        window.addEventListener('scroll', this.navBarTransition)
+        window.addEventListener('scroll', this.monitorScroll)
     },
     methods: {
-        navBarTransition(event) {
-            if ($(window).scrollTop() > 300) {
-                $(navbar).addClass("navbar-background");
-                // $(navLink).addClass("nav-btn-black");
-                // $(navLink).removeClass("nav-btn-white");
-            } else {
-                $(navbar).removeClass("navbar-background");
-                // $(navLink).removeClass("nav-btn-black");
-                // $(navLink).addClass("nav-btn-white")
+        toggleNav() {
+            this.navOpen = !this.navOpen
+            if (!this.navOpen) {
+                document.getElementById("navbarWrapper").style.opacity = "0";
+                document.getElementById("navbarWrapper").style.visibility = "hidden";
+                // $('body').css('overflow', 'auto')
             }
-        }
+            if (this.navOpen) {
+                document.getElementById("navbarWrapper").style.opacity = "1";
+                document.getElementById("navbarWrapper").style.visibility = "visible";
+                // $('body').css('overflow', 'hidden')
+            }
+        },
+        monitorScroll(event) {
+            if ($(window).scrollTop() > 300) {
+                $(navbar).addClass("navBackground");
+            }
+            if ($(window).scrollTop() <= 300) {
+                $(navbar).removeClass("navBackground");
+            }
+        },
     }
-
 }
 </script>
 
 <style lang="scss">
-a.nav-link {
-    font-family: 'Staatliches', cursive;
-    font-size: 2.75em;
+.signature {
+    font-family: 'Mrs Sheppards', cursive;
+    font-size: 3em;
+    color: #90E876;
+    text-decoration: none;
 }
 
-.navbar-background {
+.navBackground {
+    z-index: 5;
+    position: fixed;
+    height: 100px;
+    width: 80vw;
     background: white;
-    -webkit-box-shadow: 0px 10px 18px -19px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 10px 18px -19px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 10px 18px -19px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.75);
+}
+
+.logoWrapper {
+    position: fixed;
+    top: 20px;
+    left: 2%;
+    z-index: 2;
+    text-decoration: none;
+}
+
+.logoWrapper:hover {
+    text-decoration: none;
+}
+
+.linkWrapper {
+    width: 35vw;
+
+}
+
+.bar1.active {
+    top: 10px;
+    background-color: white;
+    -webkit-transform: rotate(-135deg);
+    -webkit-transition: all .5s ease-in;
+}
+
+.bar2.active {
+    left: 0px;
+    background-color: transparent;
+    -webkit-transition: all 0.2s ease-in;
+
+}
+
+.bar3.active {
+    top: 10px;
+    background-color: white;
+    -webkit-transform: rotate(135deg);
+    -webkit-transition: all .5s ease-in;
+}
+
+.topNavItem {
+    margin-top: 100px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    position: absolute;
+    display: block;
+    font-size: 10px;
+    padding: 0;
+    width: 40px;
+    height: 4px;
+    border-radius: 8px;
+    -webkit-appearance: none;
+    -webkit-transition: all 0.2s ease-in;
+    -webkit-transform: rotate(0deg);
+    background-color: black;
+}
+
+.bar2 {
+    top: 10px;
+}
+
+.bar3 {
+    top: 20px;
+}
+
+.hamburgerButton {
+    display: block;
+    position: fixed;
+    height: 40px;
+    right: 3%;
+    top: 3%;
+    width: 40px;
+    z-index: 2;
+}
+
+.navbarWrapper {
+    position: fixed;
+    display: flex;
+    align-items: flex-end;
+    z-index: 1;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    transition: .5s;
+    background: #111517;
+    overflow:inherit;
+    visibility: hidden;
+
+}
+
+
+
+a.nav-link {
+    font-family: 'Staatliches', cursive;
+    font-size: 5em;
+    color: white;
+    padding: 0;
+    display: inline-block;
+}
+
+a.nav-link:hover,
+.socialIcon:hover {
+    color: rgb(101, 248, 123);
+}
+
+.socialIcon {
+    color: white;
 }
 
 .navbar-logo {
     width: 160px;
 }
-
-.make-bg-transparent {
-    position: fixed !important;
-}
-
-.nav-btn-white>a.nav-link {
-    color: white;
-}
-
-.nav-btn-black>a.nav-link {
-    color: black;
-}
-
-.nav-btn-black>a.nav-link:after {
-  background: none repeat scroll 0 0 transparent;
-  bottom: 0;
-  content: "";
-  display: block;
-  height: 2px;
-  left: 50%;
-  position: absolute;
-  background: #fff;
-  transition: width 0.3s ease 0s, left 0.3s ease 0s;
-  width: 0;
-}
-
-a:hover:after { 
-  width: 100%; 
-  left: 0; 
-}
-@media screen and (max-height: 300px) {
-	ul {
-		margin-top: 40px;
-	}
-}
-
 </style>
