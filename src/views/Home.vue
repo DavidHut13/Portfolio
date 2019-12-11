@@ -19,7 +19,7 @@
                 </div>
             </b-col>
             <b-col class="flexCenter">
-                <b-img class="rounded profileImg" src="/img/Hutto_David_DFW_Web Maintenance_500.jpg"></b-img>
+                <b-img class="rounded profileImg" src="/img/Home/Hutto_David_DFW_Web Maintenance_500.jpg"></b-img>
             </b-col>
         </b-row>
         <b-row class="pb-5">
@@ -39,7 +39,7 @@
                 <h3 class="skillsHeader">Video and 3d Software</h3>
             </b-col>
             <b-col cols="5">
-                <b-img src="/img/home/BlenderScreenShot.jpg"></b-img>
+                <b-img src="/img/Home/BlenderScreenShot.jpg"></b-img>
             </b-col>
 
 
@@ -49,31 +49,31 @@
                 <h1 class="sectionHeader toolsHeader">Tools</h1>
             </b-col>
             <b-col class="my-3" cols="2" offset="1">
-                <b-img class="skillLogo" src="/img/langIcons/npm-logo-red.svg"></b-img>
+                <b-img class="skillLogo" src="/img/Home/langIcons/npm-logo-red.svg"></b-img>
             </b-col>
             <b-col class="my-3" cols="2" offset="1">
-                <b-img class="skillLogo" src="/img/langIcons/Git-Logo-White.png"></b-img>
+                <b-img class="skillLogo" src="/img/Home/langIcons/Git-Logo-White.png"></b-img>
             </b-col>
             <b-col class="my-3"  cols="2" offset="1">
-                <b-img class="skillLogo" src="/img/langIcons/256px-Vue.js_Logo_2.svg.png"></b-img>
+                <b-img class="skillLogo" src="/img/Home/langIcons/256px-Vue.js_Logo_2.svg.png"></b-img>
             </b-col>
             <b-col class="my-3" cols="2" offset="1">
-                <b-img class="skillLogo" src="/img/langIcons/javascript.svg"></b-img>
+                <b-img class="skillLogo" src="/img/Home/langIcons/javascript.svg"></b-img>
             </b-col>
             <b-col class="my-3" cols="2" offset="1">
-                <b-img class="skillLogo" src="/img/langIcons/react.svg"></b-img>
+                <b-img class="skillLogo" src="/img/Home/langIcons/react.svg"></b-img>
             </b-col>
              <b-col class="my-3" cols="2" offset="1">
-                <b-img class="skillLogo" src="/img/langIcons/HTML5_Badge_512.png"></b-img>
+                <b-img class="skillLogo" src="/img/Home/langIcons/HTML5_Badge_512.png"></b-img>
             </b-col>
              <b-col class="my-3" cols="2" offset="1">
-                <b-img class="skillLogo" src="/img/langIcons/css3-logo.png"></b-img>
+                <b-img class="skillLogo" src="/img/Home/langIcons/css3-logo.png"></b-img>
             </b-col>
             <b-col class="my-3" cols="2" offset="1">
-                <b-img class="skillLogo" src="/img/langIcons/icon_512.67aef2.png"></b-img>
+                <b-img class="skillLogo" src="/img/Home/langIcons/icon_512.67aef2.png"></b-img>
             </b-col>
              <b-col class="my-3" cols="2" offset="1">
-                <b-img class="skillLogo" src="/img/langIcons/Creative_Cloud.svg"></b-img>
+                <b-img class="skillLogo" src="/img/Home/langIcons/Creative_Cloud.svg"></b-img>
             </b-col>
         </b-row>
     </b-container>
@@ -110,7 +110,7 @@ color:#292F36;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    background-image: url(/img/AdobeStock_275693862.jpeg);
+    background-image: url(/img/Home/AdobeStock_275693862.jpeg);
 }
 
 .bg-color {

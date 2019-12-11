@@ -2,7 +2,7 @@
 <b-navbar id="navbar" toggleable="md" type="none" variant="none" fixed="top">
     <b-navbar-brand>
         <router-link to="/">
-            <img class="navbar-logo" src="/img/VividDigitalLogoColor.png" fluid>
+            <img class="navbar-logo" src="/img/Logos/VividDigitalLogoColor.png" fluid>
         </router-link>
     </b-navbar-brand>
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
