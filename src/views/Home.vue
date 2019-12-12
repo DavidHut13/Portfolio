@@ -87,6 +87,7 @@
                         <h4 class="my-2">Marketing</h4>
                     </div>
                 </div>
+                <h4 class="my-2">Marketing</h4>
                 <!-- ==============  Testing Progress Pie ============== -->
                 <p> Food truck before they sold out 8-bit, ramps asymmetrical brooklyn man bun knausgaard DIY woke taxidermy chia banh mi raclette. </p>
             </b-col>
