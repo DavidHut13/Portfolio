@@ -1,20 +1,33 @@
 <template>
-<b-navbar id="navbar" toggleable="md" type="none" variant="none" fixed="top">
-    <b-navbar-brand>
-        <router-link to="/">
-            <img class="navbar-logo" src="/img/Logos/VividDigitalLogoColor.png" fluid>
-        </router-link>
-    </b-navbar-brand>
-    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-    <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav>
-        </b-navbar-nav>
-        <b-navbar-nav class="ml-auto">
-            <router-link id="navLink" tag="b-nav-item" class="nav-btn-black" to="/work">work</router-link>
-             <router-link id="navLink" tag="b-nav-item" class="nav-btn-black" to="/work">contact</router-link>
-        </b-navbar-nav>
-    </b-collapse>
-</b-navbar>
+<b-container fluid>
+    <b-row>
+        <b-col class="p-0">
+            <div>
+                <div @click="toggleNav" target="nav-collapse" class="hamburgerButton">
+                    <div id="bar" :class="{active: navOpen }" class="mt-1 bar1"></div>
+                    <div id="bar" :class="{active: navOpen }" class="mt-1 bar2"></div>
+                    <div id="bar" :class="{active: navOpen }" class="mt-1 bar3"></div>
+                </div>
+                <router-link class="logoWrapper" to="/">
+                    <img class="navbar-logo" src="/img/Logos/VividDigitalLogoColor.png" fluid>
+                    <!-- <img  class="navbar-logo" src="/img/signatureWhite.png" fluid> -->
+                    <!-- <h5 class="signature">David Hutto</h5> -->
+                </router-link>
+                <b-nav id="navbarWrapper" vertical class="navbarWrapper">
+                    <div class="linkWrapper">
+                        <router-link id="navLink" tag="b-nav-item" class="topNavItem" to="/">Home</router-link>
+                        <router-link id="navLink" tag="b-nav-item" to="/work">work</router-link>
+                        <router-link id="navLink" tag="b-nav-item" class="mb-5" to="/">contact</router-link>
+                        <i class="socialIcon fab fa-facebook-square fa-3x mr-2"></i>
+                        <i class="socialIcon fab fa-linkedin fa-3x mx-2"></i>
+                        <i class="socialIcon fab fa-github-square fa-3x mx-2"></i>
+                        <i class="socialIcon fab fa-codepen fa-3x mx-2"></i>
+                    </div>
+                </b-nav>
+            </div>
+        </b-col>
+    </b-row>
+</b-container>
 </template>
 
 <script>
@@ -63,7 +76,6 @@ export default {
     color: #90E876;
     text-decoration: none;
 }
-
 .navBackground {
     z-index: 5;
     position: fixed;
@@ -74,7 +86,6 @@ export default {
     -moz-box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.75);
 }
-
 .logoWrapper {
     position: fixed;
     top: 20px;
@@ -82,41 +93,32 @@ export default {
     z-index: 2;
     text-decoration: none;
 }
-
 .logoWrapper:hover {
     text-decoration: none;
 }
-
 .linkWrapper {
     width: 35vw;
-
 }
-
 .bar1.active {
     top: 10px;
     background-color: white;
     -webkit-transform: rotate(-135deg);
     -webkit-transition: all .5s ease-in;
 }
-
 .bar2.active {
     left: 0px;
     background-color: transparent;
     -webkit-transition: all 0.2s ease-in;
-
 }
-
 .bar3.active {
     top: 10px;
     background-color: white;
     -webkit-transform: rotate(135deg);
     -webkit-transition: all .5s ease-in;
 }
-
 .topNavItem {
     margin-top: 100px;
 }
-
 .bar1,
 .bar2,
 .bar3 {
@@ -132,15 +134,12 @@ export default {
     -webkit-transform: rotate(0deg);
     background-color: black;
 }
-
 .bar2 {
     top: 10px;
 }
-
 .bar3 {
     top: 20px;
 }
-
 .hamburgerButton {
     display: block;
     position: fixed;
@@ -150,7 +149,6 @@ export default {
     width: 40px;
     z-index: 2;
 }
-
 .navbarWrapper {
     position: fixed;
     display: flex;
@@ -163,11 +161,7 @@ export default {
     background: #111517;
     overflow:inherit;
     visibility: hidden;
-
 }
-
-
-
 a.nav-link {
     font-family: 'Staatliches', cursive;
     font-size: 5em;
@@ -175,16 +169,13 @@ a.nav-link {
     padding: 0;
     display: inline-block;
 }
-
 a.nav-link:hover,
 .socialIcon:hover {
     color: rgb(101, 248, 123);
 }
-
 .socialIcon {
     color: white;
 }
-
 .navbar-logo {
     width: 160px;
 }
