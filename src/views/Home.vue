@@ -26,25 +26,6 @@
             </b-col>
         </b-row>
         <b-row class="pb-5">
-            <b-col cols="10" offset="1">
-                <h1 class="sectionHeader skillsHeader">Skills</h1>
-            </b-col>
-            <b-col cols="10" offset="1">
-                <h4>Front end Development</h4>
-            </b-col>
-            <b-col cols="10" offset="1">
-                <h4>Graphic Design</h4>
-            </b-col>
-             <b-col cols="10" offset="1">
-                 <h4>Marketing</h4>
-            </b-col>
-             <b-col cols="5" offset="1" class="d-flex justify-content-center align-items-center">
-                <h3 class="skillsHeader">Video and 3d Software</h3>
-            </b-col>
-            <b-col cols="5">
-                <b-img src="/img/Home/BlenderScreenShot.jpg"></b-img>
-            </b-col>
-
             <!-- Front end Skill Section -->
             <b-col cols="12" md="4">
                 <div class="flexCenter">
