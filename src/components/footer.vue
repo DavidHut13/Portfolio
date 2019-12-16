@@ -28,7 +28,7 @@
         </b-col>
         <b-col cols="12" class="text-right">
              <b-link class="madeWithVue"   href="https://www.williamsauction.com" target="_blank">
-                <p>made with <b-img class="vueLogo" src="/img/langIcons/256px-Vue.js_Logo_2.svg.png"></b-img></p>
+                <p>made with <b-img class="vueLogo" src="/img/home/langIcons/256px-Vue.js_Logo_2.svg.png"></b-img></p>
             </b-link>
         </b-col>
     </b-row>
@@ -49,7 +49,7 @@ export default {
 <style scoped>
 .color {
     color: white;
-    background-color: rgb(26, 27, 29);
+    background-color: rgb(7, 7, 7);
 }
 
 .vueLogo {

@@ -21,6 +21,9 @@ export default {
         navbar: Navbar,
         appFooter: appFooter
     },
+    methods: {
+    
+    }
 }
 </script>
 
