@@ -9,9 +9,9 @@
                     <div id="bar" :class="{active: navOpen }" class="mt-1 bar3"></div>
                 </div>
                 <router-link class="logoWrapper" to="/">
-                    <img class="navbar-logo" src="/img/Logos/VividDigitalLogoColor.png" fluid>
+                    <!-- <img class="navbar-logo" src="/img/Logos/VividDigitalLogoColor.png" fluid> -->
                     <!-- <img  class="navbar-logo" src="/img/fullNameSignature.png" fluid> -->
-                    <!-- <h5 class="signature">David Hutto</h5> -->
+                    <h5 id="signature" class="signature">david hutto.</h5>
                 </router-link>
                 <b-nav id="navbarWrapper" vertical class="navbarWrapper">
                     <div class="linkWrapper">
@@ -48,11 +48,14 @@ export default {
             if (!this.navOpen) {
                 document.getElementById("navbarWrapper").style.opacity = "0";
                 document.getElementById("navbarWrapper").style.visibility = "hidden";
+                
+                document.getElementById("signature").style.color = "black"
                 // $('body').css('overflow', 'auto')
             }
             if (this.navOpen) {
                 document.getElementById("navbarWrapper").style.opacity = "1";
                 document.getElementById("navbarWrapper").style.visibility = "visible";
+                document.getElementById("signature").style.color = "white"
                 // $('body').css('overflow', 'hidden')
             }
         },
@@ -71,16 +74,16 @@ export default {
 
 <style lang="scss">
 .signature {
-    font-family: 'Mrs Sheppards', cursive;
-    font-size: 3em;
-    color: #90E876;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.75em;
+    color: rgb(36, 36, 36);
     text-decoration: none;
 }
 
 .navBackground {
     z-index: 5;
     position: fixed;
-    height: 100px;
+    height: 70px;
     width: 80vw;
     background: white;
     -webkit-box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.75);
