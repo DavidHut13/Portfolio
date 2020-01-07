@@ -9,7 +9,7 @@
                 </div>
             </b-col>
         </b-row>
-          <!--========================== Tools Icons Section/ Programming language Icons ======================-->
+        <!--========================== Tools Icons Section/ Programming language Icons ======================-->
     </b-container>
     <b-container>
 
@@ -29,74 +29,17 @@
                 <b-img class="profileImg" src="/img/home/Hutto_David_DFW_Web Maintenance_500.jpg" fluid></b-img>
             </b-col>
         </b-row>
+        <!--=========================== Skills Section ======================-->
         <b-row class="mb-5">
             <b-col cols="12">
                 <h1 class="sectionHeader skillsHeader mb-5">Skills</h1>
             </b-col>
-            <!--======================= Front end Skill Section ==========================-->
-            <b-col cols="12" md="4" class="mb-5">
-                <div class="flexCenter">
-                    <div class="text-center">
-                        <div class="progress-chart-wrapper  development">
-                            <div class="progress-circle ">
-                                <div class="progress-fill development-fill"></div>
-                            </div>
-                            <div class="inner-content">
-                                <div class="inner-content-wrapper">
-                                    <i class="fas fa-code fa-4x my-5"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="my-2">Frontend Development</h4>
-                    </div>
-                </div>
-                <p> Food truck before they sold out 8-bit, ramps asymmetrical brooklyn man bun knausgaard DIY woke taxidermy chia banh mi raclette. </p>
-            </b-col>
-
-            <!--====================== Graphic Design Skill Section =============================-->
-            <b-col cols="12" md="4" class="mb-5">
-                <div class="flexCenter">
-                    <div class="text-center">
-                        <div class="progress-chart-wrapper design">
-                            <div class="progress-circle">
-                                <div class="progress-fill design-fill "></div>
-                            </div>
-                            <div class="inner-content">
-                                <div class="inner-content-wrapper">
-                                    <i class="fab fa-adobe fa-4x my-5"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="my-2">Design</h4>
-                    </div>
-                </div>
-                <p> Food truck before they sold out 8-bit, ramps asymmetrical brooklyn man bun knausgaard DIY woke taxidermy chia banh mi raclette. </p>
-            </b-col>
-
-            <!--============================ Marketing Skill Section ==========================-->
-            <b-col cols="12" md="4" class="mb-5">
-                <div class="flexCenter">
-                    <div class="text-center">
-                        <div class="progress-chart-wrapper marketing">
-                            <div class="progress-circle">
-                                <div class="progress-fill marketing-fill"></div>
-                            </div>
-                            <div class="inner-content">
-                                <div class="inner-content-wrapper">
-                                    <i class="fas fa-ad fa-4x"></i>
-                                    <h6 class="m-0 p-0">500hrs</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="my-2">Marketing</h4>
-                    </div>
-                </div>
-                <p> Food truck before they sold out 8-bit, ramps asymmetrical brooklyn man bun knausgaard DIY woke taxidermy chia banh mi raclette. </p>
-            </b-col>
-
-            <!--=========================== Contact Section ======================-->
+            <skill-card></skill-card>
+        </b-row>
+        <!--=========================== Contact Section ======================-->
+        <b-row class="mb-5">
             <b-col cols="12">
-                <h1 class="sectionHeader skillsHeader my-5">Contact</h1>
+                <h1 class="sectionHeader skillsHeader mb-5">Contact</h1>
             </b-col>
             <b-col>
                 <contact-section class="mb-5 mt-2"></contact-section>
@@ -104,33 +47,49 @@
         </b-row>
     </b-container>
     <b-container fluid>
-         <b-row class="toolsWrapper flexCenter mb-1">
+        <b-row class="toolsWrapper flexCenter mb-1">
             <b-col offset="1">
-                <b-img class="skillLogo" src="/img/home/langIcons/npm-logo-red.svg"></b-img>
+                <div class="circle">
+                    <b-img class="skillLogo" src="/img/home/langIcons/npm-logo-red.svg"></b-img>
+                </div>
             </b-col>
             <b-col>
-                <b-img class="skillLogo" src="/img/home/langIcons/Git-Logo-Black.png"></b-img>
+                <div class="circle">
+                    <b-img class="skillLogo" src="/img/home/langIcons/Git-Logo-Black.png"></b-img>
+                </div>
             </b-col>
             <b-col>
-                <b-img class="skillLogo" src="/img/home/langIcons/256px-Vue.js_Logo_2.svg.png"></b-img>
+                <div class="circle">
+                    <b-img class="skillLogo" src="/img/home/langIcons/256px-Vue.js_Logo_2.svg.png"></b-img>
+                </div>
             </b-col>
             <b-col>
-                <b-img class="skillLogo" src="/img/home/langIcons/javascript.svg"></b-img>
+                <div class="circle">
+                    <b-img class="skillLogo" src="/img/home/langIcons/javascript.svg"></b-img>
+                </div>
             </b-col>
             <!-- <b-col class="my-3" cols="2" offset="1">
                 <b-img class="skillLogo" src="/img/langIcons/react.svg"></b-img>
             </b-col> -->
             <b-col>
-                <b-img class="skillLogo" src="/img/home/langIcons/react.svg"></b-img>
+                <div class="circle">
+                    <b-img class="skillLogo" src="/img/home/langIcons/react.svg"></b-img>
+                </div>
             </b-col>
             <b-col>
-                <b-img class="skillLogo" src="/img/home/langIcons/css3-logo.png"></b-img>
+                <div class="circle">
+                    <b-img class="skillLogo" src="/img/home/langIcons/css3-logo.png"></b-img>
+                </div>
             </b-col>
             <b-col>
-                <b-img class="skillLogo" src="/img/home/langIcons/icon_512.67aef2.png"></b-img>
+                <div class="circle">
+                    <b-img class="skillLogo" src="/img/home/langIcons/icon_512.67aef2.png"></b-img>
+                </div>
             </b-col>
             <b-col>
-                <b-img class="skillLogo" src="/img/home/langIcons/Creative_Cloud.svg"></b-img>
+                <div class="circle">
+                    <b-img class="skillLogo" src="/img/home/langIcons/Creative_Cloud.svg"></b-img>
+                </div>
             </b-col>
         </b-row>
     </b-container>
@@ -138,134 +97,31 @@
 </template>
 
 <script>
-import Chart from 'chart.js'
-import planetChartData from '../components/ChartData.js';
-import contactSection from '../components/contact.vue'
+import contactSection from '../components/contact.vue';
+import skillCard from '../components/skills.vue'
 
 export default {
     name: 'home',
     data() {
         return {
-            myPercent: '70'
+
         }
     },
     methods: {
-        skillsProgress() {
-            var $develop = $('.development')
-            var $design = $('.design')
-            var $marketing = $('.marketing')
-            var developmentPercent = 70;
-            var marketingPercent = 45;
-            var designPercent = 35;
-            var designDeg = 360 * designPercent / 100;
-            var marketDeg = 360 * marketingPercent / 100;
-            var devDeg = 360 * developmentPercent / 100;
-            if (developmentPercent > 50) {
-                $develop.addClass('gt-50');
-            }
-            if (designPercent > 50) {
-                $design.addClass('gt-50');
-            }
-            if (marketingPercent > 50) {
-                $marketing.addClass('gt-50');
-            }
-            $('.development-fill').css('transform', 'rotate(' + devDeg + 'deg)');
-            $('.design-fill').css('transform', 'rotate(' + designDeg + 'deg)');
-            $('.marketing-fill').css('transform', 'rotate(' + marketDeg + 'deg)');
-        }
+
     },
     mounted() {
         this.skillsProgress()
     },
     components: {
         contactSection,
+        skillCard,
     }
 
 }
 </script>
 
 <style lang="scss" scoped>
-/* progress circle chart */
-@mixin circle($size) {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    left: calc(50% - #{$size/2});
-    top: calc(50% - #{$size/2});
-    width: $size;
-    height: $size;
-}
-
-$size: 200px;
-
-.development,
-.devlopment-fill {
-   background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
-}
-
-.design-fill {
-   background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
-}
-.marketing-fill {
- background-image: linear-gradient(to right, #92fe9d 0%, #00c9ff 100%);
-}
-
-.progress-chart-wrapper {
-    width: $size;
-    height: $size;
-    border-radius: 50%;
-    position: relative;
-}
-
-.progress-circle {
-    @include circle($size);
-    clip: rect(0, $size, $size, #{$size/2});
-
-    .progress-fill {
-        @include circle($size);
-        clip: rect(0, #{$size/2}, $size, 0);
-        transform: rotate(60deg);
-    }
-
-    .gt-50 & {
-        clip: rect(0, #{$size/2}, $size, 0);
-        border: none;
-
-        .progress-fill {
-            clip: rect(0, $size, $size, #{$size/2});
-            background: white;
-
-        }
-    }
-}
-
-.inner-content {
-    @include circle(#{$size/1.15});
-    background: #fff;
-    text-align: center;
-    display: table;
-    -webkit-box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.75);
-}
-
-.inner-content-wrapper {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.progress-chart-wrapper {
-    margin: 50px auto 0;
-}
-
-/* progress circle chart */
-.skillCard {
-    -webkit-box-shadow: 0px 0px 12px -6px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 12px -6px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 12px -6px rgba(0, 0, 0, 0.75);
-    height: 450px;
-}
-
 @media (max-width:992px) {
     .aboutWrapper {
         order: 2;
@@ -283,7 +139,7 @@ $size: 200px;
 
 .skillLogo {
     width: 3.5em;
-    filter: grayscale(.75);
+    filter: grayscale(.35);
 }
 
 .aboutWrapper,
@@ -352,4 +208,19 @@ $size: 200px;
 .sloganBackground {
     color: rgba(5, 5, 5, 0.89);
 }
+
+// .circle {
+//     height: 100px;
+//     width: 100px;
+//     margin: auto;
+//     border: none;
+//     border-radius: 50px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     background: white;
+//     -webkit-box-shadow: 0px 0px 25px -15px rgba(0, 0, 0, 0.75);
+//     -moz-box-shadow: 0px 0px 25px -15px rgba(0, 0, 0, 0.75);
+//     box-shadow: 0px 0px 25px -15px rgba(0, 0, 0, 0.75);
+// }
 </style>

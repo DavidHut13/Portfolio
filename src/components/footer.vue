@@ -12,7 +12,7 @@
             <i class="socialIcon fab fa-linkedin fa-3x mx-2"></i>
             <i class="socialIcon fab fa-github-square fa-3x mx-2"></i>
         </b-col> -->
-        <b-col class="mt-5">
+        <b-col class="mt-5 mb-4">
             <h4>Links</h4>
             <b-row>
                 <b-col cols="3">
@@ -23,14 +23,13 @@
                     <p class="m-1">Github</p>
                     <p class="m-1">code Pen</p>
                 </b-col>
-
+                <b-col cols="3" class="vueBadgeWrapper pr-0">
+                    <b-button variant="none" size="sm" href="https://vuejs.org/" target="_blank" class="m-1 vueBadge py-0 px" pill >made with <b-img class="vueLogo" src="/img/home/langIcons/256px-Vue.js_Logo_2.svg.png"></b-img>
+                    </b-button>
+                </b-col>
             </b-row>
         </b-col>
-        <b-col cols="12" class="text-right">
-             <b-link class="madeWithVue"   href="https://www.williamsauction.com" target="_blank">
-                <p>made with <b-img class="vueLogo" src="/img/home/langIcons/256px-Vue.js_Logo_2.svg.png"></b-img></p>
-            </b-link>
-        </b-col>
+
     </b-row>
 </b-container>
 </template>
@@ -40,7 +39,7 @@ export default {
     name: "appFooter",
     data() {
         return {
-    
+
         }
     },
 }
@@ -49,17 +48,19 @@ export default {
 <style scoped>
 .color {
     color: white;
-    background-color: rgb(7, 7, 7);
+    background-color: #4facfe;
 }
 
 .vueLogo {
     height: 1em;
 }
-.testing:hover{
-color:red;
+
+.testing:hover {
+    color: red;
 }
-::v-deep .madeWithVue{
-    color: #3EBA84 ;
+
+::v-deep .madeWithVue {
+    color: white;
 }
 
 .flexCenter {
@@ -77,5 +78,22 @@ color:red;
 
 .socialIcon {
     color: black;
+}
+
+.vueBadgeWrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.vueBadge{
+  color:black;
+  background:white;
+}
+
+.vueBadge:hover {
+    -webkit-box-shadow: 0px 0px 17px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 17px -7px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 17px -7px rgba(0, 0, 0, 0.75);
+    cursor:pointer;
 }
 </style>

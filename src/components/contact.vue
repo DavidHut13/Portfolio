@@ -19,12 +19,10 @@
                             <div class="textAreaWrapper py-3 pr-2">
                                 <b-form-textarea class="textAreaInput" id="textarea" v-model="messageText" placeholder="Enter your message here..." rows="6" max-rows="6"></b-form-textarea>
                             </div>
-
                         </b-form-group>
                         <div class="sendBtnWrapper">
                             <b-button variant="none" class="sendBtn px-5">Send</b-button>
                         </div>
-
                     </b-col>
                 </b-row>
             </b-card>
@@ -69,8 +67,7 @@ box-shadow:none;
     color: white;
     font-weight: bold;
     border-style: none;
-   background-image: linear-gradient(to right, #37ecba 0%, #72afd3 100%);
-   /* background-image: linear-gradient(to right, #4481eb 0%, #04befe 100%); */
+   background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
     border-radius:25px 25px 0px 25px;
 }
 

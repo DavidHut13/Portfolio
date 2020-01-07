@@ -193,7 +193,7 @@ a.nav-link {
 
 a.nav-link:hover,
 .socialIcon:hover, .signature:hover {
-    color:rgb(70, 248, 85);
+    color:#4facfe;
 }
 
 .socialIcon {
