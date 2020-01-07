@@ -71,7 +71,7 @@ box-shadow:none;
     border-style: none;
    background-image: linear-gradient(to right, #37ecba 0%, #72afd3 100%);
    /* background-image: linear-gradient(to right, #4481eb 0%, #04befe 100%); */
-    border-radius:30px;
+    border-radius:25px 25px 0px 25px;
 }
 
 .sendBtn:hover {

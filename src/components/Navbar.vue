@@ -48,14 +48,16 @@ export default {
             if (!this.navOpen) {
                 document.getElementById("navbarWrapper").style.opacity = "0";
                 document.getElementById("navbarWrapper").style.visibility = "hidden";
-                
-                document.getElementById("signature").style.color = "black"
+                // document.getElementById("signature").style.color = "black"
+                 $(signature).removeClass('colorWhite')
                 // $('body').css('overflow', 'auto')
             }
             if (this.navOpen) {
                 document.getElementById("navbarWrapper").style.opacity = "1";
                 document.getElementById("navbarWrapper").style.visibility = "visible";
-                document.getElementById("signature").style.color = "white"
+                // document.getElementById("signature").style.color = "white"
+               
+                $(signature).addClass('colorWhite')
                 // $('body').css('overflow', 'hidden')
             }
         },
@@ -79,7 +81,9 @@ export default {
     color: rgb(36, 36, 36);
     text-decoration: none;
 }
-
+.colorWhite{
+    color:white;
+}
 .navBackground {
     z-index: 5;
     position: fixed;
@@ -188,8 +192,8 @@ a.nav-link {
 }
 
 a.nav-link:hover,
-.socialIcon:hover {
-    color:rgb(87, 247, 82);
+.socialIcon:hover, .signature:hover {
+    color:rgb(70, 248, 85);
 }
 
 .socialIcon {
