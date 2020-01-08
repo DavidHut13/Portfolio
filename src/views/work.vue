@@ -12,7 +12,7 @@
         </b-row>
     </b-container>
     <b-container>
-        <b-row>
+        <b-row class="pb-5">
             <!-- ====================== Websites =======================-->
             <b-col class="mt-5" cols="12">
                 <h1 class="catagoryHeader">Websites</h1>
@@ -103,7 +103,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: black;
 }
 
 .mainTitle {
@@ -115,7 +115,7 @@ export default {
 }
 
 .backgroundColor {
-    background-color: rgb(7, 7, 7);
+    background-color: rgb(240, 240, 240);
 }
 
 .viewBtn {
@@ -145,7 +145,7 @@ export default {
 }
 
 .catagoryHeader {
-    color: white;
+    color: black;
 }
 
 .card {

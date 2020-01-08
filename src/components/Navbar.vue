@@ -62,10 +62,10 @@ export default {
             }
         },
         monitorScroll(event) {
-            if ($(window).scrollTop() > 300) {
+            if ($(window).scrollTop() > 150) {
                 $(navbar).addClass("navBackground");
             }
-            if ($(window).scrollTop() <= 300) {
+            if ($(window).scrollTop() <= 150) {
                 $(navbar).removeClass("navBackground");
             }
         },
@@ -164,7 +164,7 @@ export default {
     position: fixed;
     height: 40px;
     right: 3%;
-    top: 3%;
+    top: 2%;
     width: 40px;
     z-index: 2;
 }

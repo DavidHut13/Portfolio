@@ -1,10 +1,10 @@
 <template>
 <b-container class="color" fluid>
     <b-row>
-        <b-col cols="4" offset="3" class="mt-5">
+        <b-col cols="4" offset="2" class="mt-5">
             <h3>David Hutto</h3>
-            <h5> <i class="far fa-envelope-open"></i> dhutto_11@live.com</h5>
-            <h5><i class="fas fa-phone"></i> 682-559-2836</h5>
+            <p class="my-2"> <i class="far fa-envelope-open"></i> dhutto_11@live.com</p>
+            <p><i class="fas fa-phone"></i> 682-559-2836</p>
         </b-col>
         <!-- <b-col>
             <h4>Links</h4>
@@ -13,7 +13,7 @@
             <i class="socialIcon fab fa-github-square fa-3x mx-2"></i>
         </b-col> -->
         <b-col class="mt-5 mb-4">
-            <h4>Links</h4>
+            <h3 class="mb-1">Links</h3>
             <b-row>
                 <b-col cols="3">
                     <p class="m-1">Facebook</p>

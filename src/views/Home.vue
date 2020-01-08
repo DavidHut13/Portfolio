@@ -9,7 +9,7 @@
                 </div>
             </b-col>
         </b-row>
-        <!--========================== Tools Icons Section/ Programming language Icons ======================-->
+
     </b-container>
     <b-container>
 
@@ -34,6 +34,15 @@
             <b-col cols="12">
                 <h1 class="sectionHeader skillsHeader mb-5">Skills</h1>
             </b-col>
+            <b-col class="flexCenter" cols="4">
+                <div>
+                    <h3>Frontend Development</h3>
+                    <p class="aboutPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </b-col>
+            <b-col>
+                <b-img class="profileImg" src="/img/testing/view-of-airport-247791.jpg" fluid></b-img>
+            </b-col>
             <skill-card></skill-card>
         </b-row>
         <!--=========================== Contact Section ======================-->
@@ -46,9 +55,10 @@
             </b-col>
         </b-row>
     </b-container>
+    <!--========================== Tools Icons Section/ Programming language Icons ======================-->
     <b-container fluid>
         <b-row class="toolsWrapper flexCenter mb-1">
-            <b-col offset="1">
+            <b-col class="ml-5">
                 <div class="circle">
                     <b-img class="skillLogo" src="/img/home/langIcons/npm-logo-red.svg"></b-img>
                 </div>
@@ -68,9 +78,9 @@
                     <b-img class="skillLogo" src="/img/home/langIcons/javascript.svg"></b-img>
                 </div>
             </b-col>
-            <!-- <b-col class="my-3" cols="2" offset="1">
-                <b-img class="skillLogo" src="/img/langIcons/react.svg"></b-img>
-            </b-col> -->
+            <b-col class="my-3">
+                <b-img class="skillLogo" src="/img/Home/langIcons/HTML5_Badge_512.png"></b-img>
+            </b-col>
             <b-col>
                 <div class="circle">
                     <b-img class="skillLogo" src="/img/home/langIcons/react.svg"></b-img>
@@ -188,7 +198,7 @@ export default {
 }
 
 .bg-color {
-    background: white;
+    background: rgb(240, 239, 239);
 }
 
 .slogan {
