@@ -23,7 +23,7 @@
                     <h1 class="aboutName">David Hutto</h1>
                     <h3 class="aboutTitle"> Web Developer & Designer</h3>
                     <p class="aboutPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    
+
                 </div>
             </b-col>
             <b-col cols="12" lg="6" class="aboutPic mt-5">
@@ -35,18 +35,17 @@
             <b-col cols="12">
                 <h1 class="sectionHeader skillsHeader mb-5">Skills</h1>
             </b-col>
-            <b-col class="flexCenter" cols="4">
+            <b-col class="flexCenter" cols="4" offset="2">
                 <div>
-                    <h3>Frontend Development</h3>
+                    <h3>Digital Marketing</h3>
                     <p class="aboutPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <b-badge pill class="skillPill mx-1 px-2" >Vue.js</b-badge>
-                    <b-badge pill class="skillPill mx-1 px-2" >React</b-badge>
-                    <b-badge pill class="skillPill mx-1 px-2" >Bootstrap</b-badge>
-                    <b-badge pill class="skillPill mx-1 px-2" >git</b-badge>
+                    <b-badge pill class="skillPill mx-1 px-2">Facebook</b-badge>
+                    <b-badge pill class="skillPill mx-1 px-2">Instagram</b-badge>
+                    <b-badge pill class="skillPill mx-1 px-2">Google</b-badge>
                 </div>
             </b-col>
-            <b-col>
-                <b-img class="profileImg" src="/img/testing/view-of-airport-247791.jpg" fluid></b-img>
+            <b-col offset="2">
+                <b-img class="digitalMarketingPic" src="/img/testing/AdobeStock_198585224.png" fluid></b-img>
             </b-col>
             <skill-card></skill-card>
         </b-row>
@@ -238,4 +237,8 @@ export default {
 //     -moz-box-shadow: 0px 0px 25px -15px rgba(0, 0, 0, 0.75);
 //     box-shadow: 0px 0px 25px -15px rgba(0, 0, 0, 0.75);
 // }
+
+.digitalMarketingPic{
+    height:350px;
+}
 </style>
