@@ -12,7 +12,7 @@
         <!--========================== About Section ====================== -->
         <b-row class="mt-5 aboutPageWrapper">
             <b-col cols="11" class="aboutHeader">
-                <h1 class="sectionHeader">about</h1>
+                <h1 class="sectionHeader ml-4">about</h1>
             </b-col>
             <b-col cols="12" md="8" offset-md="2" lg="5" offset-lg="1" class="aboutWrapper mt-3">
                 <div>
@@ -28,7 +28,7 @@
         <!--=========================== Skills Section ======================-->
         <b-row class="mb-5">
             <b-col cols="11">
-                <h1 class="sectionHeader skillsHeader mb-5">Skills</h1>
+                <h1 class="sectionHeader skillsHeader ml-4 mb-5">Skills</h1>
             </b-col>
             <b-col>
                 <skill-card></skill-card>
@@ -37,7 +37,7 @@
         <!--=========================== Contact Section ======================-->
         <b-row class="mb-5">
             <b-col cols="12">
-                <h1 class="sectionHeader skillsHeader my-5">Contact</h1>
+                <h1 class="sectionHeader skillsHeader ml-4 my-5">Contact</h1>
             </b-col>
             <b-col>
                 <contact-section class="mb-5 mt-2"></contact-section>
