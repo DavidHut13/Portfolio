@@ -1,7 +1,7 @@
 <template>
 <b-container class="color" fluid>
     <b-row>
-        <b-col cols="4" offset="2" class="mt-5">
+        <b-col cols="6" md="4" offset-md="2" class="mt-5">
             <h3>David Hutto</h3>
             <p class="my-2"> <i class="far fa-envelope-open"></i> dhutto_11@live.com</p>
             <p><i class="fas fa-phone"></i> 682-559-2836</p>
@@ -12,24 +12,23 @@
             <i class="socialIcon fab fa-linkedin fa-3x mx-2"></i>
             <i class="socialIcon fab fa-github-square fa-3x mx-2"></i>
         </b-col> -->
-        <b-col class="mt-5 mb-4">
+        <b-col cols="6" class="mt-5 mb-4">
             <h3 class="mb-1">Links</h3>
             <b-row>
-                <b-col cols="3">
+                <b-col cols="12" md="6">
                     <p class="m-1">Facebook</p>
                     <p class="m-1">Linkden</p>
                 </b-col>
-                <b-col cols="3">
+                <b-col cols="12" md="6">
                     <p class="m-1">Github</p>
-                    <p class="m-1">code Pen</p>
-                </b-col>
-                <b-col cols="3" class="vueBadgeWrapper pr-0">
-                    <b-button variant="none" size="sm" href="https://vuejs.org/" target="_blank" class="m-1 vueBadge py-0 px" pill >made with <b-img class="vueLogo" src="/img/home/langIcons/256px-Vue.js_Logo_2.svg.png"></b-img>
-                    </b-button>
+                    <p class="m-1">Code Pen</p>
                 </b-col>
             </b-row>
         </b-col>
-
+        <b-col cols="12"  class="vueBadgeWrapper">
+            <b-button variant="none" size="sm" href="https://vuejs.org/" target="_blank" class="m-1 vueBadge py-0 px" pill>made with <b-img class="vueLogo" src="/img/home/langIcons/256px-Vue.js_Logo_2.svg.png"></b-img>
+            </b-button>
+        </b-col>
     </b-row>
 </b-container>
 </template>
@@ -48,7 +47,7 @@ export default {
 <style scoped>
 .color {
     color: white;
-    background-color: #4facfe;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
 }
 
 .vueLogo {
@@ -70,7 +69,6 @@ export default {
 }
 
 .socialIcon:hover {
-
     background-image: -webkit-linear-gradient(#266ed8, #009aff, #00beea, #00d99f, #1feb28);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -85,15 +83,16 @@ export default {
     align-items: flex-end;
     justify-content: flex-end;
 }
-.vueBadge{
-  color:black;
-  background:white;
+
+.vueBadge {
+    color: black;
+    background: white;
 }
 
 .vueBadge:hover {
     -webkit-box-shadow: 0px 0px 17px -7px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 17px -7px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 17px -7px rgba(0, 0, 0, 0.75);
-    cursor:pointer;
+    cursor: pointer;
 }
 </style>

@@ -4,7 +4,10 @@ import router from './router'
 import store from './store'
 import 'bootstrap/dist/css/bootstrap.css';
 import BootstrapVue from 'bootstrap-vue'
+import VueCarousel from 'vue-carousel';
 
+
+Vue.use(VueCarousel);
 Vue.use(BootstrapVue)
 
 Vue.config.productionTip = false

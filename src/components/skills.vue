@@ -2,14 +2,14 @@
 <b-container>
     <b-row>
         <!--======================= Front end Skill Section ==========================-->
-        <b-col cols="12" md="4" class="mb-5">
+        <b-col cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mb-5">
             <b-card class="text-center skillCard">
                 <div class="circle mb-4">
                     <i class="icon fas fa-code fa-3x mt-5"></i>
                 </div>
-                <h4>Frontend Development</h4>
+                <h4 class="skillHeader">Frontend Development</h4>
                 <p class="hours">800 Hours</p>
-                <b-badge pill class="skillPill mx-1" variant="none">Vue.js</b-badge>
+                <b-badge pill class="skillPill mx-1 " variant="none">Vue.js</b-badge>
                 <b-badge pill class="skillPill mx-1" variant="none">React</b-badge>
                 <b-badge pill class="skillPill mx-1" variant="none">Bootstrap</b-badge>
                 <b-badge pill class="skillPill mx-1" variant="none">git</b-badge>
@@ -19,8 +19,8 @@
             </b-card>
         </b-col>
         <!--====================== Graphic Design Skill Section =============================-->
-        <b-col cols="12" md="4" class="mb-5">
-               <b-card class="text-center skillCard">
+        <b-col cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mb-5">
+            <b-card class="text-center skillCard">
                 <div class="circle mb-4">
                     <i class="icon fab fa-adobe fa-3x mt-5"></i>
                 </div>
@@ -35,8 +35,8 @@
             </b-card>
         </b-col>
         <!--============================ Marketing Skill Section ==========================-->
-        <b-col cols="12" md="4" class="mb-5">
-                <b-card class="text-center skillCard">
+        <b-col cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mb-5">
+            <b-card class="text-center skillCard">
                 <div class="circle mb-4">
                     <i class="icon fas fa-ad fa-3x mt-5"></i>
                 </div>
@@ -62,11 +62,12 @@ export default {
 
 <style scoped>
 .skillCard {
-    height: 425px;
+    max-height: 475px;
     border: none;
-    -webkit-box-shadow: 0px 0px 12px -6px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 12px -6px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 12px -6px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 20px -7px rgba(168, 168, 168, 1);
+    -moz-box-shadow: 0px 0px 20px -7px rgba(168, 168, 168, 1);
+    box-shadow: 0px 0px 20px -7px rgba(168, 168, 168, 1);
 }
 
 .circle {
@@ -90,14 +91,16 @@ export default {
 .hours {
     color: rgb(88, 87, 87);
 }
-.skillPill{
-    border:1px solid #009aff;
+
+.skillPill {
+    color: white;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
 }
 
-.skillPill:hover{
-    cursor:pointer;
-    color:white;
-    border-color:4facfe;
+.skillPill:hover {
+    cursor: pointer;
+    color: white;
+    border-color: 4facfe;
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
 }
 </style>
