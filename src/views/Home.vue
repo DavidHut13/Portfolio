@@ -47,7 +47,7 @@
         <b-row class="toolsWrapper">
             <b-col cols="12" class="m-4">
                 <carousel :paginationEnabled="false" :scrollPerPage="false" :autoplay="true" :perPageCustom="[[960, 8], [720, 5],[350,4]]">
-                    <slide v-for="icon in iconArray" :key="icon" class="text-center">
+                    <slide v-for="(icon,index) in iconArray" :key="index" class="text-center">
                         <div class="circle">
                             <b-img fluid class="skillLogo " :src="icon.src"></b-img>
                         </div>
@@ -67,19 +67,24 @@ export default {
     name: 'home',
     data() {
         return {
-            iconArray: [{
+            iconArray: [
+                {
                     name: "npm",
                     src: "/img/home/langIcons/npm-logo-red.svg"
-                }, {
+                }, 
+                {
                     name: "Git",
                     src: "/img/home/langIcons/Git-Logo-Black.png"
-                }, {
+                }, 
+                {
                     name: "Vue",
                     src: "/img/home/langIcons/256px-Vue.js_Logo_2.svg.png"
-                }, {
+                }, 
+                {
                     name: "Javascript",
                     src: "/img/home/langIcons/javascript.svg"
-                }, {
+                }, 
+                {
                     name: "HTML",
                     src: "/img/Home/langIcons/HTML5_Badge_512.png"
                 },
@@ -90,7 +95,8 @@ export default {
                 {
                     name: "CSS",
                     src: "/img/home/langIcons/css3-logo.png"
-                }, {
+                }, 
+                {
                     name: "Bootstrap Vue",
                     src: "/img/home/langIcons/icon_512.67aef2.png"
                 },
@@ -198,9 +204,15 @@ export default {
     align-items: center;
     // font: bold 100px Impact, Sans-Serif;
     color: white;
-    font-size: 3.5em;
+    font-size: 4.25vw;
 }
 
+@media(max-width:540px){
+    .slogan{
+        font-size:6vw;
+    }
+
+}
 .content {
     height: 800px;
 }

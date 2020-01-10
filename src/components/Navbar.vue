@@ -88,7 +88,6 @@ export default {
     z-index: 5;
     position: fixed;
     height: 70px;
-    width: 80vw;
     background: white;
     -webkit-box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.75);
@@ -108,7 +107,12 @@ export default {
 }
 
 .linkWrapper {
-    width: 35vw;
+    margin-right:35vh;
+}
+@media (max-width:600px){
+    .linkWrapper {
+    margin-right:5vh;
+}
 }
 
 .bar1.active {

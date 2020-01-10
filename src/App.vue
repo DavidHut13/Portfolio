@@ -1,13 +1,13 @@
 <template>
 <div id="app">
-    <navbar id="navbar" class="navWrapper"></navbar>
+    <app-navbar id="navbar" class="navWrapper"></app-navbar>
     <router-view />
     <app-footer></app-footer>
 </div>
 </template>
 
 <script>
-import Navbar from './components/Navbar.vue'
+import appNavbar from './components/Navbar.vue'
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import appFooter from './components/footer.vue'
@@ -18,7 +18,7 @@ export default {
         }
     },
     components: {
-        navbar: Navbar,
+        appNavbar: appNavbar,
         appFooter: appFooter
     },
     methods: {
