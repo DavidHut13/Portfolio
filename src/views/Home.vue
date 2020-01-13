@@ -26,7 +26,7 @@
             </b-col>
         </b-row>
         <!--=========================== Skills Section ======================-->
-        <b-row class="mb-5">
+        <b-row class="mb-5 backgroundSplash">
             <b-col cols="11">
                 <h1 class="sectionHeader skillsHeader ml-4 mb-5">Skills</h1>
             </b-col>
@@ -237,5 +237,13 @@ export default {
 
 .skillsHeader {
     margin-top: 2em;
+}
+
+.backgroundSplash{
+       background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-image: url(/img/testing/AdobeStock_310146708_Preview.jpeg);
 }
 </style>
