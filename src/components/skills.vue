@@ -1,8 +1,11 @@
 <template>
 <b-container>
     <b-row>
+        <b-col cols="12">
+            <h1 class="sectionHeader skillsHeader mb-5">what I can do.</h1>
+        </b-col>
         <!--======================= Front end Skill Section ==========================-->
-        <b-col cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mb-5">
+        <b-col data-aos="fade-right" data-aos-delay="500" cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mb-5">
             <b-card class="text-center skillCard">
                 <div class="circle mb-4">
                     <i class="icon fas fa-code fa-3x mt-5"></i>
@@ -19,7 +22,7 @@
             </b-card>
         </b-col>
         <!--====================== Graphic Design Skill Section =============================-->
-        <b-col cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mb-5">
+        <b-col data-aos="fade-right" data-aos-delay="400" cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mb-5">
             <b-card class="text-center skillCard">
                 <div class="circle mb-4">
                     <i class="icon fab fa-adobe fa-3x mt-5"></i>
@@ -35,10 +38,10 @@
             </b-card>
         </b-col>
         <!--============================ Marketing Skill Section ==========================-->
-        <b-col cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mb-5">
+        <b-col data-aos="fade-right" cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mb-5">
             <b-card class="text-center skillCard">
                 <div class="circle mb-4">
-                    <i class="icon fas fa-ad fa-3x mt-5"></i>
+                    <i class="icon fab fa-facebook-f fa-3x mt-5"></i>
                 </div>
                 <h4>Marketing</h4>
                 <p class="hours">200 Hours</p>
@@ -56,13 +59,38 @@
 
 <script>
 export default {
+    mounted() {
+        import('aos').then(AOS => AOS.init({
+            once: false,
+            delay: 300,
+            mirror: true,
+            anchorPlacement: 'center-bottom',
+        }));
+    },
+    destroyed() {
+        AOS.refresh();
+    },
 
 }
 </script>
 
 <style scoped>
+.sectionHeader {
+    background-color: #5e5e5e;
+    color: rgb(54, 54, 54);
+    text-shadow: 2px 2px 3px rgba(145, 145, 145, 0.5);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    font-size: 5em;
+    font-family: 'Staatliches', cursive;
+}
+.skillsHeader {
+    margin-top: 2em;
+}
+
 .skillCard {
-    max-height: 475px;
+    height: 475px;
     border: none;
     border-radius: 10px;
     -webkit-box-shadow: 0px 0px 20px -7px rgba(168, 168, 168, 1);

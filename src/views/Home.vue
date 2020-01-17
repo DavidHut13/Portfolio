@@ -9,40 +9,28 @@
                 </div>
             </b-col>
         </b-row>
+
         <!--========================== About Section ====================== -->
-        <b-row class="mt-5 aboutPageWrapper">
-            <b-col cols="11" class="aboutHeader">
-                <h1 class="sectionHeader ml-4">about</h1>
-            </b-col>
-            <b-col cols="12" md="8" offset-md="2" lg="5" offset-lg="1" class="aboutWrapper mt-3">
-                <div>
-                    <h1 class="aboutName">David Hutto</h1>
-                    <h3 class="aboutTitle"> Web Developer & Designer</h3>
-                    <p class="aboutPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-            </b-col>
-            <b-col cols="12" lg="6" class="aboutPic mt-5">
-                <b-img class="profileImg" src="/img/home/Hutto_David_DFW_Web Maintenance_500.jpg" fluid></b-img>
+        <b-row>
+            <b-col>
+                <about-section></about-section>
             </b-col>
         </b-row>
+
         <!--=========================== Skills Section ======================-->
-        <b-row class="mb-5 backgroundSplash">
-            <b-col cols="11">
-                <h1 class="sectionHeader skillsHeader ml-4 mb-5">Skills</h1>
-            </b-col>
-            <b-col>
+        <b-row >
+            <b-col class="backgroundSplash">
                 <skill-card></skill-card>
             </b-col>
         </b-row>
+
         <!--=========================== Contact Section ======================-->
-        <b-row class="mb-5">
-            <b-col cols="12">
-                <h1 class="sectionHeader skillsHeader ml-4 my-5">Contact</h1>
-            </b-col>
+        <b-row>
             <b-col>
                 <contact-section class="mb-5 mt-2"></contact-section>
             </b-col>
         </b-row>
+
         <!--========================== Tools Icons Section/ Programming language Icons ======================-->
         <b-row class="toolsWrapper">
             <b-col cols="12" class="m-4">
@@ -60,30 +48,31 @@
 </template>
 
 <script>
+import AOS from 'aos'
 import contactSection from '../components/contact.vue';
 import skillCard from '../components/skills.vue'
+import aboutSection from '../components/about'
 
 export default {
     name: 'home',
     data() {
         return {
-            iconArray: [
-                {
+            iconArray: [{
                     name: "npm",
                     src: "/img/home/langIcons/npm-logo-red.svg"
-                }, 
+                },
                 {
                     name: "Git",
                     src: "/img/home/langIcons/Git-Logo-Black.png"
-                }, 
+                },
                 {
                     name: "Vue",
                     src: "/img/home/langIcons/256px-Vue.js_Logo_2.svg.png"
-                }, 
+                },
                 {
                     name: "Javascript",
                     src: "/img/home/langIcons/javascript.svg"
-                }, 
+                },
                 {
                     name: "HTML",
                     src: "/img/Home/langIcons/HTML5_Badge_512.png"
@@ -95,7 +84,7 @@ export default {
                 {
                     name: "CSS",
                     src: "/img/home/langIcons/css3-logo.png"
-                }, 
+                },
                 {
                     name: "Bootstrap Vue",
                     src: "/img/home/langIcons/icon_512.67aef2.png"
@@ -110,30 +99,44 @@ export default {
     methods: {
 
     },
+    mounted() {
+        import('aos').then(AOS => AOS.init({
+            once: false,
+            delay: 300,
+            mirror: true,
+            anchorPlacement: 'center-bottom',
+
+        }));
+    },
+    destroyed() {
+        AOS.refresh();
+    },
     components: {
         contactSection,
         skillCard,
+        aboutSection
     }
 
 }
 </script>
 
 <style lang="scss" scoped>
-.angledEdge {
-    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-    height: 400px;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+.sectionHeader {
+    background-color: #5e5e5e;
+    color: rgb(54, 54, 54);
+    text-shadow: 2px 2px 3px rgba(145, 145, 145, 0.5);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    font-size: 5em;
+    font-family: 'Staatliches', cursive;
 }
 
-@media (max-width:992px) {
-    .aboutWrapper {
-        order: 2;
-    }
-
-    .aboutPic {
-        order: 1;
-    }
+.angledEdge {
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    height: 800px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
 }
 
 .toolsWrapper {
@@ -148,44 +151,18 @@ export default {
     filter: grayscale(.35);
 }
 
-.aboutWrapper,
-.aboutPic {
-    display: flex;
-    justify-content: center;
-    align-items: center
-}
-
 .flexCenter {
     display: flex;
     justify-content: center;
     align-items: center
 }
 
-.aboutName {
-    color: #292F36;
-    font-weight: bold;
-}
-
-.profileImg {
-    border-radius: 300px;
-    max-height: 450px;
-}
-
-.sectionHeader {
-    color: #292F36;
-    font-size: 5em;
-    font-family: 'Staatliches', cursive;
-}
-
 .skillsWrapper {
     height: 100vh;
 }
 
-.aboutPageWrapper {
-    margin-top: 140px !important;
-}
-
 .homepage_background {
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -198,21 +175,24 @@ export default {
 }
 
 .slogan {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 50vh;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    position: absolute;
+    top: 45%;
     // font: bold 100px Impact, Sans-Serif;
     color: white;
     font-size: 4.25vw;
 }
 
-@media(max-width:540px){
-    .slogan{
-        font-size:6vw;
+@media(max-width:540px) {
+    .slogan {
+        font-size: 6vw;
     }
 
 }
+
 .content {
     height: 800px;
 }
@@ -235,15 +215,12 @@ export default {
 //     box-shadow: 0px 0px 25px -15px rgba(0, 0, 0, 0.75);
 // }
 
-.skillsHeader {
-    margin-top: 2em;
-}
-
-.backgroundSplash{
-       background-position: center;
+.backgroundSplash {
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    width:100%;
+
     background-image: url(/img/testing/AdobeStock_310146708_Preview.jpeg);
 }
 </style>
