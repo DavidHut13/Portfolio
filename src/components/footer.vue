@@ -16,16 +16,24 @@
             <h3 class="mb-1">Links</h3>
             <b-row>
                 <b-col cols="12" md="6">
-                    <p class="m-1">Facebook</p>
-                    <p class="m-1">Linkden</p>
+                    <b-link class="customLink" target="_blank" href="https://www.facebook.com/david.hutto.9?ref=bookmarks">
+                        <p class="m-1">Facebook</p>
+                    </b-link>
+                    <b-link class="customLink" href="https://www.linkedin.com/in/david-hutto-5a7b19139/" target="_blank">
+                        <p class="m-1">Linkden</p>
+                    </b-link>
                 </b-col>
                 <b-col cols="12" md="6">
-                    <p class="m-1">Github</p>
-                    <p class="m-1">Code Pen</p>
+                    <b-link class="customLink" href="https://github.com/DavidHut13" target="_blank">
+                        <p class="m-1">Github</p>
+                    </b-link>
+                    <b-link class="customLink" href="https://codepen.io/David_Hutt" target="_blank">
+                        <p class="m-1">Code Pen</p>
+                    </b-link>
                 </b-col>
             </b-row>
         </b-col>
-        <b-col cols="12"  class="vueBadgeWrapper">
+        <b-col cols="12" class="vueBadgeWrapper">
             <b-button variant="none" size="sm" href="https://vuejs.org/" target="_blank" class="m-1 vueBadge py-0 px" pill>made with <b-img class="vueLogo" src="/img/home/langIcons/256px-Vue.js_Logo_2.svg.png"></b-img>
             </b-button>
         </b-col>
@@ -94,5 +102,13 @@ export default {
     -moz-box-shadow: 0px 0px 17px -7px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 17px -7px rgba(0, 0, 0, 0.75);
     cursor: pointer;
+}
+.customLink{
+    color:white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.customLink:hover{
+    color:black;
 }
 </style>

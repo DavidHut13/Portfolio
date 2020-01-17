@@ -11,10 +11,10 @@
         </b-row>
         <!--========================== About Section ====================== -->
         <b-row class="mt-5 aboutPageWrapper">
-            <b-col cols="11" class="aboutHeader">
+            <b-col cols="12" offset-sm="1" md="8"  class="aboutHeader">
                 <h1 class="sectionHeader ml-4">about</h1>
             </b-col>
-            <b-col cols="12" md="8" offset-md="2" lg="5" offset-lg="1" class="aboutWrapper mt-3">
+            <b-col cols="10" offset="1" md="8" offset-md="2" lg="4" offset-lg="2" class=" aboutWrapper mt-3">
                 <div>
                     <h1 class="aboutName">David Hutto</h1>
                     <h3 class="aboutTitle"> Web Developer & Designer</h3>
@@ -27,19 +27,20 @@
         </b-row>
         <!--=========================== Skills Section ======================-->
         <b-row class="mb-5 backgroundSplash">
-            <b-col cols="11">
-                <h1 class="sectionHeader skillsHeader ml-4 mb-5">Skills</h1>
+
+            <b-col cols="11" md="8" offset="1">
+                <h1 class="sectionHeader skillsHeader   ml-4 mb-5">Skills</h1>
             </b-col>
-            <b-col>
+            <b-col cols="12">
                 <skill-card></skill-card>
             </b-col>
         </b-row>
         <!--=========================== Contact Section ======================-->
-        <b-row class="mb-5">
-            <b-col cols="12">
+        <b-row class="mb-5 ">
+            <b-col cols="12" md="8" offset="1">
                 <h1 class="sectionHeader skillsHeader ml-4 my-5">Contact</h1>
             </b-col>
-            <b-col>
+            <b-col md="8" offset-md="2"  lg="10" offset-lg="1">
                 <contact-section class="mb-5 mt-2"></contact-section>
             </b-col>
         </b-row>
@@ -67,23 +68,22 @@ export default {
     name: 'home',
     data() {
         return {
-            iconArray: [
-                {
+            iconArray: [{
                     name: "npm",
                     src: "/img/home/langIcons/npm-logo-red.svg"
-                }, 
+                },
                 {
                     name: "Git",
                     src: "/img/home/langIcons/Git-Logo-Black.png"
-                }, 
+                },
                 {
                     name: "Vue",
                     src: "/img/home/langIcons/256px-Vue.js_Logo_2.svg.png"
-                }, 
+                },
                 {
                     name: "Javascript",
                     src: "/img/home/langIcons/javascript.svg"
-                }, 
+                },
                 {
                     name: "HTML",
                     src: "/img/Home/langIcons/HTML5_Badge_512.png"
@@ -95,7 +95,7 @@ export default {
                 {
                     name: "CSS",
                     src: "/img/home/langIcons/css3-logo.png"
-                }, 
+                },
                 {
                     name: "Bootstrap Vue",
                     src: "/img/home/langIcons/icon_512.67aef2.png"
@@ -126,7 +126,7 @@ export default {
     clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
 }
 
-@media (max-width:992px) {
+@media (max-width:991px) {
     .aboutWrapper {
         order: 2;
     }
@@ -207,12 +207,13 @@ export default {
     font-size: 4.25vw;
 }
 
-@media(max-width:540px){
-    .slogan{
-        font-size:6vw;
+@media(max-width:540px) {
+    .slogan {
+        font-size: 6vw;
     }
 
 }
+
 .content {
     height: 800px;
 }
@@ -239,11 +240,11 @@ export default {
     margin-top: 2em;
 }
 
-.backgroundSplash{
-       background-position: center;
+.backgroundSplash {
+    background-position:right;
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    background-image: url(/img/testing/AdobeStock_310146708_Preview.jpeg);
+    background-size: fit;
+    background-image: url(/img/testing/AdobeStock_169431539_Preview.jpeg);
 }
+
 </style>
