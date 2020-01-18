@@ -78,6 +78,7 @@ export default {
 .signature {
     font-family: 'Work Sans', sans-serif;
     font-size: 1.75em;
+    font-weight: 900;
     color: rgb(36, 36, 36);
     text-decoration: none;
 }
@@ -108,7 +109,7 @@ export default {
 }
 
 .linkWrapper {
-    margin-right:35vh;
+    margin-right:25vw;
 }
 @media (max-width:600px){
     .linkWrapper {

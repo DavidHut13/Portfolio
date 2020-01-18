@@ -11,7 +11,7 @@
                         <b-img fluid class="mailImage" src="/img/AdobeStock_266976905_Preview.png"></b-img>
                         <!-- <i class="far fa-envelope-open fa-4x"></i> -->
                     </b-col>
-                    <b-col cols="10" offset="1" lg="6" offset-lg="0">
+                    <b-col cols="12" md="10" offset-md="1" lg="5" offset-lg="1">
                         <b-form-group id="name" label="Name">
                             <b-form-input></b-form-input>
                         </b-form-group>

@@ -223,4 +223,5 @@ export default {
 
     background-image: url(/img/testing/AdobeStock_310146708_Preview.jpeg);
 }
+
 </style>
