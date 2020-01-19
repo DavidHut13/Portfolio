@@ -74,8 +74,8 @@ export default {
 .downloadBtn {
     transition: all .2s ease-in-out;
     color: white;
-    border: white;
-    border-radius: 15px;
+    border: #4facfe;
+    border-radius:8px;
     -webkit-box-shadow: 0px 0px 12px -5px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 12px -5px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 12px -5px rgba(0, 0, 0, 0.75);

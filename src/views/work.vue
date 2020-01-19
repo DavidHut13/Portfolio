@@ -6,7 +6,7 @@
                 <div>
                     <h1 class="mainTitle">See what I've done</h1>
                     <h3 class="subTitle">This is a little bit of text</h3>
-                    <b-button class="viewBtn mt-2" variant="none">Look now</b-button>
+                    <b-button size="lg" class="viewBtn mt-2" variant="none">Look now</b-button>
                 </div>
             </b-col>
         </b-row>
@@ -119,23 +119,21 @@ export default {
 }
 
 .viewBtn {
-    background: #F40612;
-    border-color: #F40612;
-    font-weight: bold;
+    transition: all .2s ease-in-out;
     color: white;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 2px;
+    border: #4facfe;
+    border-radius:5px;
+    -webkit-box-shadow: 0px 0px 12px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 12px -5px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 12px -5px rgba(0, 0, 0, 0.75);
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
 }
 
 .viewBtn:hover {
-    background: transparent;
-    color: #F40612;
-    -webkit-box-shadow: 0px 0px 14px -2px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 14px -2px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 14px -2px rgba(0, 0, 0, 0.75);
-
+    transform: scale(1.1);
+    cursor: pointer;
 }
+
 
 .mainPageWrapper {
     background-position: center;
