@@ -18,7 +18,7 @@
         </b-row>
 
         <!--=========================== Skills Section ======================-->
-        <b-row >
+        <b-row>
             <b-col class="backgroundSplash">
                 <skill-card></skill-card>
             </b-col>
@@ -95,9 +95,6 @@ export default {
                 }
             ]
         }
-    },
-    methods: {
-
     },
     mounted() {
         import('aos').then(AOS => AOS.init({
@@ -219,9 +216,8 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width:100%;
+    width: 100%;
 
     background-image: url(/img/testing/AdobeStock_310146708_Preview.jpeg);
 }
-
 </style>
