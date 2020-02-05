@@ -10,8 +10,8 @@
                 </div>
                 <router-link class="logoWrapper" to="/">
                     <!-- <img class="navbar-logo" src="/img/Logos/VividDigitalLogoColor.png" fluid> -->
-                    <!-- <img  class="navbar-logo" src="/img/fullNameSignature.png" fluid> -->
-                    <h5 id="signature" class="signature">david hutto.</h5>
+                    <img  class="navbar-logo" src="/img/testing/logotest2.svg" fluid>
+                    <!-- <h5 id="signature" class="signature">david hutto.</h5> -->
                 </router-link>
                 <b-nav id="navbarWrapper" vertical class="navbarWrapper">
                     <div class="linkWrapper">
@@ -93,7 +93,7 @@ export default {
     -webkit-box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.75);
-    transition:max-height 2s ease-in;
+    transition:.2s ease-in;
 }
 
 .logoWrapper {
@@ -207,6 +207,6 @@ a.nav-link:hover,
 }
 
 .navbar-logo {
-    width: 160px;
+    width: 50px;
 }
 </style>

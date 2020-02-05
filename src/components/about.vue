@@ -9,7 +9,7 @@
                 <h1 data-aos="fade-right" class="aboutName">David Hutto</h1>
                 <h3 data-aos="fade-right" class="aboutTitle"> Web Developer & Designer</h3>
                 <p data-aos="fade-right" data-aos-delay="100" class="aboutPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <b-button size="lg"  class="downloadBtn" variant="none">Download CV</b-button>
+                <b-button size="lg" class="downloadBtn" variant="none">Download CV</b-button>
             </div>
         </b-col>
         <b-col cols="12" lg="6" class="aboutPic">
@@ -75,16 +75,25 @@ export default {
     transition: all .2s ease-in-out;
     color: white;
     border: #4facfe;
-    border-radius:5px;
-    -webkit-box-shadow: 0px 0px 12px -5px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 12px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 12px -5px rgba(0, 0, 0, 0.75);
+    border-radius: 5px;
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    -webkit-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
 }
 
 .downloadBtn:hover {
-    transform: scale(1.1);
+    transform: translateY(-4px);
     cursor: pointer;
+    -webkit-box-shadow: 0px 10px 19px -8px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 0px 10px 19px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 10px 19px -8px rgba(0, 0, 0, 0.68);
+}
 
+.downloadBtn:active {
+    transform: translateY(-1px);
+    -webkit-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
 }
 </style>
