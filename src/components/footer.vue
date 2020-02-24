@@ -79,7 +79,9 @@ export default {
 .socialIcon:hover {
     background-image: -webkit-linear-gradient(#266ed8, #009aff, #00beea, #00d99f, #1feb28);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+    
 }
 
 .socialIcon {

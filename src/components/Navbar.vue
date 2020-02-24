@@ -10,7 +10,7 @@
                 </div>
                 <router-link class="logoWrapper" to="/">
                     <!-- <img class="navbar-logo" src="/img/Logos/VividDigitalLogoColor.png" fluid> -->
-                    <img  class="navbar-logo" src="/img/testing/logotest2.svg" fluid>
+                    <img class="navbar-logo" src="\img\Logos\Logo-2.svg" fluid>
                     <!-- <h5 id="signature" class="signature">david hutto.</h5> -->
                 </router-link>
                 <b-nav id="navbarWrapper" vertical class="navbarWrapper">
@@ -49,14 +49,14 @@ export default {
                 document.getElementById("navbarWrapper").style.opacity = "0";
                 document.getElementById("navbarWrapper").style.visibility = "hidden";
                 // document.getElementById("signature").style.color = "black"
-                 $(signature).removeClass('colorWhite')
+                $(signature).removeClass('colorWhite')
                 // $('body').css('overflow', 'auto')
             }
             if (this.navOpen) {
                 document.getElementById("navbarWrapper").style.opacity = "1";
                 document.getElementById("navbarWrapper").style.visibility = "visible";
                 // document.getElementById("signature").style.color = "white"
-               
+
                 $(signature).addClass('colorWhite')
                 // $('body').css('overflow', 'hidden')
             }
@@ -82,9 +82,11 @@ export default {
     color: rgb(36, 36, 36);
     text-decoration: none;
 }
-.colorWhite{
-    color:white;
+
+.colorWhite {
+    color: white;
 }
+
 .navBackground {
     z-index: 5;
     position: fixed;
@@ -93,7 +95,7 @@ export default {
     -webkit-box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.75);
-    transition:.2s ease-in;
+    transition: .2s ease-in;
 }
 
 .logoWrapper {
@@ -109,17 +111,20 @@ export default {
 }
 
 .linkWrapper {
-    margin-right:25vw;
+    margin-right: 25vw;
 }
-@media (max-width:600px){
+
+@media (max-width:600px) {
     .linkWrapper {
-    margin-right:5vh;
-}
+        margin-right: 5vh;
+    }
 }
 
 .bar1.active {
     top: 10px;
     background-color: white;
+    transform: rotate(-135deg);
+    transition: all .5s ease-in;
     -webkit-transform: rotate(-135deg);
     -webkit-transition: all .5s ease-in;
 }
@@ -128,13 +133,16 @@ export default {
     left: 0px;
     background-color: transparent;
     -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
 }
 
 .bar3.active {
     top: 10px;
     background-color: white;
+    transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
     -webkit-transition: all .5s ease-in;
+    transition: all .5s ease-in;
 }
 
 .topNavItem {
@@ -149,11 +157,13 @@ export default {
     font-size: 10px;
     padding: 0;
     width: 40px;
-    height: 4px;
-    border-radius: 8px;
+    height: 5px;
+    border-radius: 4px;
     -webkit-appearance: none;
     -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
     -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
     background-color: black;
 }
 
@@ -197,9 +207,31 @@ a.nav-link {
     display: inline-block;
 }
 
+a.nav-link:visited,
+a.nav-link:link,
+.socialIcon {
+    display: inline-block;
+    font-size: 4rem;
+    font-weight: 300;
+    margin: 1rem;
+    color: transparent;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: linear-gradient(120deg, white 0%, white 50%, #4facfe 0%, #00f2fe 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-size: 260%;
+    transition: all .5s;
+    backface-visibility: hidden;
+}
+
+a.nav-link:active,
 a.nav-link:hover,
-.socialIcon:hover, .signature:hover {
-    color:#4facfe;
+.socialIcon:active,
+.socialIcon:hover {
+    transform: scale(1.1);
+    background-position: 100%;
+    color: transparent;
 }
 
 .socialIcon {

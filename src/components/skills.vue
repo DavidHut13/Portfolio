@@ -1,11 +1,11 @@
 <template>
 <b-container>
     <b-row>
-        <b-col cols="12">
-            <h1 class="sectionHeader skillsHeader mb-5">what I can do.</h1>
-        </b-col>
+           <b-col cols="12">
+                <h1 class="sectionHeader skillsHeader mb-5">what I can do.</h1>
+            </b-col>
         <!--======================= Front end Skill Section ==========================-->
-        <b-col data-aos="fade-right" data-aos-delay="500" cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mb-5">
+        <b-col data-aos="fade-right" data-aos-delay="500" cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mt-4">
             <b-card class="text-center skillCard">
                 <div class="circle mb-4">
                     <i class="icon fas fa-code fa-3x mt-5"></i>
@@ -22,7 +22,7 @@
             </b-card>
         </b-col>
         <!--====================== Graphic Design Skill Section =============================-->
-        <b-col data-aos="fade-right" data-aos-delay="400" cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mb-5">
+        <b-col data-aos="fade-right" data-aos-delay="400" cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mt-4">
             <b-card class="text-center skillCard">
                 <div class="circle mb-4">
                     <i class="icon fab fa-adobe fa-3x mt-5"></i>
@@ -38,7 +38,7 @@
             </b-card>
         </b-col>
         <!--============================ Marketing Skill Section ==========================-->
-        <b-col data-aos="fade-right" cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mb-5">
+        <b-col data-aos="fade-right" cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mt-4">
             <b-card class="text-center skillCard">
                 <div class="circle mb-4">
                     <i class="icon fab fa-facebook-f fa-3x mt-5"></i>
@@ -93,9 +93,9 @@ export default {
     height: 475px;
     border: none;
     border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 20px -7px rgba(168, 168, 168, 1);
-    -moz-box-shadow: 0px 0px 20px -7px rgba(168, 168, 168, 1);
-    box-shadow: 0px 0px 20px -7px rgba(168, 168, 168, 1);
+    -webkit-box-shadow: 0px 0px 20px -7px rgb(15, 15, 15);
+    -moz-box-shadow: 0px 0px 20px -7px rgb(8, 8, 8);
+    box-shadow: 0px 0px 20px -7px rgb(49, 48, 48);
 }
 
 .circle {

@@ -3,9 +3,12 @@
     <!--======================== Home Screen =========================-->
     <b-container fluid>
         <b-row>
-            <b-col class="homepage_background">
-                <div class="flexCenter">
-                    <h1 class="slogan text-center"><span class="p-2 ">Front-end Developer</span> | <span class="p-2 sloganBackground">Designer</span></h1>
+            <b-col cols="3" offset="5"  class="homepage_background mt-5">
+
+            </b-col>
+            <b-col cols="12">
+                <div class="flexCenter sloganWrapper">
+                    <h1 class="slogan text-center"><span class="sloganBackground">Developer |</span>  <span class="sloganColor"> Designer</span></h1>
                 </div>
             </b-col>
         </b-row>
@@ -18,8 +21,9 @@
         </b-row>
 
         <!--=========================== Skills Section ======================-->
-        <b-row>
-            <b-col class="backgroundSplash">
+        <b-row class="tests">
+            <b-col cols="12" class="backgroundSplash"></b-col>
+            <b-col >
                 <skill-card></skill-card>
             </b-col>
         </b-row>
@@ -27,10 +31,9 @@
         <!--=========================== Contact Section ======================-->
         <b-row>
             <b-col>
-                <contact-section class="mb-5 mt-2"></contact-section>
+                <contact-section class="my-5"></contact-section>
             </b-col>
         </b-row>
-
         <!--========================== Tools Icons Section/ Programming language Icons ======================-->
         <b-row class="toolsWrapper">
             <b-col cols="12" class="m-4">
@@ -77,10 +80,10 @@ export default {
                     name: "HTML",
                     src: "/img/Home/langIcons/HTML5_Badge_512.png"
                 },
-                // {
-                //     name: "React",
-                //     src: "/img/home/langIcons/react.svg"
-                // }
+                {
+                    name: "React",
+                    src: "/img/home/langIcons/react.svg"
+                },
                 {
                     name: "CSS",
                     src: "/img/home/langIcons/css3-logo.png"
@@ -118,6 +121,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.sloganWrapper{
+height:30vh;
+}
+.tests{
+    position:relative;
+}
+.backgroundSplash {
+    background-position: center;
+    background-size: cover;
+    height:70%;
+    position:absolute;
+    top:30%;
+    z-index:0;
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+}
 .sectionHeader {
     background-color: #5e5e5e;
     color: rgb(54, 54, 54);
@@ -145,7 +165,7 @@ export default {
 
 .skillLogo {
     width: 3.5em;
-    filter: grayscale(.35);
+    filter: grayscale(.6);
 }
 
 .flexCenter {
@@ -163,8 +183,10 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
-    background-image: url(/img/Home/AdobeStock_275693862.jpeg);
+    height:50vh;
+    mask-image:url(/img/testing/bracketMaskBlack.svg);
+    mask-repeat: no-repeat;
+    background-image: url(/img/Archive/vlad-busuioc-xyPxcqh8Tt8-unsplash.jpg);
 }
 
 .bg-color {
@@ -181,11 +203,12 @@ export default {
     // font: bold 100px Impact, Sans-Serif;
     color: white;
     font-size: 4.25vw;
+    
 }
 
 @media(max-width:540px) {
     .slogan {
-        font-size: 6vw;
+        font-size: 8vw;
     }
 
 }
@@ -194,8 +217,13 @@ export default {
     height: 800px;
 }
 
-.sloganBackground {
+.slogan {
     color: rgba(5, 5, 5, 0.89);
+}
+.sloganColor{
+   background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+-webkit-background-clip:text;
+ color:transparent;
 }
 
 // .circle {
@@ -212,12 +240,5 @@ export default {
 //     box-shadow: 0px 0px 25px -15px rgba(0, 0, 0, 0.75);
 // }
 
-.backgroundSplash {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
 
-    background-image: url(/img/testing/AdobeStock_310146708_Preview.jpeg);
-}
 </style>
