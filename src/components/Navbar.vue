@@ -153,12 +153,13 @@ export default {
 .bar2,
 .bar3 {
     position: absolute;
+    cursor:pointer;
     display: block;
     font-size: 10px;
     padding: 0;
     width: 40px;
-    height: 5px;
-    border-radius: 4px;
+    height: 4px;
+    border-radius: 2px;
     -webkit-appearance: none;
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;

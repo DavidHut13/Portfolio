@@ -3,7 +3,7 @@
     <!--======================== Home Screen =========================-->
     <b-container fluid>
         <b-row>
-            <b-col cols="3" offset="5"  class="homepage_background mt-5">
+            <b-col class="homepage_background">
 
             </b-col>
             <b-col cols="12">
@@ -130,9 +130,9 @@ height:30vh;
 .backgroundSplash {
     background-position: center;
     background-size: cover;
-    height:70%;
+    height:85%;
     position:absolute;
-    top:30%;
+    top:25%;
     z-index:0;
     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
@@ -184,8 +184,11 @@ height:30vh;
     background-repeat: no-repeat;
     background-size: cover;
     height:50vh;
-    mask-image:url(/img/testing/bracketMaskBlack.svg);
+    text-align:center;
+    margin-top:140px;
+    mask-image:url(/img/testing/bracketMaskblack.svg);
     mask-repeat: no-repeat;
+    mask-position: center;
     background-image: url(/img/Archive/vlad-busuioc-xyPxcqh8Tt8-unsplash.jpg);
 }
 
@@ -194,15 +197,14 @@ height:30vh;
 }
 
 .slogan {
-    height: 50vh;
     // display: flex;
     // justify-content: center;
     // align-items: center;
     position: absolute;
-    top: 45%;
+    top: 20%;
     // font: bold 100px Impact, Sans-Serif;
     color: white;
-    font-size: 4.25vw;
+    font-size: 5.25vw;
     
 }
 
@@ -211,6 +213,12 @@ height:30vh;
         font-size: 8vw;
     }
 
+}
+
+@media(max-width:540px) {
+    .backgroundSplash {
+        top:15%;
+    }
 }
 
 .content {
