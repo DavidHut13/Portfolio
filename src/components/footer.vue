@@ -33,8 +33,8 @@
                 </b-col>
             </b-row>
         </b-col>
-        <b-col cols="12" class="vueBadgeWrapper">
-            <b-button variant="none" size="sm" href="https://vuejs.org/" target="_blank" class="m-1 vueBadge py-0 px" pill>made with <b-img class="vueLogo" src="/img/home/langIcons/256px-Vue.js_Logo_2.svg.png"></b-img>
+        <b-col cols="12" class="vueBadgeWrapper text-center">
+            <b-button variant="none" size="sm" href="https://vuejs.org/" target="_blank" class=" vueBadge py-0 my-3" pill>made with <b-img class="vueLogo" src="/img/home/langIcons/256px-Vue.js_Logo_2.svg.png"></b-img>
             </b-button>
         </b-col>
     </b-row>
@@ -88,22 +88,32 @@ export default {
     color: black;
 }
 
-.vueBadgeWrapper {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-}
+
+
 
 .vueBadge {
+    transition: all .2s ease-in-out;
     color: black;
     background: white;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
 }
 
 .vueBadge:hover {
-    -webkit-box-shadow: 0px 0px 17px -7px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 17px -7px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 17px -7px rgba(0, 0, 0, 0.75);
+    transform: translateY(-4px);
     cursor: pointer;
+    -webkit-box-shadow: 0px 10px 19px -8px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 0px 10px 19px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 10px 19px -8px rgba(0, 0, 0, 0.68);
+}
+
+.vueBadge:active {
+    transform: translateY(-1px);
+    -webkit-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
 }
 .customLink{
     color:white;
