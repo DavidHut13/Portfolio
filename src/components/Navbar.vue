@@ -195,7 +195,7 @@ export default {
     width: 100%;
     height: 100vh;
     transition: .5s;
-    background: #111517;
+    background: rgb(54, 54, 54);
     overflow: inherit;
     visibility: hidden;
 }
@@ -206,6 +206,8 @@ a.nav-link {
     color: white;
     padding: 0;
     display: inline-block;
+        -webkit-backface-visibility: hidden;
+     backface-visibility: hidden;
 }
 
 a.nav-link:visited,
@@ -218,7 +220,7 @@ a.nav-link:link,
     color: transparent;
     text-decoration: none;
     text-transform: uppercase;
-    background-image: linear-gradient(120deg, white 0%, white 50%, #4facfe 0%, #00f2fe 100%);
+    background-image: linear-gradient(110deg, white 0%, white 50%, #BA28F7 0%, #9A3CF4 100%);
     -webkit-background-clip: text;
     background-clip: text;
     background-size: 260%;

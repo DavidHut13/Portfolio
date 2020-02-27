@@ -55,7 +55,7 @@ export default {
 <style scoped>
 .color {
     color: white;
-    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+   background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
 }
 
 .vueLogo {

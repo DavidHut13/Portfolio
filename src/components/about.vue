@@ -7,7 +7,7 @@
         <b-col cols="12" md="10" offset-md="1" lg="6" offset-lg="0" class="aboutWrapper">
             <div>
                 <h1 data-aos="fade-right" class="aboutName">David Hutto</h1>
-                <h3 data-aos="fade-right" class="aboutTitle"> Web Developer & Designer</h3>
+                <h3 data-aos="fade-right" class="aboutTitle "> Web Developer & Designer</h3>
                 <p data-aos="fade-right" data-aos-delay="100" class="aboutPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 <b-button size="lg" class="downloadBtn" variant="none">Download CV</b-button>
             </div>
@@ -45,15 +45,22 @@ export default {
 
 .aboutName {
     color: #292F36;
-    font-weight: bold;
+    font-weight:bold;
+}
+.aboutTitle {
+
+}
+.aboutPara{
+    font-family: 'Raleway'; 
+    font-weight:400;
 }
 
 .profileImg {
     border-radius: 300px;
     max-height: 450px;
-    -webkit-box-shadow: 0px 0px 17px -9px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 17px -9px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 17px -9px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 34px -19px rgba(105,105,105,1);
+-moz-box-shadow: 0px 0px 34px -19px rgba(105,105,105,1);
+box-shadow: 0px 0px 34px -19px rgba(105,105,105,1);
 }
 
 .sectionHeader {
@@ -76,7 +83,7 @@ export default {
     color: white;
     border: #4facfe;
     border-radius: 5px;
-    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+    background-image: linear-gradient(to left, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
     -webkit-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
     -moz-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
     box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);

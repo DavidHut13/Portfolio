@@ -6,16 +6,18 @@
                <b-col cols="12" class="homepage_background">
 
                </b-col>
-               <b-col cols="12" md="10" offset-md="1" lg="8" class="titleWrapper" offset-lg="3">
-                    <h4 class="subTitle">Frontend</h4>
-                    <transition name="slide">
-                         <component :is="view"></component>
-                    </transition>
+               <b-col cols="10" offset="1" md="10" lg="7" class="titleWrapper flexCenter" offset-lg="2" xl="4" offset-xl="4">
+                    <div>
+                         <h4 class="subTitle">Frontend</h4>
+                         <transition name="slide">
+                              <component :is="view"></component>
+                         </transition>
+                    </div>
                </b-col>
           </b-row>
 
           <!--========================== About Section ====================== -->
-          <b-row>
+          <b-row class="aboutSection ">
                <b-col>
                     <about-section></about-section>
                </b-col>
@@ -112,7 +114,7 @@ export default {
           }));
      },
      created() {
-          this.displayTimer();
+          // this.displayTimer();
      },
      destroyed() {
           AOS.refresh();
@@ -148,24 +150,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.contactSection {
-     margin-bottom: 12%;
-}
 
+.aboutSection{
+margin-top: 10%;
+}
 .skillsSection {
      position: relative;
      margin-top: 10%;
      margin-bottom: 20%;
 }
+.contactSection {
+     margin-bottom: 12%;
+}
+
 
 .backgroundSplash {
+    -webkit-box-shadow: inset 0px 0px 30px 1px rgba(0,0,0,0.75);
+     -moz-box-shadow: inset 0px 0px 30px 1px rgba(0,0,0,0.75);
+     box-shadow: inset 0px 0px 30px 1px rgba(0,0,0,0.75);
      background-position: center;
      background-size: cover;
-     height: 85%;
+     height: 100%;
      position: absolute;
      top: 25%;
      z-index: 0;
-     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+     background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
      -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
      clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
 }
@@ -178,7 +187,7 @@ export default {
      -moz-background-clip: text;
      background-clip: text;
      font-size: 5em;
-     font-family: 'Staatliches', cursive;
+     font-family: 'Staatliches';
 }
 
 .toolsWrapper {
@@ -190,7 +199,8 @@ export default {
 
 .skillLogo {
      width: 3.5em;
-     filter: grayscale(.5);
+     filter: grayscale(1) contrast(1);
+
 }
 
 .flexCenter {
@@ -214,8 +224,11 @@ export default {
      mask-image: url(/img/testing/ArrowBracketMask.svg);
      mask-repeat: no-repeat;
      mask-position: center;
-     background-image: url(/img/Archive/vlad-busuioc-xyPxcqh8Tt8-unsplash.jpg);
+     background-image:linear-gradient(to bottom, rgba(251,40,247,.51) rgba(154,60,244,.3)) , url(/img/Archive/vlad-busuioc-xyPxcqh8Tt8-unsplash.jpg), ;
+      transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0,0,0);
 }
+
 
 .bg-color {
      background: rgb(240, 239, 239);
@@ -224,19 +237,20 @@ export default {
 .subTitle {
      font-size: 3rem;
      display: block;
-     margin-bottom: -20px;
-     position: absolute;
-     color: rgb(102, 102, 102);
-     font-family: 'Raleway', sans-serif;
-
+     margin-bottom:-4%;
+     color: rgb(54, 54, 54);
+     font-family: 'Raleway', cursive;
 }
 
 .title {
-     color: rgb(43, 43, 43);
+     background-image: linear-gradient(to top, #4facfe 0%, #00f2fe 100%);
+     color: rgb(54, 54, 54);
+     text-shadow: 2px 2px 3px rgba(145, 145, 145, 0.5);
+     -webkit-background-clip: text;
+     -moz-background-clip: text;
+     background-clip: text;
      font-size: 9rem;
      font-family: 'Staatliches', cursive;
-     position: absolute;
-     top:10%;
 }
 
 .titleWrapper {
@@ -257,6 +271,7 @@ export default {
 @media(max-width:540px) {
      .backgroundSplash {
           top: 15%;
+          height:85%;
      }
 }
 
@@ -270,7 +285,7 @@ export default {
 
 .slide-enter {
      opacity: 0;
-     transform: translateX(-550px);
+     transform: translateX(-600px);
 }
 
 .slide-enter-to {
@@ -281,6 +296,6 @@ export default {
 
 .slide-leave-to {
      opacity: 0;
-     transform: translateX(550px);
+     transform: translateX(600px);
 }
 </style>

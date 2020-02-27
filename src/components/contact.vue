@@ -104,7 +104,7 @@ box-shadow: 0 30px 60px rgba(138,149,158,0.2);
      color: white;
      font-weight: bold;
      border-style: none;
-     background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+     background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
      border-radius: 25px 25px 0px 25px;
      -webkit-box-shadow: 0px 10px 11px -8px rgba(138,149,158,0.6);
      -moz-box-shadow: 0px 10px 11px -8px rgba(138,149,158,0.6);
