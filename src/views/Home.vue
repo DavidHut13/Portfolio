@@ -3,17 +3,14 @@
      <!--======================== Home Screen =========================-->
      <b-container fluid>
           <b-row>
-               <b-col class="homepage_background">
+               <b-col cols="12" class="homepage_background">
 
                </b-col>
-               <b-col cols="12">
-                    <div class="sloganWrapper flexCenter">
-                         <div>
-                              <h4 class="subTitle">Frontend</h4>
-                              <h1 class="title">Developer</h1>
-                              <!-- <h1 v-if="!isDeveloper" @mouseleave="isDeveloper = true" class="title">Designer</h1> -->
-                         </div>
-                    </div>
+               <b-col cols="12" md="10" offset-md="1" lg="8" class="titleWrapper" offset-lg="3">
+                    <h4 class="subTitle">Frontend</h4>
+                    <transition name="slide">
+                         <component :is="view"></component>
+                    </transition>
                </b-col>
           </b-row>
 
@@ -65,7 +62,7 @@ export default {
      name: 'home',
      data() {
           return {
-               // isDeveloper: true,
+               view: 'isDeveloper',
                iconArray: [{
                          name: "npm",
                          src: "/img/home/langIcons/npm-logo-red.svg"
@@ -114,32 +111,52 @@ export default {
 
           }));
      },
+     created() {
+          this.displayTimer();
+     },
      destroyed() {
           AOS.refresh();
+     },
+     methods: {
+          displayTimer() {
+               setInterval(() => {
+                    if (this.view == "isDesign") {
+                         this.view = "isDeveloper"
+                         return;
+                    }
+                    if (this.view == "isDeveloper") {
+                         this.view = "isDesign"
+                         return;
+                    }
+               }, 5000);
+
+          }
      },
      components: {
           contactSection,
           skillCard,
-          aboutSection
+          aboutSection,
+          'isDeveloper': {
+               template: '<h1 class="title">Developer</h1>'
+          },
+          'isDesign': {
+               template: '<h1 class="title">Designer</h1>'
+          }
      }
 
 }
 </script>
 
 <style lang="scss" scoped>
-.sloganWrapper {
-     height: 30vh;
-}
 .contactSection {
-     margin-bottom:12%;
+     margin-bottom: 12%;
 }
 
 .skillsSection {
      position: relative;
-       margin-top:10%;
-     margin-bottom:20%;
+     margin-top: 10%;
+     margin-bottom: 20%;
 }
-
 
 .backgroundSplash {
      background-position: center;
@@ -163,8 +180,6 @@ export default {
      font-size: 5em;
      font-family: 'Staatliches', cursive;
 }
-
-
 
 .toolsWrapper {
      background: rgba(255, 255, 255, 0.562);
@@ -205,31 +220,36 @@ export default {
 .bg-color {
      background: rgb(240, 239, 239);
 }
-.subTitle{
+
+.subTitle {
      font-size: 3rem;
-     display:block;
-     margin-bottom:-20px;
-}
-.title {
-     color: white;
-     font-size: 9rem;
-     color: rgb(54, 54, 54);
-     font-family: 'Staatliches', cursive;
-     background-color: #5e5e5e;
-     color: rgb(54, 54, 54);
-     text-shadow: 2px 2px 3px rgba(145, 145, 145, 0.5);
-     -webkit-background-clip: text;
-     -moz-background-clip: text;
-     background-clip: text;  
+     display: block;
+     margin-bottom: -20px;
+     position: absolute;
+     color: rgb(102, 102, 102);
+     font-family: 'Raleway', sans-serif;
+
 }
 
+.title {
+     color: rgb(43, 43, 43);
+     font-size: 9rem;
+     font-family: 'Staatliches', cursive;
+     position: absolute;
+     top:10%;
+}
+
+.titleWrapper {
+    height:20rem;
+}
 
 @media(max-width:640px) {
      .title {
           font-size: 5.3rem;
      }
-     .subTitle{
-          font-size:2rem;
+
+     .subTitle {
+          font-size: 2rem;
      }
 
 }
@@ -238,5 +258,29 @@ export default {
      .backgroundSplash {
           top: 15%;
      }
+}
+
+.slide-enter-active {
+     transition: all .85s;
+}
+
+.slide-leave-active {
+     transition: all .85s;
+}
+
+.slide-enter {
+     opacity: 0;
+     transform: translateX(-550px);
+}
+
+.slide-enter-to {
+     opacity: 1;
+
+}
+
+
+.slide-leave-to {
+     opacity: 0;
+     transform: translateX(550px);
 }
 </style>
