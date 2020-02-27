@@ -8,6 +8,7 @@ import VueCarousel from 'vue-carousel';
 import 'aos/dist/aos.css'
 
 
+
 Vue.use(VueCarousel);
 Vue.use(BootstrapVue)
 

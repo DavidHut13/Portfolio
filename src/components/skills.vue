@@ -58,6 +58,7 @@
 </template>
 
 <script>
+import AOS from 'aos'
 export default {
     mounted() {
         import('aos').then(AOS => AOS.init({
