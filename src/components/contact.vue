@@ -8,7 +8,7 @@
                <b-card class="customShadow">
                     <b-row>
                          <b-col data-aos="fade-right" data-aos-delay="400" cols="12" lg="6" class="flexCenter">
-                              <b-img fluid class="mailImage" src="/img/AdobeStock_266976905_Preview.png"></b-img>
+                              <b-img fluid class="mailImage" src="\img\contact\mail-icon.svg"></b-img>
                               <!-- <i class="far fa-envelope-open fa-4x"></i> -->
                          </b-col>
                          <b-col cols="12" md="10" offset-md="1" lg="5" offset-lg="1">
@@ -76,6 +76,11 @@ box-shadow: 0 30px 60px rgba(138,149,158,0.2);
 
 .mailImage {
      max-height: 250px;
+      -webkit-background-clip: text;
+     -moz-background-clip: text;
+     background-clip: text;
+     color:red;
+      background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
 }
 
 .textAreaWrapper {

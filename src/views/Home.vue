@@ -219,14 +219,11 @@ margin-top: 10%;
      background-repeat: no-repeat;
      background-size: cover;
      height: 50vh;
-     text-align: center;
      margin-top: 140px;
      mask-image: url(/img/testing/ArrowBracketMask.svg);
      mask-repeat: no-repeat;
      mask-position: center;
      background-image:linear-gradient(to bottom, rgba(251,40,247,.51) rgba(154,60,244,.3)) , url(/img/Archive/vlad-busuioc-xyPxcqh8Tt8-unsplash.jpg), ;
-      transform: translate3d(0,0,0);
-    -webkit-transform: translate3d(0,0,0);
 }
 
 
