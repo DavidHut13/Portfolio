@@ -223,7 +223,7 @@ margin-top: 10%;
      mask-image: url(/img/testing/ArrowBracketMask.svg);
      mask-repeat: no-repeat;
      mask-position: center;
-     background-image:linear-gradient(to bottom, rgba(251,40,247,.51) rgba(154,60,244,.3)) , url(/img/Archive/vlad-busuioc-xyPxcqh8Tt8-unsplash.jpg), ;
+     background-image:linear-gradient(to bottom, rgba(251,40,247,.71) rgba(154,60,244,.3)) , url(/img/Archive/vlad-busuioc-xyPxcqh8Tt8-unsplash.jpg), ;
 }
 
 

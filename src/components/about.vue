@@ -81,7 +81,6 @@ box-shadow: 0px 0px 34px -19px rgba(105,105,105,1);
 .downloadBtn {
     transition: all .2s ease-in-out;
     color: white;
-    border: #4facfe;
     border-radius: 5px;
     background-image: linear-gradient(to left, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
     -webkit-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
@@ -99,8 +98,8 @@ box-shadow: 0px 0px 34px -19px rgba(105,105,105,1);
 
 .downloadBtn:active {
     transform: translateY(-1px);
-    -webkit-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
-    -moz-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
-    box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
+    -webkit-box-shadow: 0px 10px 5px -8px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 0px 10px 5px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 10px 5px -8px rgba(0, 0, 0, 0.68);
 }
 </style>

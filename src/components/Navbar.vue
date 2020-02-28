@@ -9,9 +9,9 @@
                     <div id="bar" :class="{active: navOpen }" class="mt-1 bar3"></div>
                 </div>
                 <router-link class="logoWrapper" to="/">
-                    <!-- <img class="navbar-logo" src="/img/Logos/VividDigitalLogoColor.png" fluid> -->
-                    <img class="navbar-logo" src="\img\Logos\Logo-2.svg" fluid>
-                    <!-- <h5 id="signature" class="signature">david hutto.</h5> -->
+                    <img v-if="blackLogo" class="navbar-logo" src="\img\Logos\Logo-2.svg" fluid>
+                    <img v-if="!blackLogo" class="navbar-logo" src="\img\Logos\Logo-white.svg" fluid>
+   
                 </router-link>
                 <b-nav id="navbarWrapper" vertical class="navbarWrapper">
                     <div class="linkWrapper">
@@ -36,7 +36,7 @@ export default {
         return {
             windowTop: window.top.scrollYm,
             navOpen: false,
-            whiteLogo: false
+            blackLogo:true
         }
     },
     created() {
@@ -48,17 +48,16 @@ export default {
             if (!this.navOpen) {
                 document.getElementById("navbarWrapper").style.opacity = "0";
                 document.getElementById("navbarWrapper").style.visibility = "hidden";
-                // document.getElementById("signature").style.color = "black"
-                $(signature).removeClass('colorWhite')
-                // $('body').css('overflow', 'auto')
+                this.blackLogo = true;
+                console.log(this.blackLogo)
             }
             if (this.navOpen) {
                 document.getElementById("navbarWrapper").style.opacity = "1";
                 document.getElementById("navbarWrapper").style.visibility = "visible";
-                // document.getElementById("signature").style.color = "white"
-
-                $(signature).addClass('colorWhite')
-                // $('body').css('overflow', 'hidden')
+               
+                this.blackLogo = false;
+                console.log(this.blackLogo)
+             
             }
         },
         monitorScroll(event) {
@@ -75,17 +74,6 @@ export default {
 </script>
 
 <style lang="scss">
-.signature {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 1.75em;
-    font-weight: 900;
-    color: rgb(36, 36, 36);
-    text-decoration: none;
-}
-
-.colorWhite {
-    color: white;
-}
 
 .navBackground {
     z-index: 5;
@@ -195,7 +183,7 @@ export default {
     width: 100%;
     height: 100vh;
     transition: .5s;
-    background: rgb(54, 54, 54);
+    background: rgb(20, 20, 20);
     overflow: inherit;
     visibility: hidden;
 }
