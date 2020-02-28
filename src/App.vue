@@ -3,6 +3,7 @@
     <app-navbar id="navbar" class="navWrapper"></app-navbar>
     <router-view />
     <app-footer></app-footer>
+    <scroll-to-top></scroll-to-top>
 </div>
 </template>
 
@@ -10,7 +11,8 @@
 import appNavbar from './components/Navbar.vue'
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
-import appFooter from './components/footer.vue'
+import appFooter from './components/footer.vue';
+import ScrollToTop from './components//ScrollToTop';
 export default {
     data() {
         return {
@@ -19,7 +21,8 @@ export default {
     },
     components: {
         appNavbar: appNavbar,
-        appFooter: appFooter
+        appFooter: appFooter,
+        ScrollToTop
     },
     methods: {
     
@@ -28,5 +31,7 @@ export default {
 </script>
 
 <style lang="scss">
-
+html {
+  scroll-behavior: smooth;
+}
 </style>
