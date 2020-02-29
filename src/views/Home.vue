@@ -240,7 +240,6 @@ margin-top: 10%;
 }
 
 .title {
-     background-image: linear-gradient(to top, #4facfe 0%, #00f2fe 100%);
      color: rgb(54, 54, 54);
      text-shadow: 2px 2px 3px rgba(145, 145, 145, 0.5);
      -webkit-background-clip: text;
@@ -262,7 +261,9 @@ margin-top: 10%;
      .subTitle {
           font-size: 2rem;
      }
-
+          .titleWrapper {
+    height:10rem;
+}
 }
 
 @media(max-width:540px) {
@@ -270,6 +271,7 @@ margin-top: 10%;
           top: 15%;
           height:85%;
      }
+
 }
 
 .slide-enter-active {

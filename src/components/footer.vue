@@ -62,9 +62,7 @@ export default {
     height: 1em;
 }
 
-.testing:hover {
-    color: red;
-}
+
 
 ::v-deep .madeWithVue {
     color: white;

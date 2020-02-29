@@ -12,10 +12,10 @@
                               <!-- <i class="far fa-envelope-open fa-4x"></i> -->
                          </b-col>
                          <b-col cols="12" md="10" offset-md="1" lg="5" offset-lg="1">
-                              <b-form-group id="name" label="Name">
+                              <b-form-group class="input" id="name" label="Name">
                                    <b-form-input></b-form-input>
                               </b-form-group>
-                              <b-form-group id="email" label="Email">
+                              <b-form-group class="input" id="email" label="Email">
                                    <b-form-input></b-form-input>
                               </b-form-group>
                               <b-form-group id="message" label="Message">
@@ -58,11 +58,12 @@ export default {
 </script>
 
 <style scoped>
-.customShadow{
--webkit-box-shadow: 0 30px 60px rgba(138,149,158,0.2);
--moz-box-shadow: 0 30px 60px rgba(138,149,158,0.2);
-box-shadow: 0 30px 60px rgba(138,149,158,0.2);
+.customShadow {
+     -webkit-box-shadow: 0 30px 60px rgba(138, 149, 158, 0.2);
+     -moz-box-shadow: 0 30px 60px rgba(138, 149, 158, 0.2);
+     box-shadow: 0 30px 60px rgba(138, 149, 158, 0.2);
 }
+
 .sectionHeader {
      background-color: #5e5e5e;
      color: rgb(54, 54, 54);
@@ -76,11 +77,6 @@ box-shadow: 0 30px 60px rgba(138,149,158,0.2);
 
 .mailImage {
      max-height: 250px;
-      -webkit-background-clip: text;
-     -moz-background-clip: text;
-     background-clip: text;
-     color:red;
-      background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
 }
 
 .textAreaWrapper {
@@ -91,6 +87,21 @@ box-shadow: 0 30px 60px rgba(138,149,158,0.2);
 .textAreaInput {
      border: none !important;
      box-shadow: none;
+}
+
+.textAreaWrapper:focus-within {
+     border-color: #b928f7c7;
+     -webkit-box-shadow: 0px 0px 25px -10px rgba(186, 40, 247, 0.60);
+     -moz-box-shadow: 0px 0px 25px -10px rgba(186, 40, 247, 0.60);
+     box-shadow: 0px 0px 20px -10px rgba(186, 40, 247, 0.60);
+}
+
+input.form-control:focus  {
+    border-color: #b928f7c7;
+     -webkit-box-shadow: 0px 0px 25px -10px rgba(186, 40, 247, 0.60);
+     -moz-box-shadow: 0px 0px 25px -10px rgba(186, 40, 247, 0.60);
+     box-shadow: 0px 0px 20px -10px rgba(186, 40, 247, 0.60);
+    
 }
 
 .sendBtnWrapper {
@@ -111,18 +122,17 @@ box-shadow: 0 30px 60px rgba(138,149,158,0.2);
      border-style: none;
      background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
      border-radius: 25px 25px 0px 25px;
-     -webkit-box-shadow: 0px 10px 11px -8px rgba(138,149,158,0.6);
-     -moz-box-shadow: 0px 10px 11px -8px rgba(138,149,158,0.6);
-     box-shadow: 0px 10px 11px -8px rgba(138,149,158,0.6);
+     -webkit-box-shadow: 0px 10px 11px -8px rgba(138, 149, 158, 0.6);
+     -moz-box-shadow: 0px 10px 11px -8px rgba(138, 149, 158, 0.6);
+     box-shadow: 0px 10px 11px -8px rgba(138, 149, 158, 0.6);
 }
 
 .sendBtn.btn:active {
-    transform: translateY(-2px);
-    -webkit-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
-    -moz-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
-    box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
+     transform: translateY(-2px);
+     -webkit-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
+     -moz-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
+     box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
 }
-
 
 .sendBtn:hover {
      transform: translateY(-4px);

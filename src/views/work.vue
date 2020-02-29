@@ -118,20 +118,31 @@ export default {
     background-color: rgb(240, 240, 240);
 }
 
+
+
 .viewBtn {
-    transition: all .2s ease-in-out;
-    color: white;
-    border: #4facfe;
-    border-radius:5px;
-    -webkit-box-shadow: 0px 0px 12px -5px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 12px -5px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 0px 12px -5px rgba(0, 0, 0, 0.75);
-    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+     transition: all .2s ease-in-out;
+     color: white;
+     border-radius: 5px;
+     background-image: linear-gradient(to left, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
+     -webkit-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
+     -moz-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
+     box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
 }
 
 .viewBtn:hover {
-    transform: scale(1.1);
-    cursor: pointer;
+     transform: translateY(-4px);
+     cursor: pointer;
+     -webkit-box-shadow: 0px 10px 19px -8px rgba(0, 0, 0, 0.68);
+     -moz-box-shadow: 0px 10px 19px -8px rgba(0, 0, 0, 0.68);
+     box-shadow: 0px 10px 19px -8px rgba(0, 0, 0, 0.68);
+}
+
+.viewBtn:active {
+     transform: translateY(-1px);
+     -webkit-box-shadow: 0px 10px 5px -8px rgba(0, 0, 0, 0.68);
+     -moz-box-shadow: 0px 10px 5px -8px rgba(0, 0, 0, 0.68);
+     box-shadow: 0px 10px 5px -8px rgba(0, 0, 0, 0.68);
 }
 
 
