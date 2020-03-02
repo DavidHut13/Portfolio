@@ -11,14 +11,10 @@
                          <i class="icon fas fa-code fa-3x"></i>
                     </div>
                     <h4 class="cardHeader">Development</h4>
-                    <p class="hours">800 Hours</p>
-                    <!-- <b-badge pill class="skillPill mx-1 " variant="none">Vue.js</b-badge>
-                <b-badge pill class="skillPill mx-1" variant="none">React</b-badge>
-                <b-badge pill class="skillPill mx-1" variant="none">Bootstrap</b-badge>
-                <b-badge pill class="skillPill mx-1" variant="none">git</b-badge> -->
-                    <p>
+                    <development-chart></development-chart>
+                    <!-- <p>
                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
+                    </p> -->
                </b-card>
           </b-col>
           <!--====================== Graphic Design Skill Section =============================-->
@@ -59,6 +55,7 @@
 
 <script>
 import AOS from 'aos'
+import developmentChart from '../components/Charts/developmentChart.vue'
 export default {
      mounted() {
           import('aos').then(AOS => AOS.init({
@@ -71,6 +68,9 @@ export default {
      destroyed() {
           AOS.refresh();
      },
+     components: {
+          developmentChart,
+     }
 
 }
 </script>
