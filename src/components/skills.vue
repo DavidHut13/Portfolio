@@ -6,12 +6,15 @@
           </b-col>
           <!--======================= Front end Skill Section ==========================-->
           <b-col data-aos="fade-right" data-aos-delay="500" cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mt-4">
-               <b-card class="text-center skillCard">
+               <b-card class=" skillCard">
+                     <h4 class="cardHeader">Development</h4>
                     <div class="circle my-5">
                          <i class="icon fas fa-code fa-3x"></i>
                     </div>
-                    <h4 class="cardHeader">Development</h4>
-                    <development-chart></development-chart>
+                   <div  v-for="(progress,index) in development" :key="index">
+                         <progress-bar :prop="progress" ></progress-bar>
+                   </div>
+                    
                     <!-- <p>
                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p> -->
@@ -55,8 +58,13 @@
 
 <script>
 import AOS from 'aos'
-import developmentChart from '../components/Charts/developmentChart.vue'
+import progressBar from '../components/ProgressBar.vue'
 export default {
+     data(){
+          return{
+               development:[{label:"HTML", percent:"70%"},{label:"REACT", percent:"10%"}]
+          }
+     },
      mounted() {
           import('aos').then(AOS => AOS.init({
                once: false,
@@ -69,7 +77,7 @@ export default {
           AOS.refresh();
      },
      components: {
-          developmentChart,
+          progressBar,
      }
 
 }
@@ -143,10 +151,12 @@ export default {
 }
 
 .cardHeader {
-     border: 2px solid #ba28f7;
+     border:none;
      border-radius: 20px;
      padding: 4px 20px 4px 20px;
-     display: inline-block;
-     color: #ba28f7;
+     color: rgb(54, 54, 54);
+      font-family: 'Staatliches';
+      opacity:.5;
+      font-size:2rem;
 }
 </style>
