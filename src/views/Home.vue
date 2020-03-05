@@ -150,32 +150,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.aboutSection{
-margin-top: 10%;
+.aboutSection {
+     margin-top: 10%;
 }
+
 .skillsSection {
      position: relative;
      margin-top: 10%;
-     margin-bottom: 20%;
+     margin-bottom: 25%;
 }
+
 .contactSection {
      margin-bottom: 12%;
+
 }
 
-
 .backgroundSplash {
-    -webkit-box-shadow: inset 0px 0px 30px 1px rgba(0,0,0,0.75);
-     -moz-box-shadow: inset 0px 0px 30px 1px rgba(0,0,0,0.75);
-     box-shadow: inset 0px 0px 30px 1px rgba(0,0,0,0.75);
+     -webkit-box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
+     -moz-box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
+     box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
      background-position: center;
      background-size: cover;
      height: 100%;
      position: absolute;
-     top: 25%;
+     top:25%;
      z-index: 0;
      background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
-     -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+     -webkit-clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
      clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
 }
 
@@ -223,9 +224,8 @@ margin-top: 10%;
      mask-image: url(/img/testing/ArrowBracketMask.svg);
      mask-repeat: no-repeat;
      mask-position: center;
-     background-image:linear-gradient(to bottom, rgba(251,40,247,.71) rgba(154,60,244,.3)) , url(/img/Archive/vlad-busuioc-xyPxcqh8Tt8-unsplash.jpg), ;
+     background-image: linear-gradient(to bottom, rgba(212, 55, 243, 0.521)), url(/img/Archive/vlad-busuioc-xyPxcqh8Tt8-unsplash.jpg), ;
 }
-
 
 .bg-color {
      background: rgb(240, 239, 239);
@@ -234,7 +234,7 @@ margin-top: 10%;
 .subTitle {
      font-size: 3rem;
      display: block;
-     margin-bottom:-4%;
+     margin-bottom: -4%;
      color: rgb(54, 54, 54);
      font-family: 'Raleway', cursive;
 }
@@ -250,7 +250,7 @@ margin-top: 10%;
 }
 
 .titleWrapper {
-    height:20rem;
+     height: 20rem;
 }
 
 @media(max-width:640px) {
@@ -261,15 +261,21 @@ margin-top: 10%;
      .subTitle {
           font-size: 2rem;
      }
-          .titleWrapper {
-    height:10rem;
-}
-}
 
+     .titleWrapper {
+          height: 10rem;
+     }
+   
+}
+@media(max-width:991px) {
+  .backgroundSplash{
+          top:15%;
+     }
+}
 @media(max-width:540px) {
      .backgroundSplash {
           top: 15%;
-          height:85%;
+          height: 85%;
      }
 
 }
@@ -291,7 +297,6 @@ margin-top: 10%;
      opacity: 1;
 
 }
-
 
 .slide-leave-to {
      opacity: 0;

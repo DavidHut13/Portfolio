@@ -9,7 +9,7 @@
                     <div id="bar" :class="{active: navOpen }" class="mt-1 bar3"></div>
                 </div>
                 <router-link class="logoWrapper" to="/">
-                    <img v-if="blackLogo" class="navbar-logo" src="\img\Logos\Logo-2.svg" fluid>
+                    <img v-if="blackLogo" class="navbar-logo" src="\img\Logos\Logo.svg" fluid>
                     <img v-if="!blackLogo" class="navbar-logo" src="\img\Logos\Logo-white.svg" fluid>
    
                 </router-link>
@@ -99,7 +99,7 @@ export default {
 }
 
 .linkWrapper {
-    margin-right: 25vw;
+    margin-right: 5vw;
 }
 
 @media (max-width:600px) {
