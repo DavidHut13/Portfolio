@@ -1,10 +1,9 @@
 <template>
 <div>
      <p class="progressLabel">{{prop.label}}</p>
-     <div id="test" class="progressBackground my-1">
+     <div class="progressBackground my-1">
           <div id="progress-value" class="progress-value" :style="{width:prop.percent}"></div>
      </div>
-     <b-tooltip target="test">Vue: 800hrs </b-tooltip>
 </div>
 </template>
 

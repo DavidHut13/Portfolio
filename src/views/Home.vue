@@ -3,17 +3,21 @@
      <!--======================== Home Screen =========================-->
      <b-container fluid>
           <b-row>
-               <b-col cols="12" class="homepage_background">
-
-               </b-col>
+               <b-col cols="12" class="homepage_background"></b-col>
                <b-col cols="10" offset="1" md="10" lg="7" class="titleWrapper flexCenter" offset-lg="2" xl="4" offset-xl="4">
                     <div>
                          <h4 class="subTitle">Frontend</h4>
-                         <transition name="slide">
-                              <component :is="view"></component>
-                         </transition>
+                         <h1 class="title">Developer</h1>
                     </div>
                </b-col>
+               <!-- Alternative Landing Page Layout -->
+               <!-- <b-col cols="12" class="homepage_background  flexCenter">
+                    <div>
+                         <b-img class="brackets" src="/img/testing/bracketMaskblack.svg" fluid></b-img>
+                         <h4 class="subTitle">Frontend</h4>
+                         <h1 class="title">Developer</h1>
+                    </div>
+               </b-col> -->
           </b-row>
 
           <!--========================== About Section ====================== -->
@@ -64,7 +68,6 @@ export default {
      name: 'home',
      data() {
           return {
-               view: 'isDeveloper',
                iconArray: [{
                          name: "npm",
                          src: "/img/home/langIcons/npm-logo-red.svg"
@@ -119,31 +122,10 @@ export default {
      destroyed() {
           AOS.refresh();
      },
-     methods: {
-          displayTimer() {
-               setInterval(() => {
-                    if (this.view == "isDesign") {
-                         this.view = "isDeveloper"
-                         return;
-                    }
-                    if (this.view == "isDeveloper") {
-                         this.view = "isDesign"
-                         return;
-                    }
-               }, 5000);
-
-          }
-     },
      components: {
           contactSection,
           skillCard,
           aboutSection,
-          'isDeveloper': {
-               template: '<h1 class="title">Developer</h1>'
-          },
-          'isDesign': {
-               template: '<h1 class="title">Designer</h1>'
-          }
      }
 
 }
@@ -173,7 +155,7 @@ export default {
      background-size: cover;
      height: 100%;
      position: absolute;
-     top:25%;
+     top: 25%;
      z-index: 0;
      background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
      -webkit-clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
@@ -224,7 +206,7 @@ export default {
      mask-image: url(/img/testing/ArrowBracketMask.svg);
      mask-repeat: no-repeat;
      mask-position: center;
-     background-image: linear-gradient(to bottom, rgba(212, 55, 243, 0.521)), url(/img/Archive/vlad-busuioc-xyPxcqh8Tt8-unsplash.jpg), ;
+     background-image: url(/img/testing/markus-spiske-eo3Xr2yhYVw-unsplash.jpg), ;
 }
 
 .bg-color {
@@ -265,13 +247,15 @@ export default {
      .titleWrapper {
           height: 10rem;
      }
-   
+
 }
+
 @media(max-width:991px) {
-  .backgroundSplash{
-          top:15%;
+     .backgroundSplash {
+          top: 15%;
      }
 }
+
 @media(max-width:540px) {
      .backgroundSplash {
           top: 15%;

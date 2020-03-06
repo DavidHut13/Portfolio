@@ -24,9 +24,6 @@ export default {
         appFooter: appFooter,
         ScrollToTop
     },
-    methods: {
-    
-    }
 }
 </script>
 

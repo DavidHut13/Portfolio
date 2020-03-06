@@ -1,93 +1,46 @@
 <template>
 <div class="backgroundColor">
-    <b-container fluid>
-        <b-row>
-            <b-col cols="4" offset="1" class="mainPageWrapper workIntro">
-                <div>
-                    <h1 class="mainTitle">See what I've done</h1>
-                    <h3 class="subTitle">This is a little bit of text</h3>
-                    <b-button size="lg" class="viewBtn mt-2" variant="none">Look now</b-button>
-                </div>
-            </b-col>
-        </b-row>
-    </b-container>
-    <b-container>
-        <b-row class="pb-5">
-            <!-- ====================== Websites =======================-->
-            <b-col class="mt-5" cols="12">
-                <h1 class="catagoryHeader">Websites</h1>
-            </b-col>
-            <b-col cols="3">
-                <b-card class="shadow">
+     <b-container fluid>
+          <b-row class="mainPageWrapper">
+               <b-col cols="4" offset="1" class=" workIntro">
+                    <div>
+                         <h1 class="mainTitle">See what I've done</h1>
+                         <h3 class="subTitle">This is a little bit of text</h3>
+                         <b-button size="lg" class="viewBtn mt-2" variant="none">Look now</b-button>
+                    </div>
+               </b-col>
+               <b-col>
 
-                </b-card>
-            </b-col>
-            <b-col cols="3">
-                <b-card class="shadow">
+               </b-col>
+          </b-row>
+     </b-container>
+     <b-container >
+          <b-row class="pb-5">
+               <!-- ====================== Websites =======================-->
+               <b-col class="mt-5" cols="12">
+                    <h1 class="catagoryHeader">Websites</h1>
+               </b-col>
+               <b-col cols="12">
+                    <carousel :paginationEnabled="false" :scrollPerPage="false" :autoplay="true" :perPageCustom="[[960, 8], [720, 5],[350,4]]">
+                         <slide class="mx-3 py-3">
+                              <b-card class="cardWrapper websiteWrapper">
 
-                </b-card>
-            </b-col>
-            <b-col cols="3">
-                <b-card class="shadow">
+                              </b-card>
+                         </slide>
+                          <slide class="mx-3 py-3">
+                              <b-card class="cardWrapper">
 
-                </b-card>
-            </b-col>
-            <b-col cols="3">
-                <b-card class="shadow">
+                              </b-card>
+                         </slide>
+                          <slide class="mx-3 py-3">
+                              <b-card class="cardWrapper">
 
-                </b-card>
-            </b-col>
-
-            <!--========================== Components ===================== -->
-            <b-col class="mt-5" cols="12">
-                <h1 class="catagoryHeader">Components</h1>
-            </b-col>
-            <b-col cols="3">
-                <b-card class="shadow">
-
-                </b-card>
-            </b-col>
-            <b-col cols="3">
-                <b-card class="shadow">
-
-                </b-card>
-            </b-col>
-            <b-col cols="3">
-                <b-card class="shadow">
-
-                </b-card>
-            </b-col>
-            <b-col cols="3">
-                <b-card class="shadow">
-
-                </b-card>
-            </b-col>
-            <!--========================== Components ===================== -->
-            <b-col class="mt-5" cols="12">
-                <h1 class="catagoryHeader">Graphic Design</h1>
-            </b-col>
-            <b-col cols="3">
-                <b-card class="shadow">
-
-                </b-card>
-            </b-col>
-            <b-col cols="3">
-                <b-card class="shadow">
-
-                </b-card>
-            </b-col>
-            <b-col cols="3">
-                <b-card class="shadow">
-
-                </b-card>
-            </b-col>
-            <b-col cols="3">
-                <b-card class="shadow">
-
-                </b-card>
-            </b-col>
-        </b-row>
-    </b-container>
+                              </b-card>
+                         </slide>
+                    </carousel>
+               </b-col>
+          </b-row>
+     </b-container>
 </div>
 </template>
 
@@ -99,26 +52,42 @@ export default {
 </script>
 
 <style scoped>
+
+.websiteWrapper{
+ background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-image: url(/img/Work/view-of-airport-247791.jpg);
+}
+.cardWrapper{
+    height:400px;
+    width:270px;
+-webkit-box-shadow: 0px 0px 13px -4px rgba(0,0,0,0.2);
+-moz-box-shadow: 0px 0px 13px -4px rgba(0,0,0,0.2);
+box-shadow: 0px 0px 13px -4px rgba(0,0,0,0.2);
+}
+
+.card{
+    border:none;
+}
 .workIntro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: black;
 }
 
 .mainTitle {
-    font-size: 4.25em;
+     font-size: 4.25em;
 }
 
 .subTitle {
-    font-size: 2em;
+     font-size: 2em;
 }
 
 .backgroundColor {
-    background-color: rgb(240, 240, 240);
+     background-color: rgb(240, 240, 240);
 }
-
-
 
 .viewBtn {
      transition: all .2s ease-in-out;
@@ -145,19 +114,16 @@ export default {
      box-shadow: 0px 10px 5px -8px rgba(0, 0, 0, 0.68);
 }
 
-
 .mainPageWrapper {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     height: 100vh;
+     background-image: linear-gradient(to bottom, transparent, rgba(240, 240, 240, .85)), url(/img/testing/AdobeStock_282397552.jpeg);
 }
 
 .catagoryHeader {
-    color: black;
+     color: black;
 }
 
-.card {
-    height: 400px;
-}
 </style>

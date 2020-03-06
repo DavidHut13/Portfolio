@@ -61,10 +61,10 @@ export default {
             }
         },
         monitorScroll(event) {
-            if ($(window).scrollTop() > 752) {
+            if ($(window).scrollTop() > 52) {
                 $(navbar).addClass("navBackground");
             }
-            if ($(window).scrollTop() <= 752) {
+            if ($(window).scrollTop() <= 52) {
                 $(navbar).removeClass("navBackground");
             }
         },
