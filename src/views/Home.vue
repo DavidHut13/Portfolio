@@ -134,6 +134,7 @@ export default {
 <style lang="scss" scoped>
 .aboutSection {
      margin-top: 10%;
+      
 }
 
 .skillsSection {
@@ -198,7 +199,7 @@ export default {
 
 .homepage_background {
      background-attachment: fixed;
-     background-position: center;
+     background-position:center;
      background-repeat: no-repeat;
      background-size: cover;
      height: 50vh;
@@ -206,7 +207,7 @@ export default {
      mask-image: url(/img/testing/ArrowBracketMask.svg);
      mask-repeat: no-repeat;
      mask-position: center;
-     background-image: url(/img/testing/markus-spiske-eo3Xr2yhYVw-unsplash.jpg), ;
+     background-image: url(/img/testing/AdobeStock_194389209.jpeg);
 }
 
 .bg-color {
@@ -233,6 +234,7 @@ export default {
 
 .titleWrapper {
      height: 20rem;
+     
 }
 
 @media(max-width:640px) {

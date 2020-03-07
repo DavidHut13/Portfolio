@@ -2,19 +2,15 @@
 <div class="backgroundColor">
      <b-container fluid>
           <b-row class="mainPageWrapper">
-               <b-col cols="4" offset="1" class=" workIntro">
+               <b-col cols="8" class=" workIntro">
                     <div>
-                         <h1 class="mainTitle">See what I've done</h1>
-                         <h3 class="subTitle">This is a little bit of text</h3>
-                         <b-button size="lg" class="viewBtn mt-2" variant="none">Look now</b-button>
+                         <h4 class="subTitle">I few of my</h4>
+                         <h1 class="title">Projects</h1>
                     </div>
-               </b-col>
-               <b-col>
-
                </b-col>
           </b-row>
      </b-container>
-     <b-container >
+     <b-container>
           <b-row class="pb-5">
                <!-- ====================== Websites =======================-->
                <b-col class="mt-5" cols="12">
@@ -23,16 +19,21 @@
                <b-col cols="12">
                     <carousel :paginationEnabled="false" :scrollPerPage="false" :autoplay="true" :perPageCustom="[[960, 8], [720, 5],[350,4]]">
                          <slide class="mx-3 py-3">
-                              <b-card class="cardWrapper websiteWrapper">
-
+                              <b-card class="cardWrapper">
+                                   <div class="websiteBackground"></div>
+                                   <div class="projectInfo">
+                                        <h3>Name of website</h3>
+                                        <p>Vue / BootstrapVue</p>
+                                        <b-button class="viewBtn d-inline-block" pill>View</b-button>
+                                   </div>
                               </b-card>
                          </slide>
-                          <slide class="mx-3 py-3">
+                         <slide class="mx-3 py-3">
                               <b-card class="cardWrapper">
 
                               </b-card>
                          </slide>
-                          <slide class="mx-3 py-3">
+                         <slide class="mx-3 py-3">
                               <b-card class="cardWrapper">
 
                               </b-card>
@@ -51,25 +52,78 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.projectInfo {
+     width: 100%;
+     text-align: center;
+     position: absolute;
+     top: 25%;
+     left: 50%;
+     color: white;
+     transform: translate(-50%, 50%);
+     backface-visibility: hidden;
+     opacity:0;
+     transition: all .5s;
+}
 
-.websiteWrapper{
- background-position: center;
+.subTitle {
+     font-size: 3rem;
+     display: block;
+     margin-bottom: -4%;
+     color: rgb(54, 54, 54);
+     font-family: 'Raleway', cursive;
+}
+
+.title {
+     color: rgb(54, 54, 54);
+     text-shadow: 2px 2px 3px rgba(145, 145, 145, 0.5);
+     -webkit-background-clip: text;
+     -moz-background-clip: text;
+     background-clip: text;
+     font-size: 9rem;
+     font-family: 'Staatliches', cursive;
+}
+.cardWrapper:hover{
+     .projectInfo{
+          opacity:1;
+        transform: translate(-50%, 40%);
+     }
+     .websiteBackground{
+     transform: scale(1);
+     filter: blur(3px) brightness(69%);
+}
+}
+.cardWrapper {
+     height: 400px;
+     width: 270px;
+     overflow: hidden;
+     -webkit-box-shadow: 0px 0px 13px -4px rgba(0, 0, 0, 0.2);
+     -moz-box-shadow: 0px 0px 13px -4px rgba(0, 0, 0, 0.2);
+     box-shadow: 0px 0px 13px -4px rgba(0, 0, 0, 0.2);
+}
+
+.websiteBackground {
+     height: 100%;
+     width: 100%;
+     transform: translateX(-2rem) scale(1.4);
+     backface-visibility: hidden;
+     transition: all .5s;
+     background-position: center;
      background-repeat: no-repeat;
      background-size: cover;
-     background-image: url(/img/Work/view-of-airport-247791.jpg);
-}
-.cardWrapper{
-    height:400px;
-    width:270px;
--webkit-box-shadow: 0px 0px 13px -4px rgba(0,0,0,0.2);
--moz-box-shadow: 0px 0px 13px -4px rgba(0,0,0,0.2);
-box-shadow: 0px 0px 13px -4px rgba(0,0,0,0.2);
+     background-image: url(/img/testing/view-of-airport-247791.jpg);
 }
 
-.card{
-    border:none;
+
+
+.card-body {
+     padding: 0;
 }
+
+.card {
+     border: none;
+}
+
 .workIntro {
      display: flex;
      justify-content: center;
@@ -93,6 +147,8 @@ box-shadow: 0px 0px 13px -4px rgba(0,0,0,0.2);
      transition: all .2s ease-in-out;
      color: white;
      border-radius: 5px;
+     border:none;
+     padding: 5px 25px 5px 25px;
      background-image: linear-gradient(to left, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
      -webkit-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
      -moz-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
@@ -125,5 +181,4 @@ box-shadow: 0px 0px 13px -4px rgba(0,0,0,0.2);
 .catagoryHeader {
      color: black;
 }
-
 </style>
