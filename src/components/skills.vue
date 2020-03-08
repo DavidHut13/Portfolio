@@ -48,7 +48,6 @@
 </template>
 
 <script>
-import AOS from 'aos'
 import progressBar from '../components/ProgressBar.vue'
 export default {
      data() {
@@ -84,17 +83,6 @@ export default {
                     percent: '90%'
                }]
           }
-     },
-     mounted() {
-          import('aos').then(AOS => AOS.init({
-               once: false,
-               delay: 300,
-               mirror: true,
-               anchorPlacement: 'center-bottom',
-          }));
-     },
-     destroyed() {
-          AOS.refresh();
      },
      components: {
           progressBar,

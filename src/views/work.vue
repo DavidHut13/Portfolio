@@ -14,7 +14,7 @@
           <b-row class="pb-5">
                <!-- ====================== Websites =======================-->
                <b-col class="mt-5" cols="12">
-                    <h1 class="catagoryHeader">Websites</h1>
+                    <h1 class="catagoryHeader">websites.</h1>
                </b-col>
                <b-col cols="12">
                     <carousel :paginationEnabled="false" :scrollPerPage="false" :autoplay="true" :perPageCustom="[[960, 8], [720, 5],[350,4]]">
@@ -22,9 +22,9 @@
                               <b-card class="cardWrapper">
                                    <div class="websiteBackground"></div>
                                    <div class="projectInfo">
-                                        <h3>Name of website</h3>
-                                        <p>Vue / BootstrapVue</p>
-                                        <b-button class="viewBtn d-inline-block" pill>View</b-button>
+                                        <h3 class="projectTitle">Eloan Logic</h3>
+                                        <p class="projectTools">Vue | BootstrapVue</p>
+                                        <b-button variant="none" class="viewBtn d-inline-block" pill>View</b-button>
                                    </div>
                               </b-card>
                          </slide>
@@ -53,6 +53,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.projectTools{
+     color:#ba28f7;
+     font-weight:bold;
+     font-family: 'Roboto', sans-serif;
+}
+
+.projectTitle{
+     font-weight:bold;
+
+}
 .projectInfo {
      width: 100%;
      text-align: center;
@@ -105,13 +115,13 @@ export default {
 .websiteBackground {
      height: 100%;
      width: 100%;
-     transform: translateX(-2rem) scale(1.4);
+     transform: translateY(-2rem) scale(1.4);
      backface-visibility: hidden;
      transition: all .5s;
      background-position: center;
      background-repeat: no-repeat;
      background-size: cover;
-     background-image: url(/img/testing/view-of-airport-247791.jpg);
+     background-image: url(/img/testing/AdobeStock_308186809.jpeg);
 }
 
 
@@ -149,10 +159,11 @@ export default {
      border-radius: 5px;
      border:none;
      padding: 5px 25px 5px 25px;
-     background-image: linear-gradient(to left, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
      -webkit-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
      -moz-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
      box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
+     background:transparent;
+     border:2px solid #ba28f7;
 }
 
 .viewBtn:hover {
@@ -161,6 +172,7 @@ export default {
      -webkit-box-shadow: 0px 10px 19px -8px rgba(0, 0, 0, 0.68);
      -moz-box-shadow: 0px 10px 19px -8px rgba(0, 0, 0, 0.68);
      box-shadow: 0px 10px 19px -8px rgba(0, 0, 0, 0.68);
+     
 }
 
 .viewBtn:active {
@@ -168,6 +180,7 @@ export default {
      -webkit-box-shadow: 0px 10px 5px -8px rgba(0, 0, 0, 0.68);
      -moz-box-shadow: 0px 10px 5px -8px rgba(0, 0, 0, 0.68);
      box-shadow: 0px 10px 5px -8px rgba(0, 0, 0, 0.68);
+      background-image: linear-gradient(to left, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
 }
 
 .mainPageWrapper {
@@ -180,5 +193,8 @@ export default {
 
 .catagoryHeader {
      color: black;
+     font-weight: bold;
+     font-size:1.75rem;
+     font-family: 'Roboto', sans-serif;
 }
 </style>

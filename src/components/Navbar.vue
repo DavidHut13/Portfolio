@@ -17,10 +17,10 @@
                     <div class="linkWrapper">
                         <router-link id="navLink" tag="b-nav-item" class="topNavItem" to="/"><span @click="toggleNav">Home</span></router-link>
                         <router-link id="navLink" tag="b-nav-item" to="/work"><span @click="toggleNav">Work</span></router-link>
-                        <i class="socialIcon fab fa-facebook-square fa-3x mr-2"></i>
-                        <i class="socialIcon fab fa-linkedin fa-3x mx-2"></i>
-                        <i class="socialIcon fab fa-github-square fa-3x mx-2"></i>
-                        <i class="socialIcon fab fa-codepen fa-3x mx-2"></i>
+                        <i class="socialIcon fab fa-facebook-square mr-2"></i>
+                        <i class="socialIcon fab fa-linkedin mx-2"></i>
+                        <i class="socialIcon fab fa-github-square mx-2"></i>
+                        <i class="socialIcon fab fa-codepen mx-2"></i>
                     </div>
                 </b-nav>
             </div>
@@ -202,7 +202,6 @@ a.nav-link:visited,
 a.nav-link:link,
 .socialIcon {
     display: inline-block;
-    font-size: 4rem;
     font-weight: 300;
     margin: 1rem;
     color: transparent;
@@ -211,9 +210,20 @@ a.nav-link:link,
     background-image: linear-gradient(110deg, white 0%, white 50%, #BA28F7 0%, #9A3CF4 100%);
     -webkit-background-clip: text;
     background-clip: text;
-    background-size: 260%;
     transition: all .5s;
     backface-visibility: hidden;
+}
+
+
+a.nav-link:visited,
+a.nav-link:link
+ {
+    font-size: 4rem;
+    background-size: 220%;
+}
+.socialIcon{
+    font-size: 2rem;
+    background-size: 260%;
 }
 
 a.nav-link:active,

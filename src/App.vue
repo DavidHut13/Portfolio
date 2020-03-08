@@ -13,6 +13,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import appFooter from './components/footer.vue';
 import ScrollToTop from './components//ScrollToTop';
+import AOS from 'aos'
 export default {
     data() {
         return {
@@ -24,11 +25,23 @@ export default {
         appFooter: appFooter,
         ScrollToTop
     },
+    mounted() {
+        import('aos').then(AOS => AOS.init({
+            once: true,
+            delay: 300,
+            mirror: true,
+            anchorPlacement: 'center-bottom',
+
+        }));
+    },
+    destroyed() {
+        AOS.refresh();
+    },
 }
 </script>
 
 <style lang="scss">
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 </style>

@@ -35,24 +35,12 @@
 </template>
 
 <script>
-import AOS from 'aos'
+
 export default {
      data() {
           return {
                messageText: ""
           }
-     },
-     mounted() {
-          import('aos').then(AOS => AOS.init({
-               once: false,
-               delay: 300,
-               mirror: true,
-               anchorPlacement: 'center-bottom',
-
-          }));
-     },
-     destroyed() {
-          AOS.refresh();
      },
 }
 </script>
@@ -100,8 +88,7 @@ input.form-control:focus  {
     border-color: #b928f7c7;
      -webkit-box-shadow: 0px 0px 25px -10px rgba(186, 40, 247, 0.60);
      -moz-box-shadow: 0px 0px 25px -10px rgba(186, 40, 247, 0.60);
-     box-shadow: 0px 0px 20px -10px rgba(186, 40, 247, 0.60);
-    
+     box-shadow: 0px 0px 20px -10px rgba(186, 40, 247, 0.60);  
 }
 
 .sendBtnWrapper {
