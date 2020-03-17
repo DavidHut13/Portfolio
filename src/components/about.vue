@@ -61,18 +61,18 @@ p{
      transform: rotateY(180deg);
 }
 
-.pictureFlip:hover, .pictureFlip:active  {
-     .aboutPicWrapper-back {
-          transform: rotateY(0deg);
-          z-index: 1;
-     }
+// .pictureFlip:hover, .pictureFlip:active  {
+//      .aboutPicWrapper-back {
+//           transform: rotateY(0deg);
+//           z-index: 1;
+//      }
 
-     .aboutPicWrapper-front {
-          transform: rotateY(-180deg);
-          z-index: -1;
+//      .aboutPicWrapper-front {
+//           transform: rotateY(-180deg);
+//           z-index: -1;
 
-     }
-}
+//      }
+// }
 
 .aboutPicWrapper-back,
 .aboutPicWrapper-front {
@@ -94,7 +94,7 @@ p{
 .aboutPic {
      border-radius: 300px;
      height: 400px;
-     border:10px solid white;
+     border:5px solid white;
      -webkit-box-shadow: 0px 0px 41px -13px rgba(97, 97, 97, 0.4);
      -moz-box-shadow: 0px 0px 41px -13px rgba(97, 97, 97, 0.4);
      box-shadow: 0px 0px 41px -13px rgba(97, 97, 97, 0.4);

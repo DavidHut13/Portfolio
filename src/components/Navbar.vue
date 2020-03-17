@@ -146,7 +146,7 @@ export default {
     font-size: 10px;
     padding: 0;
     width: 40px;
-    height: 4px;
+    height: 3px;
     border-radius: 2px;
     -webkit-appearance: none;
     -webkit-transition: all 0.2s ease-in;
