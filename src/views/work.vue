@@ -157,7 +157,7 @@ export default {
 }
 
 .eloan-bg {
-     background-image: url(/img/testing/AdobeStock_308186809.jpeg);
+     background-image: url(/img/Work/AdobeStock_308186809.jpeg);
 }
 
 .gaming-bg {
