@@ -4,8 +4,8 @@
           <b-row class="mainPageWrapper">
                <b-col cols="8" class=" workIntro">
                     <div>
-                         <h4 class="subTitle">I few of my</h4>
-                         <h1 class="title">Projects</h1>
+                         <h4 class="subTitle ml-5">I few of my</h4>
+                         <h1 class="title ml-5">Projects</h1>
                     </div>
                </b-col>
           </b-row>
@@ -22,7 +22,7 @@
                          <div class="projectInfo">
                               <h3 class="projectTitle">Eloan Logic</h3>
                               <p class="projectTools">Vue | BootstrapVue</p>
-                              <b-button @click="showModal()" variant="none" class="viewBtn d-inline-block" pill>View</b-button>
+                              <b-button @click="showModal(eloanData,eloanPics)" variant="none" class="viewBtn d-inline-block" pill>View</b-button>
                          </div>
                     </b-card>
                </b-col>
@@ -32,7 +32,7 @@
                          <div class="projectInfo">
                               <h3 class="projectTitle">Streamer</h3>
                               <p class="projectTools">Vue | Twitch API</p>
-                              <b-button variant="none" class="viewBtn d-inline-block" pill>View</b-button>
+                              <b-button @click="showModal(streamerData,streamerPics)" variant="none" class="viewBtn d-inline-block" pill>View</b-button>
                          </div>
                     </b-card>
                </b-col>
@@ -42,22 +42,24 @@
                          <div class="projectInfo">
                               <h3 class="projectTitle">Auction Network</h3>
                               <p class="projectTools">Vue | Google Maps</p>
-                              <b-button variant="none" class="viewBtn d-inline-block" pill>View</b-button>
+                              <b-button @click="showModal(auctionData,auctionPics)" variant="none" class="viewBtn d-inline-block" pill>View</b-button>
                          </div>
                     </b-card>
                </b-col>
                <b-col cols="12">
-                    <details-modal></details-modal>
+                    <details-modal :projectInfo="modalData" :projectPics="modalPics"></details-modal>
                </b-col>
                <b-col class="mt-5 mb-2" cols="12">
                     <h1 class="catagoryHeader">Designs.</h1>
                </b-col>
                <b-col class="my-2" cols="12" sm="6" md="4" xl="3">
                     <b-card class="cardWrapper">
-                    </b-card>
-               </b-col>
-               <b-col class="my-2" cols="12" sm="6" md="4" xl="3">
-                    <b-card class="cardWrapper">
+                         <div class="websiteBackground logo-bg"></div>
+                         <div class="projectInfo">
+                              <h3 class="projectTitle">Logo's</h3>
+                              <p class="projectTools">illustrator | Blender</p>
+                              <b-button variant="none" class="viewBtn d-inline-block" pill>View</b-button>
+                         </div>
                     </b-card>
                </b-col>
                <b-col class="my-2" cols="12" sm="6" md="4" xl="3">
@@ -77,22 +79,31 @@
 import detailsModal from '../components/modal.vue'
 name: 'work'
 export default {
-data(){
-     return{
-
-     }
-},
-components: {
-detailsModal,
-},
-methods:{
-     showModal(){
-          this.$bvModal.show('detailsModal')
+     data() {
+          return {
+               modalPics:[],
+               modalData:{},
+               eloanData:{name:'Eloan Logic',urlLink:'', details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel impedit adipisci earum labore laborum placeat nisi iusto inventore? Ea ex magni ratione, ipsa libero ipsum autem obcaecati officiis asperiores cupiditate.'},
+               eloanPics: ['/img/Work/websiteShots/Logic/Logic-1.png', '/img/Work/websiteShots/Logic/Logic-2.png', '/img/Work/websiteShots/Logic/Logic-3.png', '/img/Work/websiteShots/Logic/Logic-4.png'],
+               streamerData:{name:'Streamer',urlLink:'', details:'This is a project to tes the twitch api.'},
+               streamerPics:['/img/Work/websiteShots/Streamer/streamer-1.png','/img/Work/websiteShots/Streamer/streamer-2.png'],
+               auctionData:{name:'Auction Network', urlLink:'', details:'A zillow type mockup website. Made with vue,BootstrapVue, Google Maps API, Google Maps autocomple API'},
+               auctionPics:['/img/Work/websiteShots/ANetwork/ANetwork-1.png','/img/Work/websiteShots/ANetwork/ANetwork-2.png','/img/Work/websiteShots/ANetwork/ANetwork-3.png','/img/Work/websiteShots/ANetwork/ANetwork-4.png','/img/Work/websiteShots/ANetwork/ANetwork-5.png']
+          }
      },
-     hideModal(){
-          this.$refs['viewModal'].hide()
+     components: {
+          detailsModal,
+     },
+     methods: {
+          showModal(data,pics) {
+               this.modalData = data;
+               this.modalPics = pics;
+               this.$bvModal.show('detailsModal')
+          },
+          hideModal() {
+               this.$refs['viewModal'].hide()
+          }
      }
-}
 }
 </script>
 
@@ -139,6 +150,16 @@ methods:{
      font-family: 'Staatliches', cursive;
 }
 
+@media(max-width:740px) {
+     .title {
+          font-size: 4.5rem;
+     }
+
+     .subTitle {
+          font-size: 1rem;
+     }
+}
+
 .cardWrapper:hover {
      .projectInfo {
           opacity: 1;
@@ -177,8 +198,12 @@ methods:{
 .gaming-bg {
      background-image: url(/img/Work/gray-scale-image-of-xbox-game-controller-194511.jpg);
 }
-.auction-bg{
-    background-image: url(/img/Work/backyard-lights-property-32870.jpg);
+
+.auction-bg {
+     background-image: url(/img/Work/backyard-lights-property-32870.jpg);
+}
+.logo-bg{
+     background-image: url(/img/Work/Designs/Logos/logo-bg.png);
 }
 
 .card-body {
@@ -247,7 +272,7 @@ methods:{
 }
 
 .catagoryHeader {
-     color: black;
+     color:#292F36;
      font-weight: bold;
      font-size: 1.75rem;
      font-family: 'Roboto', sans-serif;

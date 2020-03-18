@@ -94,7 +94,6 @@ p{
 .aboutPic {
      border-radius: 300px;
      height: 400px;
-     border:5px solid white;
      -webkit-box-shadow: 0px 0px 41px -13px rgba(97, 97, 97, 0.4);
      -moz-box-shadow: 0px 0px 41px -13px rgba(97, 97, 97, 0.4);
      box-shadow: 0px 0px 41px -13px rgba(97, 97, 97, 0.4);
@@ -117,6 +116,7 @@ p{
 .aboutPara {
      font-family: 'Raleway';
      font-weight: 400;
+     
 }
 
 .sectionHeader {
