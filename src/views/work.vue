@@ -22,7 +22,7 @@
                          <div class="projectInfo">
                               <h3 class="projectTitle">Eloan Logic</h3>
                               <p class="projectTools">Vue | BootstrapVue</p>
-                              <b-button variant="none" class="viewBtn d-inline-block" pill>View</b-button>
+                              <b-button @click="showModal()" variant="none" class="viewBtn d-inline-block" pill>View</b-button>
                          </div>
                     </b-card>
                </b-col>
@@ -46,11 +46,9 @@
                          </div>
                     </b-card>
                </b-col>
-               <b-col class="my-2" cols="12" sm="6" md="4" xl="3">
-                    <b-card class="cardWrapper">
-                    </b-card>
+               <b-col cols="12">
+                    <details-modal></details-modal>
                </b-col>
-
                <b-col class="mt-5 mb-2" cols="12">
                     <h1 class="catagoryHeader">Designs.</h1>
                </b-col>
@@ -76,9 +74,25 @@
 </template>
 
 <script>
+import detailsModal from '../components/modal.vue'
 name: 'work'
 export default {
+data(){
+     return{
 
+     }
+},
+components: {
+detailsModal,
+},
+methods:{
+     showModal(){
+          this.$bvModal.show('detailsModal')
+     },
+     hideModal(){
+          this.$refs['viewModal'].hide()
+     }
+}
 }
 </script>
 

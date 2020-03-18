@@ -178,7 +178,7 @@ margin-top: 10%;
      background-size: cover;
      height: 50vh;
      margin-top: 80px;
-     mask-image: url(/img/testing/ArrowBracketMask.svg);
+     mask-image: url(/img/home/ArrowBracketMask.svg);
      mask-repeat: no-repeat;
      mask-position: center;
      background-image:url(/img/home/architecture-buildings-city-280193.jpg);
