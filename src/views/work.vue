@@ -50,24 +50,26 @@
                     <details-modal :projectInfo="modalData" :projectPics="modalPics"></details-modal>
                </b-col>
                <b-col class="mt-5 mb-2" cols="12">
-                    <h1 class="catagoryHeader">Designs.</h1>
+                    <h1 class="catagoryHeader">Creative.</h1>
                </b-col>
                <b-col class="my-2" cols="12" sm="6" md="4" xl="3">
                     <b-card class="cardWrapper">
                          <div class="websiteBackground logo-bg"></div>
                          <div class="projectInfo">
                               <h3 class="projectTitle">Logo's</h3>
-                              <p class="projectTools">illustrator | Blender</p>
-                              <b-button variant="none" class="viewBtn d-inline-block" pill>View</b-button>
+                              <p class="projectTools">illustrator | PhotoShop</p>
+                              <b-button @click="showModal(designData,designPics)" variant="none" class="viewBtn d-inline-block" pill>View</b-button>
                          </div>
                     </b-card>
                </b-col>
                <b-col class="my-2" cols="12" sm="6" md="4" xl="3">
-                    <b-card class="cardWrapper">
-                    </b-card>
-               </b-col>
-               <b-col class="my-2" cols="12" sm="6" md="4" xl="3">
-                    <b-card class="cardWrapper">
+                     <b-card class="cardWrapper">
+                         <div class="websiteBackground video-bg"></div>
+                         <div class="projectInfo">
+                              <h3 class="projectTitle">video</h3>
+                              <p class="projectTools">Premiere Pro | Drones</p>
+                              <b-button variant="none" class="viewBtn d-inline-block" pill>Coming Soon</b-button>
+                         </div>
                     </b-card>
                </b-col>
           </b-row>
@@ -88,7 +90,9 @@ export default {
                streamerData:{name:'Streamer',urlLink:'', details:'This is a project to tes the twitch api.'},
                streamerPics:['/img/Work/websiteShots/Streamer/streamer-1.png','/img/Work/websiteShots/Streamer/streamer-2.png'],
                auctionData:{name:'Auction Network', urlLink:'', details:'A zillow type mockup website. Made with vue,BootstrapVue, Google Maps API, Google Maps autocomple API'},
-               auctionPics:['/img/Work/websiteShots/ANetwork/ANetwork-1.png','/img/Work/websiteShots/ANetwork/ANetwork-2.png','/img/Work/websiteShots/ANetwork/ANetwork-3.png','/img/Work/websiteShots/ANetwork/ANetwork-4.png','/img/Work/websiteShots/ANetwork/ANetwork-5.png']
+               auctionPics:['/img/Work/websiteShots/ANetwork/ANetwork-1.png','/img/Work/websiteShots/ANetwork/ANetwork-2.png','/img/Work/websiteShots/ANetwork/ANetwork-3.png','/img/Work/websiteShots/ANetwork/ANetwork-4.png','/img/Work/websiteShots/ANetwork/ANetwork-5.png'],
+               designData:{name:'Logo Creation', details:"Over the years I have enjoyed all things branding"},
+               designPics:['/img/Work/Designs/Logos/billyCoder.svg','/img/Work/Designs/Logos/BlackBox.svg','/img/Work/Designs/Logos/GeekLogic.svg','/img/Work/Designs/Logos/candleLabel.svg','/img/Work/Designs/Logos/partTime.svg','/img/Work/Designs/Logos/smellys.svg','/img/Work/Designs/Logos/vividDigital.svg']
           }
      },
      components: {
@@ -192,7 +196,7 @@ export default {
 }
 
 .eloan-bg {
-     background-image: url(/img/Work/AdobeStock_308186809.jpeg);
+     background-image: url(/img/Work/AdobeStock_308186809.jpg);
 }
 
 .gaming-bg {
@@ -203,7 +207,10 @@ export default {
      background-image: url(/img/Work/backyard-lights-property-32870.jpg);
 }
 .logo-bg{
-     background-image: url(/img/Work/Designs/Logos/logo-bg.png);
+     background-image: url(/img/Work/logo.jpg);
+}
+.video-bg{
+     background-image: url(/img/Work/video.jpg)
 }
 
 .card-body {
