@@ -49,14 +49,12 @@ export default {
                 document.getElementById("navbarWrapper").style.opacity = "0";
                 document.getElementById("navbarWrapper").style.visibility = "hidden";
                 this.blackLogo = true;
-                console.log(this.blackLogo)
             }
             if (this.navOpen) {
                 document.getElementById("navbarWrapper").style.opacity = "1";
                 document.getElementById("navbarWrapper").style.visibility = "visible";
                
                 this.blackLogo = false;
-                console.log(this.blackLogo)
              
             }
         },
