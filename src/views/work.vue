@@ -85,11 +85,11 @@ export default {
           return {
                modalPics:[],
                modalData:{},
-               eloanData:{name:'Eloan Logic',urlLink:'', details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel impedit adipisci earum labore laborum placeat nisi iusto inventore? Ea ex magni ratione, ipsa libero ipsum autem obcaecati officiis asperiores cupiditate.'},
+               eloanData:{name:'Eloan Logic',urlLink:'https://eloanlogic.firebaseapp.com/', details:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel impedit adipisci earum labore laborum placeat nisi iusto inventore? Ea ex magni ratione, ipsa libero ipsum autem obcaecati officiis asperiores cupiditate.'},
                eloanPics: ['/img/Work/websiteShots/Logic/Logic-1.png', '/img/Work/websiteShots/Logic/Logic-2.png', '/img/Work/websiteShots/Logic/Logic-3.png', '/img/Work/websiteShots/Logic/Logic-4.png'],
-               streamerData:{name:'Streamer',urlLink:'', details:'This is a project to tes the twitch api.'},
+               streamerData:{name:'Streamer',urlLink:'https://streamerapp-fab47.firebaseapp.com/', details:'This is a project to tes the twitch api.'},
                streamerPics:['/img/Work/websiteShots/Streamer/streamer-1.png','/img/Work/websiteShots/Streamer/streamer-2.png'],
-               auctionData:{name:'Auction Network', urlLink:'', details:'A zillow type mockup website. Made with vue,BootstrapVue, Google Maps API, Google Maps autocomple API'},
+               auctionData:{name:'Auction Network', urlLink:'https://auctionnetwork-1558556770854.firebaseapp.com/', details:'A zillow type mockup website. Made with vue,BootstrapVue, Google Maps API, Google Maps autocomple API'},
                auctionPics:['/img/Work/websiteShots/ANetwork/ANetwork-1.png','/img/Work/websiteShots/ANetwork/ANetwork-2.png','/img/Work/websiteShots/ANetwork/ANetwork-3.png','/img/Work/websiteShots/ANetwork/ANetwork-4.png','/img/Work/websiteShots/ANetwork/ANetwork-5.png'],
                designData:{name:'Logo Creation', details:"Over the years I have enjoyed all things branding"},
                designPics:['/img/Work/Designs/Logos/billyCoder.svg','/img/Work/Designs/Logos/BlackBox.svg','/img/Work/Designs/Logos/GeekLogic.svg','/img/Work/Designs/Logos/candleLabel.svg','/img/Work/Designs/Logos/partTime.svg','/img/Work/Designs/Logos/smellys.svg','/img/Work/Designs/Logos/vividDigital.svg']
