@@ -196,21 +196,21 @@ export default {
 }
 
 .eloan-bg {
-     background-image: url(/img/Work/AdobeStock_308186809.jpg);
+     background-image: url('/img/Work/AdobeStock_308186809.jpg');
 }
 
 .gaming-bg {
-     background-image: url(/img/Work/gray-scale-image-of-xbox-game-controller-194511.jpg);
+     background-image: url('/img/Work/gray-scale-image-of-xbox-game-controller-194511.jpg');
 }
 
 .auction-bg {
-     background-image: url(/img/Work/backyard-lights-property-32870.jpg);
+     background-image: url('/img/Work/backyard-lights-property-32870.jpg');
 }
 .logo-bg{
-     background-image: url(/img/Work/logo.jpg);
+     background-image: url('/img/Work/logo.jpg')
 }
 .video-bg{
-     background-image: url(/img/Work/video.jpg)
+     background-image: url('/img/Work/video.jpg')
 }
 
 .card-body {
