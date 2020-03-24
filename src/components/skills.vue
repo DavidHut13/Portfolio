@@ -93,7 +93,6 @@ export default {
 
 <style scoped>
 .sectionHeader {
-     background-color: #5e5e5e;
      color: rgb(54, 54, 54);
      text-shadow: 2px 2px 3px rgba(145, 145, 145, 0.5);
      -webkit-background-clip: text;
@@ -140,14 +139,16 @@ export default {
 }
 
 .icon {
-     position: relative;
-     top: 0;
-     background-color: #d37cff;
-     color: transparent;
-     text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.6);
+     color: #9a3cf4;
+}
+.title {
+     color: rgb(54, 54, 54);
+     text-shadow: 2px 2px 3px rgba(145, 145, 145, 0.5);
      -webkit-background-clip: text;
      -moz-background-clip: text;
      background-clip: text;
+     font-size: 9rem;
+     font-family: 'Staatliches', cursive;
 }
 
 .hours {

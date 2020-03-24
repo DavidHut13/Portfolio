@@ -23,7 +23,7 @@
 
           <!--=========================== Skills Section ======================-->
           <b-row class="skillsSection ">
-               <b-col cols="12" class="backgroundSplash"></b-col>
+               <b-col cols="12" class="backgroundStripe"></b-col>
                <b-col>
                     <skill-card class=""></skill-card>
                </b-col>
@@ -110,27 +110,29 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.aboutSection{
-margin-top: 10%;
+.aboutSection {
+     margin-top: 10%;
 }
+
 .skillsSection {
      position: relative;
      margin-top: 10%;
      margin-bottom: 20%;
 }
+
 .contactSection {
      margin-bottom: 12%;
 }
-.backgroundSplash {
-    -webkit-box-shadow: inset 0px 0px 30px 1px rgba(0,0,0,0.75);
-     -moz-box-shadow: inset 0px 0px 30px 1px rgba(0,0,0,0.75);
-     box-shadow: inset 0px 0px 30px 1px rgba(0,0,0,0.75);
+
+.backgroundStripe   {
+     -webkit-box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
+     -moz-box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
+     box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
      background-position: center;
      background-size: cover;
-     height: 100%;
+     height: 80%;
      position: absolute;
-     top: 25%;
+     top: 36%;
      z-index: 0;
      background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
      -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
@@ -181,9 +183,8 @@ margin-top: 10%;
      mask-image: url(/img/home/ArrowBracketMask.svg);
      mask-repeat: no-repeat;
      mask-position: center;
-     background-image:url(/img/home/architecture-buildings-city-280193.jpg);
+     background-image: url(/img/home/architecture-buildings-city-280193.jpg);
 }
-
 
 .bg-color {
      background: rgb(240, 239, 239);
@@ -192,7 +193,7 @@ margin-top: 10%;
 .subTitle {
      font-size: 3rem;
      display: block;
-     margin-bottom:-4%;
+     margin-bottom: -4%;
      color: rgb(54, 54, 54);
      font-family: 'Raleway', cursive;
 }
@@ -208,7 +209,7 @@ margin-top: 10%;
 }
 
 .titleWrapper {
-    height:20rem;
+     height: 20rem;
 }
 
 @media(max-width:640px) {
@@ -219,15 +220,16 @@ margin-top: 10%;
      .subTitle {
           font-size: 2rem;
      }
-          .titleWrapper {
-    height:10rem;
-}
+
+     .titleWrapper {
+          height: 10rem;
+     }
 }
 
 @media(max-width:540px) {
-     .backgroundSplash {
+     .backgroundStripe {
           top: 15%;
-          height:85%;
+          height: 85%;
      }
 
 }
@@ -249,7 +251,6 @@ margin-top: 10%;
      opacity: 1;
 
 }
-
 
 .slide-leave-to {
      opacity: 0;

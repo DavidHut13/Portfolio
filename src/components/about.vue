@@ -120,7 +120,6 @@ p{
 }
 
 .sectionHeader {
-     background-color: #5e5e5e;
      color: rgb(54, 54, 54);
      text-shadow: 2px 2px 3px rgba(145, 145, 145, 0.5);
      -webkit-background-clip: text;
