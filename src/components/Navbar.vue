@@ -11,7 +11,7 @@
                 <router-link class="logoWrapper" to="/">
                     <img v-if="blackLogo" class="navbar-logo" src="\img\Logos\Logo.svg" fluid>
                     <img v-if="!blackLogo" class="navbar-logo" src="\img\Logos\Logo-white.svg" fluid>
-   
+
                 </router-link>
                 <b-nav id="navbarWrapper" vertical class="navbarWrapper">
                     <div class="linkWrapper">
@@ -36,7 +36,7 @@ export default {
         return {
             windowTop: window.top.scrollYm,
             navOpen: false,
-            blackLogo:true
+            blackLogo: true
         }
     },
     created() {
@@ -53,9 +53,9 @@ export default {
             if (this.navOpen) {
                 document.getElementById("navbarWrapper").style.opacity = "1";
                 document.getElementById("navbarWrapper").style.visibility = "visible";
-               
+
                 this.blackLogo = false;
-             
+
             }
         },
         monitorScroll(event) {
@@ -72,7 +72,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 .navBackground {
     z-index: 5;
     position: fixed;
@@ -139,7 +138,7 @@ export default {
 .bar2,
 .bar3 {
     position: absolute;
-    cursor:pointer;
+    cursor: pointer;
     display: block;
     font-size: 10px;
     padding: 0;
@@ -192,8 +191,8 @@ a.nav-link {
     color: white;
     padding: 0;
     display: inline-block;
-        -webkit-backface-visibility: hidden;
-     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 a.nav-link:visited,
@@ -208,18 +207,17 @@ a.nav-link:link,
     background-image: linear-gradient(110deg, white 0%, white 50%, #BA28F7 0%, #9A3CF4 100%);
     -webkit-background-clip: text;
     background-clip: text;
-    transition: all .5s;
+    transition: all .4s;
     backface-visibility: hidden;
 }
 
-
 a.nav-link:visited,
-a.nav-link:link
- {
+a.nav-link:link {
     font-size: 4rem;
     background-size: 220%;
 }
-.socialIcon{
+
+.socialIcon {
     font-size: 2rem;
     background-size: 260%;
 }

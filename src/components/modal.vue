@@ -30,7 +30,6 @@ export default {
                window.open(this.projectInfo.urlLink, '_blank');
           }
      }
-
 }
 </script>
 
