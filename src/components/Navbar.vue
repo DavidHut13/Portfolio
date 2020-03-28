@@ -11,7 +11,6 @@
                 <router-link class="logoWrapper" to="/">
                     <img v-if="blackLogo" class="navbar-logo" src="\img\Logos\Logo.svg" fluid>
                     <img v-if="!blackLogo" class="navbar-logo" src="\img\Logos\Logo-white.svg" fluid>
-
                 </router-link>
                 <b-nav id="navbarWrapper" vertical class="navbarWrapper">
                     <div class="linkWrapper">
@@ -85,7 +84,7 @@ export default {
 
 .logoWrapper {
     position: fixed;
-    top: 20px;
+    top: 2%;
     left: 2%;
     z-index: 2;
     text-decoration: none;
@@ -144,13 +143,13 @@ export default {
     padding: 0;
     width: 40px;
     height: 4px;
-    border-radius: 1px;
+    border-radius: 3px;
     -webkit-appearance: none;
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
-    background-color: black;
+     background:black;
 }
 
 .bar2 {
