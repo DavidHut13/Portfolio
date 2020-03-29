@@ -11,7 +11,7 @@
                          <i class="icon fas fa-code fa-3x"></i>
                     </div>
                     <h4 class="cardHeader">Development.</h4>
-                    <hr class="underline">
+                    <hr class="underline text-left">
                     <div v-for="(progress,index) in development" :key="index">
                          <progress-bar :key="index" :prop="progress"></progress-bar>
                     </div>
@@ -24,7 +24,7 @@
                          <i class="icon fab fa-adobe fa-3x"></i>
                     </div>
                     <h4 class="cardHeader">Design.</h4>
-                    <hr class="underline">
+                    <hr class="underline text-left">
                     <div v-for="(progress,index) in design" :key="index">
                          <progress-bar :key="index" :prop="progress"></progress-bar>
                     </div>
@@ -37,7 +37,7 @@
                          <i class="icon fab fa-facebook-f fa-3x"></i>
                     </div>
                     <h4 class="cardHeader">Marketing.</h4>
-                    <hr class="underline">
+                    <hr class="underline text-left">
                     <div v-for="(progress,index) in marketing" :key="index">
                          <progress-bar :key="index" :prop="progress"></progress-bar>
                     </div>
@@ -59,8 +59,8 @@ export default {
                     label: 'VUE',
                     percent: '80%'
                }, {
-                    label: 'GIT',
-                    percent: '80%'
+                    label: 'CSS',
+                    percent: '90%'
                }],
                design: [{
                     label: 'Illustrator',
@@ -110,17 +110,17 @@ export default {
      height: 475px;
      border: none;
      border-radius: 10px;
-     -webkit-box-shadow: 0px 12px 25px 8px rgba(97, 97, 97, 0.3);
-     -moz-box-shadow: 0px 12px 25px 8px rgba(97, 97, 97, 0.3);
-     box-shadow: 0px 12px 25px 8px rgba(97, 97, 97, 0.3);
+     -webkit-box-shadow: 0px 2px 18px 0px rgba(97, 97, 97, 0.3);
+     -moz-box-shadow: 0px 2px 18px 0px rgba(97, 97, 97, 0.3);
+     box-shadow: 0px 2px 18px 0px rgba(97, 97, 97, 0.3);
      transition: all .3s ease-out;
 }
 
 .skillCard:hover {
      transform: translateY(-15px) scale(1.01);
-     -webkit-box-shadow: 0px 23px 25px 8px rgba(97, 97, 97, 0.4);
-     -moz-box-shadow: 0px 23px 25px 8px rgba(97, 97, 97, 0.4);
-     box-shadow: 0px 23px 25px 8px rgba(97, 97, 97, 0.4);
+     -webkit-box-shadow: 0px 2px 25px 0px rgba(97, 97, 97, 0.3);
+     -moz-box-shadow: 0px 2px 25px 0px rgba(97, 97, 97, 0.3);
+     box-shadow: 0px 2px 25px 0px rgba(97, 97, 97, 0.3);
 }
 
 .circle {
@@ -141,26 +141,12 @@ export default {
 .icon {
      color: #9a3cf4;
 }
-.title {
-     color: rgb(54, 54, 54);
-     text-shadow: 2px 2px 3px rgba(145, 145, 145, 0.5);
-     -webkit-background-clip: text;
-     -moz-background-clip: text;
-     background-clip: text;
-     font-size: 9rem;
-     font-family: 'Staatliches', cursive;
-}
 
-.hours {
-     color: rgb(92, 92, 92);
-     font-weight: bold;
-     font-family: 'raleway';
-}
 
 .cardHeader {
      border: none;
      border-radius: 0px 0px 10px 10px;
-     color: rgba(95, 95, 95, 0.945);
+     color: rgb(54, 54, 54);
      font-size: 2rem;
      background: white;
      font-weight: bold;

@@ -9,8 +9,8 @@
                     <div id="bar" :class="{active: navOpen }" class="mt-1 bar3"></div>
                 </div>
                 <router-link class="logoWrapper" to="/">
-                    <img v-if="blackLogo" class="navbar-logo" src="\img\Logos\Logo.svg" fluid>
-                    <img v-if="!blackLogo" class="navbar-logo" src="\img\Logos\Logo-white.svg" fluid>
+                    <img v-if="blackLogo" class="navbar-logo" src="\img\Logos\Logo.png" fluid>
+                    <img v-if="!blackLogo" class="navbar-logo" src="\img\Logos\Logo-white.png" fluid>
                 </router-link>
                 <b-nav id="navbarWrapper" vertical class="navbarWrapper">
                     <div class="linkWrapper">
@@ -149,7 +149,7 @@ export default {
     transition: all 0.2s ease-in;
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
-     background:black;
+    background: black;
 }
 
 .bar2 {
@@ -205,10 +205,28 @@ a.nav-link:link,
     text-transform: uppercase;
     background-image: linear-gradient(110deg, white 0%, white 50%, #BA28F7 0%, #9A3CF4 100%);
     -webkit-background-clip: text;
+    -moz-background-clip: text;
     background-clip: text;
     transition: all .4s;
     backface-visibility: hidden;
 }
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+a.nav-link:visited,
+a.nav-link:link,
+.socialIcon {
+    background-image: none;
+    color:white;
+}
+a.nav-link:active,
+a.nav-link:hover,
+.socialIcon:active,
+.socialIcon:hover {
+    color:#9A3CF4 !important;
+}
+
+}
+
 
 a.nav-link:visited,
 a.nav-link:link {
@@ -228,6 +246,7 @@ a.nav-link:hover,
     transform: scale(1.1);
     background-position: 100%;
     color: transparent;
+    cursor:pointer;
 }
 
 .socialIcon {

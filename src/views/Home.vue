@@ -4,7 +4,6 @@
     <b-container fluid>
         <b-row>
             <b-col cols="12" class="homepage_background">
-
             </b-col>
             <b-col cols="10" offset="1" md="10" lg="7" class="titleWrapper flexCenter" offset-lg="2" xl="4" offset-xl="4">
                 <div>
@@ -24,7 +23,7 @@
         <!--=========================== Skills Section ======================-->
         <b-row class="skillsSection ">
             <b-col cols="12" class="backgroundStripe"></b-col>
-            <b-col>
+            <b-col cols="12">
                 <skill-card class=""></skill-card>
             </b-col>
         </b-row>
@@ -61,6 +60,7 @@ export default {
     name: 'home',
     data() {
         return {
+            IE: false,
             view: 'isDeveloper',
             iconArray: [{
                     name: "npm",
@@ -105,7 +105,7 @@ export default {
         contactSection,
         skillCard,
         aboutSection,
-    }
+    },
 }
 </script>
 
@@ -125,18 +125,29 @@ export default {
 }
 
 .backgroundStripe {
-    -webkit-box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
-    box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
+    //-webkit-box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
+    //-moz-box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
+    //box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
     height: 80%;
     position: absolute;
-    top: 36%;
+    top: 35%;
     z-index: 0;
-    background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
-    clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+    background-image: url(/img/home/purpleStipe.svg);
+    //background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .backgroundStripe {
+        background-image: none;
+
+    }
+
 }
 
 .sectionHeader {
@@ -166,7 +177,7 @@ export default {
 .flexCenter {
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 
 .skillsWrapper {
@@ -186,6 +197,22 @@ export default {
     background-image: url(/img/home/architecture-buildings-city-280193.jpg);
 }
 
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+
+    .homepage_background {
+        background-attachment: scroll;
+        background-image: url(/img/home/home_background_IE-1.png);
+        background-size: contain;
+        height: 60vh;
+    }
+
+    .titleWrapper {
+        height: 10rem !important;
+    }
+
+}
+
 .bg-color {
     background: rgb(240, 239, 239);
 }
@@ -195,7 +222,8 @@ export default {
     display: block;
     margin-bottom: -4%;
     color: rgb(54, 54, 54);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
 }
 
 .title {
