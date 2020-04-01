@@ -80,7 +80,7 @@ export default {
                 },
                 {
                     name: "HTML",
-                    src: "/img/Home/langIcons/HTML5_Badge_512.png"
+                    src: "/img/home/langIcons/HTML5_Badge_512.png"
                 },
                 {
                     name: "React",
@@ -131,9 +131,9 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 80%;
+    height: 93%;
     position: absolute;
-    top: 35%;
+    top: 28%;
     z-index: 0;
     background-image: url(/img/home/purpleStipe.svg);
     //background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
@@ -185,16 +185,19 @@ export default {
 }
 
 .homepage_background {
+    background-image: url("/img/home/architecture-buildings-city-280193.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 50vh;
+    background-size: contain;
+    height: 60vh;
     margin-top: 80px;
-    mask-image: url(/img/home/ArrowBracketMask.svg);
+    mask-image: url("/img/home/ArrowBracketMask.png");
+    -webkit-mask-image: url("/img/home/ArrowBracketMask.png");
     mask-repeat: no-repeat;
     mask-position: center;
-    background-image: url(/img/home/architecture-buildings-city-280193.jpg);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
 }
 
 @media all and (-ms-high-contrast: none),
@@ -208,7 +211,13 @@ export default {
     }
 
     .titleWrapper {
-        height: 10rem !important;
+        height: 5rem !important;
+        margin-top: -5rem;
+    }
+
+    .title {
+        background-image: none !important;
+        color: #a238f5 !important;
     }
 
 }
@@ -227,37 +236,55 @@ export default {
 }
 
 .title {
-    color: rgb(54, 54, 54);
-    text-shadow: 2px 2px 3px rgba(145, 145, 145, 0.5);
+    font-size: 9rem;
+    font-family: 'Staatliches', cursive;
+    color: transparent;
+    text-transform: uppercase;
+    background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
-    font-size: 9rem;
-    font-family: 'Staatliches', cursive;
-}
-
-.titleWrapper {
-    height: 20rem;
 }
 
 @media(max-width:640px) {
     .title {
-        font-size: 5.3rem;
+        font-size: 8.3rem;
     }
 
     .subTitle {
         font-size: 2rem;
     }
 
-    .titleWrapper {
-        height: 10rem;
+    .homepage_background {
+        background-attachment: scroll;
+        background-image: url(/img/home/home_background_IE-1.png);
+        background-size: contain;
+        mask-image: none;
+        -webkit-mask-image:none;
     }
+
 }
 
 @media(max-width:540px) {
     .backgroundStripe {
         top: 15%;
         height: 85%;
+    }
+
+    .titleWrapper {
+        margin-top: -3.5rem;
+    }
+
+    .homepage_background {
+        margin-top: 40px;
+    }
+
+    .title {
+        font-size: 5.3rem;
+    }
+
+    .subTitle {
+        font-size: 2rem;
     }
 
 }

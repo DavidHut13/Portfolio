@@ -9,8 +9,7 @@
                     <div id="bar" :class="{active: navOpen }" class="mt-1 bar3"></div>
                 </div>
                 <router-link class="logoWrapper" to="/">
-                    <img v-if="blackLogo" class="navbar-logo" src="\img\Logos\Logo.png" fluid>
-                    <img v-if="!blackLogo" class="navbar-logo" src="\img\Logos\Logo-white.png" fluid>
+                    <img  class="navbar-logo" src="\img\Logos\Logo-1.png" fluid>
                 </router-link>
                 <b-nav id="navbarWrapper" vertical class="navbarWrapper">
                     <div class="linkWrapper">
@@ -35,7 +34,6 @@ export default {
         return {
             windowTop: window.top.scrollYm,
             navOpen: false,
-            blackLogo: true
         }
     },
     created() {
@@ -47,14 +45,10 @@ export default {
             if (!this.navOpen) {
                 document.getElementById("navbarWrapper").style.opacity = "0";
                 document.getElementById("navbarWrapper").style.visibility = "hidden";
-                this.blackLogo = true;
             }
             if (this.navOpen) {
                 document.getElementById("navbarWrapper").style.opacity = "1";
                 document.getElementById("navbarWrapper").style.visibility = "visible";
-
-                this.blackLogo = false;
-
             }
         },
         monitorScroll(event) {
@@ -79,7 +73,7 @@ export default {
     -webkit-box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 25px -9px rgba(0, 0, 0, 0.75);
-    transition: .2s ease-in;
+    transition: .1s ease-in;
 }
 
 .logoWrapper {
@@ -116,6 +110,8 @@ export default {
 .bar2.active {
     left: 0px;
     background-color: transparent;
+    transform:translateX(13px);
+    -webkit-transform:translateX(13px);
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
 }
@@ -141,23 +137,27 @@ export default {
     display: block;
     font-size: 10px;
     padding: 0;
-    width: 40px;
     height: 4px;
-    border-radius: 3px;
+    border-radius: 4px;
     -webkit-appearance: none;
     -webkit-transition: all 0.2s ease-in;
     transition: all 0.2s ease-in;
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
-    background: black;
+    background:#a238f5 ;
 }
-
+.bar1{
+    width: 40px;
+}
 .bar2 {
     top: 10px;
+    right:0px;
+    width: 25px;
 }
 
 .bar3 {
     top: 20px;
+    width: 40px;
 }
 
 .hamburgerButton {
@@ -178,7 +178,7 @@ export default {
     opacity: 0;
     width: 100%;
     height: 100vh;
-    transition: .5s;
+    transition: .1s;
     background: rgb(20, 20, 20);
     overflow: inherit;
     visibility: hidden;

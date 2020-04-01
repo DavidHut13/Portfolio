@@ -2,7 +2,7 @@
 <b-container>
      <b-row class="mt-5 aboutPageWrapper">
           <b-col cols="12" class="aboutHeader">
-               <h1 class="sectionHeader">A little About Me</h1>
+               <h1 class="sectionHeader">about me</h1>
           </b-col>
           <b-col cols="12" md="10" offset-md="1" lg="6" offset-lg="0" class="aboutWrapper">
                <div>
@@ -89,6 +89,8 @@ p{
      position: relative;
      height: 400px;
      width: 400px;
+
+
 }
 
 .aboutPic {

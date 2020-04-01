@@ -1,15 +1,16 @@
 <template>
-<div class="backgroundColor">
-    <b-container fluid>
-        <b-row class="mainPageWrapper">
+<div >
+    <b-container class="mainPageWrapper" fluid>
+        <b-row >
             <b-col cols="8" class=" workIntro">
                 <div>
-                    <h1 class="title ml-5">Projects</h1>
+                    <h4 class="subTitle">My</h4>
+                    <h1 class="title ml-5">Portfolio</h1>
                 </div>
             </b-col>
         </b-row>
     </b-container>
-    <b-container>
+    <b-container class="backgroundColor">
         <b-row class="pb-5">
             <!-- ====================== Websites =======================-->
             <b-col class="mt-5 mb-2" cols="12">
@@ -43,12 +44,11 @@
                     </b-card>
                 </carousel>
             </b-col>
-
             <b-col cols="12">
                 <details-modal :projectInfo="modalData" :projectPics="modalPics"></details-modal>
             </b-col>
             <b-col class="mt-5 mb-2" cols="12">
-                <h1 class="catagoryHeader">Creative.</h1>
+                <h1 class="catagoryHeader">creative.</h1>
             </b-col>
             <b-col cols="12" lg="10">
                 <carousel :responsive="{0:{items:2},750:{items:3}}" :nav="false" :dots="false">
@@ -129,6 +129,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .projectTools {
     color: #ba28f7;
     font-weight: bold;
@@ -161,19 +162,29 @@ export default {
 .subTitle {
     font-size: 3rem;
     display: block;
+    margin-left:3.2rem;
     margin-bottom: -4%;
     color: rgb(54, 54, 54);
    font-family: 'Roboto', sans-serif;
 }
 
 .title {
-    color: white;
-    text-shadow: 2px 2px 3px rgba(145, 145, 145, 0.5);
+    font-size: 9rem;
+    font-family: 'Staatliches', cursive;
+    color: transparent;
+    text-transform: uppercase;
+    background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
-    font-size: 9rem;
-    font-family: 'Staatliches', cursive;
+}
+.subTitle {
+    font-size: 2.2rem;
+    display: block;
+    margin-bottom: -4%;
+    color: rgb(54, 54, 54);
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
 }
 
 @media(max-width:740px) {
@@ -304,11 +315,18 @@ export default {
 }
 
 .mainPageWrapper {
+    background-image:linear-gradient(to bottom,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 80%,rgb(240, 240,240)), url("/img/Work/workBG.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, rgb(255, 255, 255) 98%), url(/img/home/architecture-buildings-city-280193.jpg);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.backgroundColor{
+   background-color:rgb(240, 240,240);
 }
 
 .catagoryHeader {

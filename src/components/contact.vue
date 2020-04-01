@@ -47,9 +47,9 @@ export default {
 
 <style scoped>
 .customShadow {
-     -webkit-box-shadow: 0 30px 60px rgba(138, 149, 158, 0.2);
-     -moz-box-shadow: 0 30px 60px rgba(138, 149, 158, 0.2);
-     box-shadow: 0 30px 60px rgba(138, 149, 158, 0.2);
+   -webkit-box-shadow:  0px 0px 30px -5px rgba(0,0,0,0.25);
+-moz-box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.25);
+box-shadow: 0px 0px 30px -5px rgba(0,0,0,0.25);
 }
 
 .sectionHeader {
