@@ -1,16 +1,16 @@
 <template>
-<div >
+<div class="backgroundColor">
     <b-container class="mainPageWrapper" fluid>
         <b-row >
-            <b-col cols="8" class=" workIntro">
-                <div>
+            <b-col cols="12" class="flexCenter">
+                <div class="titleWrapper">
                     <h4 class="subTitle">My</h4>
-                    <h1 class="title ml-5">Portfolio</h1>
+                    <h1 class="title">Portfolio</h1>
                 </div>
             </b-col>
         </b-row>
     </b-container>
-    <b-container class="backgroundColor">
+    <b-container>
         <b-row class="pb-5">
             <!-- ====================== Websites =======================-->
             <b-col class="mt-5 mb-2" cols="12">
@@ -45,7 +45,7 @@
                 </carousel>
             </b-col>
             <b-col cols="12">
-                <details-modal :projectInfo="modalData" :projectPics="modalPics"></details-modal>
+                <details-modal :projectInfo="modalData" :projectPics="modalPics" :loaded="loaded"></details-modal>
             </b-col>
             <b-col class="mt-5 mb-2" cols="12">
                 <h1 class="catagoryHeader">creative.</h1>
@@ -83,7 +83,7 @@ export default {
     data() {
         return {
             modalPics: [],
-
+            loaded:false,
             modalData: {},
             eloanData: {
                 name: 'Eloan Logic',
@@ -117,6 +117,7 @@ export default {
 
     methods: {
         showModal(data, pics) {
+            this.loaded=false,
             this.modalData = data;
             this.modalPics = pics;
             this.$bvModal.show('detailsModal')
@@ -129,7 +130,29 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    .title{
+        background-image:none;
+        color:#9a3cf4;
+    }
 
+}
+.flexCenter{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    height:100vh;
+}
+
+.titleWrapper{
+    margin-left:-15rem;
+}
+@media(max-width:990px) {
+ .titleWrapper{
+    margin-left:0rem;
+}
+}
 .projectTools {
     color: #ba28f7;
     font-weight: bold;
@@ -159,14 +182,7 @@ export default {
     transition: all .5s;
 }
 
-.subTitle {
-    font-size: 3rem;
-    display: block;
-    margin-left:3.2rem;
-    margin-bottom: -4%;
-    color: rgb(54, 54, 54);
-   font-family: 'Roboto', sans-serif;
-}
+
 
 .title {
     font-size: 9rem;
@@ -267,12 +283,6 @@ export default {
     border: none;
 }
 
-.workIntro {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-}
 
 .mainTitle {
     font-size: 4.25em;
@@ -316,13 +326,10 @@ export default {
 
 .mainPageWrapper {
     background-image:linear-gradient(to bottom,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 80%,rgb(240, 240,240)), url("/img/Work/workBG.jpg");
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
 }
 
 .backgroundColor{

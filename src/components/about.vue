@@ -41,7 +41,7 @@ export default {
 p{
     text-align: justify;
 }
-@media (max-width:992px) {
+@media (max-width:991px) {
      .aboutWrapper {
           order: 2;
      }

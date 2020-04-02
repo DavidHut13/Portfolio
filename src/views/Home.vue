@@ -1,25 +1,23 @@
 <template>
-<div>
+<div class="backgroundColor">
     <!--======================== Home Screen =========================-->
-    <b-container fluid>
+    <b-container class="homepage_background" fluid>
         <b-row>
-            <b-col cols="12" class="homepage_background">
-            </b-col>
-            <b-col cols="10" offset="1" md="10" lg="7" class="titleWrapper flexCenter" offset-lg="2" xl="4" offset-xl="4">
-                <div>
+            <b-col cols="12" class="flexCenter">
+                <div class="titleWrapper">
                     <h4 class="subTitle">Frontend</h4>
                     <h1 class="title">Developer</h1>
                 </div>
             </b-col>
         </b-row>
-
-        <!--========================== About Section ====================== -->
-        <b-row class="aboutSection ">
+    </b-container>
+    <!--========================== About Section ====================== -->
+    <b-container fluid>
+        <b-row class="aboutSection">
             <b-col>
                 <about-section></about-section>
             </b-col>
         </b-row>
-
         <!--=========================== Skills Section ======================-->
         <b-row class="skillsSection ">
             <b-col cols="12" class="backgroundStripe"></b-col>
@@ -110,6 +108,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.titleWrapper {
+    margin-left: -15rem;
+}
+
+@media(max-width:990px) {
+    .titleWrapper {
+        margin-left: 0rem;
+    }
+}
+
+.backgroundColor {
+    background-color: rgb(240, 240, 240);
+}
+
 .aboutSection {
     margin-top: 10%;
 }
@@ -128,16 +147,16 @@ export default {
     //-webkit-box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
     //-moz-box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
     //box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 93%;
+    // background-position: center;
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    height: 100%;
     position: absolute;
     top: 28%;
     z-index: 0;
-    background-image: url(/img/home/purpleStipe.svg);
-    //background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    // background-image: url(/img/home/purpleStipe.svg);
+    background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
+    -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
 }
 
@@ -145,7 +164,11 @@ export default {
 (-ms-high-contrast: active) {
     .backgroundStripe {
         background-image: none;
+    }
 
+    .title {
+        background-image: none;
+        color: #9a3cf4;
     }
 
 }
@@ -162,7 +185,7 @@ export default {
 }
 
 .toolsWrapper {
-    background: rgba(255, 255, 255, 0.562);
+    background-color: rgb(240, 240, 240);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,41 +208,11 @@ export default {
 }
 
 .homepage_background {
-    background-image: url("/img/home/architecture-buildings-city-280193.jpg");
-    background-attachment: fixed;
-    background-position: center;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 80%, rgb(240, 240, 240)), url("/img/Work/workBG.jpg");
+    background-position: right;
     background-repeat: no-repeat;
-    background-size: contain;
-    height: 60vh;
-    margin-top: 80px;
-    mask-image: url("/img/home/ArrowBracketMask.png");
-    -webkit-mask-image: url("/img/home/ArrowBracketMask.png");
-    mask-repeat: no-repeat;
-    mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-}
-
-@media all and (-ms-high-contrast: none),
-(-ms-high-contrast: active) {
-
-    .homepage_background {
-        background-attachment: scroll;
-        background-image: url(/img/home/home_background_IE-1.png);
-        background-size: contain;
-        height: 60vh;
-    }
-
-    .titleWrapper {
-        height: 5rem !important;
-        margin-top: -5rem;
-    }
-
-    .title {
-        background-image: none !important;
-        color: #a238f5 !important;
-    }
-
+    background-size: cover;
+    height: 100vh;
 }
 
 .bg-color {
@@ -246,7 +239,7 @@ export default {
     background-clip: text;
 }
 
-@media(max-width:640px) {
+@media(max-width:990px) {
     .title {
         font-size: 8.3rem;
     }
@@ -255,28 +248,32 @@ export default {
         font-size: 2rem;
     }
 
-    .homepage_background {
-        background-attachment: scroll;
-        background-image: url(/img/home/home_background_IE-1.png);
-        background-size: contain;
-        mask-image: none;
-        -webkit-mask-image:none;
+    .backgroundStripe {
+        -webkit-clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+        clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+        top: 23%;
+        height: 75%;
+    }
+
+    .aboutSection {
+        margin-top: 10%;
+    }
+
+    .skillsSection {
+        position: relative;
+        margin-top: 20%;
+        margin-bottom: 35%;
+    }
+
+    .contactSection {
+        margin-bottom: 25%;
     }
 
 }
 
 @media(max-width:540px) {
-    .backgroundStripe {
-        top: 15%;
-        height: 85%;
-    }
-
     .titleWrapper {
         margin-top: -3.5rem;
-    }
-
-    .homepage_background {
-        margin-top: 40px;
     }
 
     .title {
