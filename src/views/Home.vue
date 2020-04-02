@@ -126,7 +126,6 @@ export default {
 
     .contactSection {
         margin-bottom: 12%;
-        height: 80vh;
     }
 }
 
