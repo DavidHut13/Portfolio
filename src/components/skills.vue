@@ -5,7 +5,7 @@
                <h1 class="sectionHeader skillsHeader mb-5">what I can do.</h1>
           </b-col>
           <!--======================= Front end Skill Section ==========================-->
-          <b-col data-aos="fade-right" data-aos-delay="500" cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mt-4">
+          <b-col data-aos="fade-right" data-aos-delay="300" cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mt-4">
                <b-card class=" skillCard">
                     <div class="circle mt-5 mb-4">
                          <i class="icon fas fa-code fa-3x"></i>
@@ -18,7 +18,7 @@
                </b-card>
           </b-col>
           <!--====================== Graphic Design Skill Section =============================-->
-          <b-col data-aos="fade-right" data-aos-delay="400" cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mt-4">
+          <b-col data-aos="fade-right" data-aos-delay="200" cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mt-4">
                <b-card class="skillCard">
                     <div class="circle mb-4 mt-5">
                          <i class="icon fab fa-adobe fa-3x"></i>
@@ -133,9 +133,9 @@ export default {
      display: flex;
      justify-content: center;
      align-items: center;
-     -webkit-box-shadow: 0px 0px 30px -6px rgba(105, 105, 105, .2);
-     -moz-box-shadow: 0px 0px 30px -6px rgba(105, 105, 105, .2);
-     box-shadow: 0px 0px 30px -6px rgba(105, 105, 105, .2);
+     -webkit-box-shadow: 0px 0px 17px -4px rgba(105, 105, 105, .6);
+     -moz-box-shadow: 0px 0px 17px -4px rgba(105, 105, 105, .6);
+     box-shadow: 0px 0px 17px -4px rgba(105, 105, 105, .6);
 }
 
 .icon {

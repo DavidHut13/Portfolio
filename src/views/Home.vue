@@ -28,8 +28,8 @@
 
         <!--=========================== Contact Section ======================-->
         <b-row>
-            <b-col>
-                <contact-section class="contactSection"></contact-section>
+            <b-col class="contactSection">
+                <contact-section></contact-section>
             </b-col>
         </b-row>
         <!--========================== Tools Icons Section/ Programming language Icons ======================-->
@@ -122,6 +122,11 @@ export default {
 @media(max-width:990px) {
     .titleWrapper {
         margin-left: 0rem;
+    }
+
+    .contactSection {
+        margin-bottom: 12%;
+        height: 80vh;
     }
 }
 

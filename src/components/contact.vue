@@ -7,21 +7,10 @@
         <b-col cols="12" data-aos="fade-right">
             <b-card class="customShadow">
                 <b-row>
-                    <b-col data-aos="fade-right" data-aos-delay="400" cols="12" lg="6" class="mailWrapper">
-                        <transition-group name="slide-fade">
-                            <div v-if="messageSent == true" class="text-center" key="messageSent">
-                                <div class="flexCenter">
-                                    <div class="text-center">
-                                        <h2>Message Sent</h2>
-                                        <b-img fluid class="mailImage" src="\img\contact\messageSent.svg"></b-img>
-                                        <p class="mt-5">Thanks for reaching out!</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div v-if="messageSent == false" class="text-center" key="messageOpen">
-                                <b-img fluid class="mailImage" src="\img\contact\messageOpen.svg"></b-img>
-                            </div>
-                        </transition-group>
+                    <b-col id="LargeScreenMailWrapper" class="LargeScreenMailWrapper">
+                        <div class="mailWrapper" key="messageOpen">
+                            <b-img fluid class="mailOpen" src="\img\contact\messageOpen.svg"></b-img>
+                        </div>
                     </b-col>
                     <b-col cols="12" md="10" offset-md="1" lg="5" offset-lg="1">
                         <b-form-group class="input" id="name" label="Name">
@@ -36,11 +25,20 @@
                             </div>
                         </b-form-group>
                         <div class="sendBtnWrapper">
-                            <b-button @click="sendMsg()" variant="none" class="sendBtn px-5">Send</b-button>
+                            <b-button @click="$bvModal.show('message-Sent')" variant="none" class="sendBtn px-5">Send</b-button>
                         </div>
                     </b-col>
                 </b-row>
             </b-card>
+            <b-modal centered id="message-Sent" hide-footer hide-header>
+                <div key="messageSent" class=" text-center">
+                    <b-img class="sentMailImg mt-5" fluid src="\img\contact\messageSent.svg"></b-img>
+                    <h2 class="mt-5 messageSentText">Ready to Send?</h2>
+                    <p>Thanks for reaching out!</p>
+                    <b-button @click="$bvModal.hide('message-Sent')" variant="none" class="cancelBtn px-5 mr-5 my-3">cancel</b-button>
+                    <b-button @click="sendMsg()" variant="none" class="sendBtn px-5 ml-5  my-3">Send</b-button>
+                </div>
+            </b-modal>
         </b-col>
     </b-row>
 </b-container>
@@ -56,7 +54,20 @@ export default {
     },
     methods: {
         sendMsg() {
-            this.messageSent = true;
+            this.$bvModal.show('message-Sent')
+        }
+    },
+    computed: {
+        smallScreen() {
+            var mailImg =
+                console.log("test:" + document.getElementById("LargeScreenMailWrapper").style.display)
+            if (document.getElementById("LargeScreenMailWrapper").style.display == 'none') {
+
+                return true;
+            } else {
+
+                return false
+            }
         }
     }
 }
@@ -64,13 +75,22 @@ export default {
 
 <style scoped>
 @media(max-width:991px) {
-    .flexCenter.mailWrapper {
+    .LargeScreenMailWrapper {
         display: none;
     }
 }
 
-.checkIcon {
-    color: #9a3cf4;
+.mailWrapper {
+    margin-top: 5rem;
+    width: 100%;
+}
+
+::v-deep .modal-content {
+    border: none;
+    border-radius: 15px;
+    -webkit-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.3);
 }
 
 .customShadow {
@@ -89,8 +109,18 @@ export default {
     font-family: 'Staatliches', cursive;
 }
 
-.mailImage {
+.mailOpen {
     max-height: 250px;
+}
+
+.sentMailImg {
+    max-height: 80px;
+}
+
+.messageSentText {
+    color: rgb(54, 54, 54);
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
 }
 
 .textAreaWrapper {
@@ -134,25 +164,37 @@ input.form-control:focus {
     font-weight: bold;
     border-style: none;
     background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
-    border-radius: 25px 25px 0px 25px;
+    border-radius: 20px;
     -webkit-box-shadow: 0px 10px 11px -8px rgba(138, 149, 158, 0.6);
     -moz-box-shadow: 0px 10px 11px -8px rgba(138, 149, 158, 0.6);
     box-shadow: 0px 10px 11px -8px rgba(138, 149, 158, 0.6);
 }
 
-.sendBtn.btn:active {
+.sendBtn.btn:active, .cancelBtn.btn:active {
     transform: translateY(-2px);
     -webkit-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
     -moz-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
     box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
 }
 
-.sendBtn:hover {
+.sendBtn:hover, .cancelBtn:hover {
     transform: translateY(-4px);
     cursor: pointer;
     -webkit-box-shadow: 0px 10px 19px -8px rgba(0, 0, 0, 0.68);
     -moz-box-shadow: 0px 10px 19px -8px rgba(0, 0, 0, 0.68);
     box-shadow: 0px 10px 19px -8px rgba(0, 0, 0, 0.68);
+}
+
+.cancelBtn {
+    transition: all .2s ease-in-out;
+    color: #9a3cf4;
+    font-weight: bold;
+    border-style: none;
+    border-radius: 20px;
+    border: 1px solid #9a3cf4;
+    -webkit-box-shadow: 0px 10px 11px -8px rgba(138, 149, 158, 0.6);
+    -moz-box-shadow: 0px 10px 11px -8px rgba(138, 149, 158, 0.6);
+    box-shadow: 0px 10px 11px -8px rgba(138, 149, 158, 0.6);
 }
 
 .form-control {
@@ -166,16 +208,16 @@ input.form-control:focus {
 }
 
 .slide-fade-enter-active {
-    transition: all 0.75s ease;
+    transition: all .5s ease;
 }
 
 .slide-fade-leave-active {
-    transition: all 0.5s ease;
+    transition: all 0.25s ease;
 }
 
 .slide-fade-enter {
     opacity: 0;
-    transform: translateX(-80px);
+    transform: translateX(-175px);
 }
 
 .slide-fade-enter-to {
@@ -184,6 +226,7 @@ input.form-control:focus {
 
 .slide-fade-leave {
     opacity: 1;
+
 }
 
 .slide-fade-leave-to {

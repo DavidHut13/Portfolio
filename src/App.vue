@@ -28,7 +28,7 @@ export default {
     mounted() {
         import('aos').then(AOS => AOS.init({
             once: true,
-            delay: 300,
+            delay: 100,
             mirror: true,
             anchorPlacement: 'center-bottom',
 
