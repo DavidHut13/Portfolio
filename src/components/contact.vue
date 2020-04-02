@@ -33,10 +33,12 @@
             <b-modal centered id="message-Sent" hide-footer hide-header>
                 <div key="messageSent" class=" text-center">
                     <b-img class="sentMailImg mt-5" fluid src="\img\contact\messageSent.svg"></b-img>
-                    <h2 class="mt-5 messageSentText">Ready to Send?</h2>
+                    <h2 class="mt-4 messageSentText">Ready to Send?</h2>
                     <p>Thanks for reaching out!</p>
-                    <b-button @click="$bvModal.hide('message-Sent')" variant="none" class="cancelBtn px-5 mr-5 my-3">cancel</b-button>
-                    <b-button @click="sendMsg()" variant="none" class="sendBtn px-5 ml-5  my-3">Send</b-button>
+                    <div class="modalBtnWrapper">
+                        <b-button @click="$bvModal.hide('message-Sent')" variant="none" class="cancelBtn px-4 mr-2 my-3">cancel</b-button>
+                        <b-button @click="sendMsg()" variant="none" class="sendBtn px-4 ml-2  my-3">Send</b-button>
+                    </div>
                 </div>
             </b-modal>
         </b-col>
@@ -92,7 +94,10 @@ export default {
     -moz-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.3);
 }
-
+.modalBtnWrapper{
+    display:flex;
+    justify-content: space-around;
+}
 .customShadow {
     -webkit-box-shadow: 0px 0px 30px -5px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 0px 30px -5px rgba(0, 0, 0, 0.25);
@@ -170,14 +175,16 @@ input.form-control:focus {
     box-shadow: 0px 10px 11px -8px rgba(138, 149, 158, 0.6);
 }
 
-.sendBtn.btn:active, .cancelBtn.btn:active {
+.sendBtn.btn:active,
+.cancelBtn.btn:active {
     transform: translateY(-2px);
     -webkit-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
     -moz-box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
     box-shadow: 0px 10px 11px -8px rgba(0, 0, 0, 0.68);
 }
 
-.sendBtn:hover, .cancelBtn:hover {
+.sendBtn:hover,
+.cancelBtn:hover {
     transform: translateY(-4px);
     cursor: pointer;
     -webkit-box-shadow: 0px 10px 19px -8px rgba(0, 0, 0, 0.68);
