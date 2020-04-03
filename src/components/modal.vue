@@ -30,7 +30,6 @@ export default {
     },
     watch: {
         modalOpen: function () {
-            console.log(this.modalOpen)
             if (this.modalOpen == true) {
                 this.loaded = false;
             }

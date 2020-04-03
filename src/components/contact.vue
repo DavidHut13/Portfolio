@@ -9,34 +9,34 @@
                 <b-row>
                     <b-col id="LargeScreenMailWrapper" class="LargeScreenMailWrapper">
                         <div class="mailWrapper" key="messageOpen">
-                            <b-img fluid class="mailOpen" src="\img\contact\messageOpen.svg"></b-img>
+                            <b-img fluid class="mailOpen" src="\img\contact\MessageOpen.svg"></b-img>
                         </div>
                     </b-col>
                     <b-col cols="12" md="10" offset-md="1" lg="5" offset-lg="1">
                         <b-form-group class="input" id="name" label="Name">
-                            <b-form-input></b-form-input>
+                            <b-form-input v-model="contactForm.name"></b-form-input>
                         </b-form-group>
                         <b-form-group class="input" id="email" label="Email">
-                            <b-form-input></b-form-input>
+                            <b-form-input v-model="contactForm.email"></b-form-input>
                         </b-form-group>
                         <b-form-group id="message" label="Message">
                             <div class="textAreaWrapper py-3 pr-2">
-                                <b-form-textarea class="textAreaInput" id="textarea" v-model="messageText" placeholder="Enter your message here..." rows="6" max-rows="6"></b-form-textarea>
+                                <b-form-textarea class="textAreaInput" id="textarea" v-model="contactForm.message" placeholder="Enter your message here..." rows="6" max-rows="6"></b-form-textarea>
                             </div>
                         </b-form-group>
                         <div class="sendBtnWrapper">
-                            <b-button @click="$bvModal.show('message-Sent')" variant="none" class="sendBtn px-5">Send</b-button>
+                            <b-button @click="$bvModal.show('message-modal')" variant="none" class="sendBtn px-5">Send</b-button>
                         </div>
                     </b-col>
                 </b-row>
             </b-card>
-            <b-modal centered id="message-Sent" hide-footer hide-header>
+            <b-modal centered id="message-modal" hide-footer hide-header>
                 <div key="messageSent" class=" text-center">
                     <b-img class="sentMailImg mt-5" fluid src="\img\contact\messageSent.svg"></b-img>
                     <h2 class="mt-4 messageSentText">Ready to Send?</h2>
                     <p>Thanks for reaching out!</p>
                     <div class="modalBtnWrapper">
-                        <b-button @click="$bvModal.hide('message-Sent')" variant="none" class="cancelBtn px-4 mr-2 my-3">cancel</b-button>
+                        <b-button @click="$bvModal.hide('message-modal')" variant="none" class="cancelBtn px-4 mr-2 my-3">cancel</b-button>
                         <b-button @click="sendMsg()" variant="none" class="sendBtn px-4 ml-2  my-3">Send</b-button>
                     </div>
                 </div>
@@ -47,30 +47,53 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
     data() {
         return {
-            messageText: "",
+            contactForm: {
+                name: '',
+                email: '',
+                message: '',
+            },
+            sendError: '',
             messageSent: false,
         }
     },
     methods: {
         sendMsg() {
-            this.$bvModal.show('message-Sent')
+            const url = process.env.VUE_APP_Firebase_Function
+            const payload = {
+                name:this.contactForm.name,
+                email:this.contactForm.email,
+                message:this.contactForm.message,
+            };
+
+            var v = this;
+            axios
+                .post(url, {
+                    body: JSON.stringify(payload)
+                })
+                .then(response => {
+                    v.$bvModal.hide('message-modal')
+                    this.resetForm();
+
+                })
+                .catch(function (error) {
+                    v.sendError = error;
+                });
+
+        },
+        resetForm() {
+            this.contactForm = {
+                name: '',
+                email: '',
+                message: '',
+            }
         }
     },
     computed: {
-        smallScreen() {
-            var mailImg =
-                console.log("test:" + document.getElementById("LargeScreenMailWrapper").style.display)
-            if (document.getElementById("LargeScreenMailWrapper").style.display == 'none') {
 
-                return true;
-            } else {
-
-                return false
-            }
-        }
     }
 }
 </script>
@@ -94,10 +117,12 @@ export default {
     -moz-box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.3);
 }
-.modalBtnWrapper{
-    display:flex;
+
+.modalBtnWrapper {
+    display: flex;
     justify-content: space-around;
 }
+
 .customShadow {
     -webkit-box-shadow: 0px 0px 30px -5px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 0px 30px -5px rgba(0, 0, 0, 0.25);
