@@ -203,13 +203,13 @@ export default {
     text-transform: uppercase;
 }
 
-@media(max-width:740px) {
-    .title {
-        font-size: 4.5rem;
+@media(max-width:990px) {
+   .title {
+        font-size: 8.3rem;
     }
 
     .subTitle {
-        font-size: 1rem;
+        font-size: 2rem;
     }
 }
 
@@ -255,6 +255,19 @@ export default {
     }
 }
 
+@media(max-width:540px) {
+       .titleWrapper {
+        margin-top: -3.5rem;
+    }
+
+    .title {
+        font-size: 5.3rem;
+    }
+
+    .subTitle {
+        font-size: 2rem;
+    }
+}
 .eloan-bg {
     background-image: url(/img/Work/AdobeStock_308186809.jpg);
 }
