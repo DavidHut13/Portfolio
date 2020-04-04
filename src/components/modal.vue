@@ -10,7 +10,7 @@
     </content-loader>
     <h4 class="title ml-4">{{projectInfo.name}}</h4>
     <p class="paragraph ml-4">{{projectInfo.details}}</p>
-    <b-button  v-if="projectInfo.name != 'Logo Creation'"  @click="viewSite" class="mr-3 mb-2 demoBtn float-right" variant="none">Live Demo</b-button>
+    <b-button v-if="projectInfo.name != 'Logo Creation'" @click="viewSite" class="mr-3 mb-2 demoBtn float-right" variant="none">Live Demo</b-button>
     <b-button v-if="projectInfo.name == 'Logo Creation'" @click="$bvModal.hide('detailsModal')" class="mr-3 mb-2 demoBtn float-right" variant="none">Close</b-button>
 </b-modal>
 </template>
@@ -39,7 +39,7 @@ export default {
                     this.loaded = true;
                 }, 800);
             }
-            if(this.modalOpen == false){
+            if (this.modalOpen == false) {
                 this.loaded = false;
             }
         }

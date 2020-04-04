@@ -133,11 +133,12 @@ export default {
 @media all and (-ms-high-contrast: none),
 (-ms-high-contrast: active) {
     .title{
-        background-image:none;
-        color:#9a3cf4;
+        background-image:none !important;
+        color:#9a3cf4 !important;
     }
 
 }
+
 .flexCenter{
     display:flex;
     justify-content: center;

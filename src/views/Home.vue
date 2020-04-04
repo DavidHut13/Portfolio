@@ -170,9 +170,9 @@ export default {
         background-image: none;
     }
 
-    .title {
-        background-image: none;
-        color: #9a3cf4;
+    .title{
+        background-image:none !important;
+        color:#9a3cf4 !important;
     }
 
 }
