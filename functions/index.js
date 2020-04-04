@@ -7,14 +7,14 @@ const mailTransport = nodemailer.createTransport({
   port: '465',
   auth: {
     user: 'apikey',
-    pass: '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',
+    pass: process.env.VUE_APP_sendGrid_Key,
   },
 });
 
 exports.sendEmail = functions.https.onRequest((req, res) => {
   const mailOptions = {
     from: `david.hutto@portfolio.com`,
-    to: `davidsnextemail@gmail.com`
+    to: `dhutto_11@live.com`
   };
 
   // in case you get CORS errors you need these 2 lines of code

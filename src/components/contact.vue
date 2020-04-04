@@ -37,7 +37,7 @@
                     <p>Thanks for reaching out!</p>
                     <div class="modalBtnWrapper">
                         <b-button @click="$bvModal.hide('message-modal')" variant="none" class="cancelBtn px-4 mr-2 my-3">cancel</b-button>
-                        <b-button @click="sendMsg()" variant="none" class="sendBtn px-4 ml-2  my-3">Send</b-button>
+                        <b-button @click="sendMessage()" variant="none" class="sendBtn px-4 ml-2  my-3">Send</b-button>
                     </div>
                 </div>
             </b-modal>
@@ -47,6 +47,7 @@
 </template>
 
 <script>
+import {db} from './firebase/init.js'
 import axios from 'axios'
 export default {
     data() {
@@ -61,27 +62,20 @@ export default {
         }
     },
     methods: {
-        sendMsg() {
-            const url = process.env.VUE_APP_Firebase_Function
-            const payload = {
-                name:this.contactForm.name,
-                email:this.contactForm.email,
-                message:this.contactForm.message,
-            };
-
-            var v = this;
-            axios
-                .post(url, {
-                    body: JSON.stringify(payload)
+        sendMessage() {
+            if (this.contactForm.name != null) {
+                db.collection('Message').add({
+                    name: this.contactForm.name,
+                    email: this.contactForm.email,
+                    message: this.contactForm.message,
+                    timestamp: Date.now()
+                }).catch(err => {
+                    console.log(err)
                 })
-                .then(response => {
-                    v.$bvModal.hide('message-modal')
-                    this.resetForm();
-
-                })
-                .catch(function (error) {
-                    v.sendError = error;
-                });
+                this.resetForm();
+                this.$bvModal.hide('message-modal')
+            
+            }
 
         },
         resetForm() {
