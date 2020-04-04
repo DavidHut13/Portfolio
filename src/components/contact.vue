@@ -68,7 +68,7 @@ export default {
                     name: this.contactForm.name,
                     email: this.contactForm.email,
                     message: this.contactForm.message,
-                    timestamp: Date.now()
+                    timestamp: new Date()
                 }).catch(err => {
                     console.log(err)
                 })
