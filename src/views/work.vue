@@ -192,7 +192,7 @@ body.modal-open {
 
 .title {
     font-size: 9rem;
-    font-family: 'Staatliches', cursive;
+    font-family: 'Staatliches', cursive,  'Roboto', sans-serif;;
     color: transparent;
     text-transform: uppercase;
     background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);

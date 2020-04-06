@@ -229,7 +229,7 @@ export default {
       margin-left:.3rem;
     margin-bottom: -4%;
     color: rgb(54, 54, 54);
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif, 'Roboto', sans-serif;;
     text-transform: uppercase;
 }
 
