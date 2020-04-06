@@ -7,8 +7,7 @@
         <b-col cols="12" md="10" offset-md="1" lg="6" offset-lg="0" class="aboutWrapper">
             <div>
                 <h1 data-aos="fade-right" class="aboutName">David Hutto</h1>
-                <h3 data-aos="fade-right" class="aboutTitle "> Web Developer & Designer</h3>
-                <p data-aos="fade-right" data-aos-delay="100" class="aboutPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p data-aos="fade-right" data-aos-delay="100" class="aboutPara">I'm a Front-End Developer located in Fort Worth Texas. I can be a bit of a perfectionist, and a tad OCD.  I'm a big fan of modern, minimalist designs, but enjoy learning other techniques. I work primarily with Vue.js and currently learning React on my spare time. I love learning new skills, solving problems, and creating stunning visuals. I eventually see myself transitioning to a full-stack developer, but right now I focus more on the Front-End.</p>
                 <b-button @click="downloadCV()" size="lg" class="downloadBtn" variant="none">View Resume</b-button>
             </div>
         </b-col>
@@ -40,7 +39,7 @@ export default {
             var storageRef = firebaseApp.ref();;
             var pathReference = storageRef.child('Resume.pdf');
             pathReference.getDownloadURL().then(function (url) {
-                 window.open(url, '_blank');
+                window.open(url, '_blank');
             })
 
         }
@@ -131,10 +130,17 @@ p {
 .aboutName {
     color: #292F36;
     font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.aboutTitle {
+    color: #292F36;
+    font-family: 'Roboto', sans-serif;
 }
 
 .aboutPara {
-    font-family: 'Raleway';
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
 
 }

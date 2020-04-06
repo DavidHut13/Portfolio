@@ -9,16 +9,15 @@
                     <div id="bar" :class="{active: navOpen }" class="mt-1 bar3"></div>
                 </div>
                 <router-link class="logoWrapper" to="/">
-                    <img  class="navbar-logo" src="\img\Logos\Logo-1.png" fluid>
+                    <img class="navbar-logo" src="\img\Logos\Logo.png" fluid>
                 </router-link>
                 <b-nav id="navbarWrapper" vertical class="navbarWrapper">
                     <div class="linkWrapper">
                         <router-link id="navLink" tag="b-nav-item" class="topNavItem" to="/"><span @click="toggleNav">Home</span></router-link>
                         <router-link id="navLink" tag="b-nav-item" to="/work"><span @click="toggleNav">Work</span></router-link>
-                        <i class="socialIcon fab fa-facebook-square mr-2"></i>
-                        <i class="socialIcon fab fa-linkedin mx-2"></i>
-                        <i class="socialIcon fab fa-github-square mx-2"></i>
-                        <i class="socialIcon fab fa-codepen mx-2"></i>
+                        <i @click="viewSite('https://www.linkedin.com/in/david-hutto-5a7b19139/')" class="socialIcon fab fa-linkedin ml-4"></i>
+                        <i @click="viewSite('https://github.com/DavidHut13')" class="socialIcon fab fa-github-square mx-2"></i>
+                        <i @click="viewSite('https://codepen.io/dashboard/?cursor=ZD0wJm89MSZwPTEmdj0zOTM1OTA1NQ==')" class="socialIcon fab fa-codepen mx-2"></i>
                     </div>
                 </b-nav>
             </div>
@@ -38,6 +37,9 @@ export default {
     },
     created() {
         window.addEventListener('scroll', this.monitorScroll)
+        // window.addEventListener('scroll', () => {
+        //     document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+        // });
     },
     methods: {
         toggleNav() {
@@ -45,10 +47,12 @@ export default {
             if (!this.navOpen) {
                 document.getElementById("navbarWrapper").style.opacity = "0";
                 document.getElementById("navbarWrapper").style.visibility = "hidden";
+                document.getElementById("navbarWrapper").style.paddingRight = "0px";
             }
             if (this.navOpen) {
                 document.getElementById("navbarWrapper").style.opacity = "1";
                 document.getElementById("navbarWrapper").style.visibility = "visible";
+                document.getElementById("navbarWrapper").style.paddingRight = "15px";
             }
         },
         monitorScroll(event) {
@@ -59,12 +63,16 @@ export default {
                 $(navbar).removeClass("navBackground");
             }
         },
+           viewSite(url) {
+            window.open(url, '_blank');
+        },
     },
 
 }
 </script>
 
 <style lang="scss">
+
 .navBackground {
     z-index: 5;
     position: fixed;
@@ -102,18 +110,18 @@ export default {
     top: 10px;
     background-color: white;
     transform: rotate(-135deg);
-    transition: all .5s ease-in;
+    transition: all .3s ease-in;
     -webkit-transform: rotate(-135deg);
-    -webkit-transition: all .5s ease-in;
+    -webkit-transition: all .3s ease-in;
 }
 
 .bar2.active {
     left: 0px;
     background-color: transparent;
-    transform:translateX(13px);
-    -webkit-transform:translateX(13px);
-    -webkit-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in;
+    transform: translateX(13px);
+    -webkit-transform: translateX(13px);
+    -webkit-transition: all 0.1s ease-in;
+    transition: all 0.1s ease-in;
 }
 
 .bar3.active {
@@ -121,8 +129,8 @@ export default {
     background-color: white;
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
-    -webkit-transition: all .5s ease-in;
-    transition: all .5s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
 }
 
 .topNavItem {
@@ -144,14 +152,16 @@ export default {
     transition: all 0.2s ease-in;
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
-    background:#a238f5 ;
+    background: #a238f5;
 }
-.bar1{
+
+.bar1 {
     width: 40px;
 }
+
 .bar2 {
     top: 10px;
-    right:0px;
+    right: 0px;
     width: 25px;
 }
 
@@ -159,6 +169,7 @@ export default {
     top: 20px;
     width: 40px;
 }
+
 
 .hamburgerButton {
     display: block;
@@ -210,23 +221,25 @@ a.nav-link:link,
     transition: all .4s;
     backface-visibility: hidden;
 }
+
 @media all and (-ms-high-contrast: none),
 (-ms-high-contrast: active) {
-a.nav-link:visited,
-a.nav-link:link,
-.socialIcon {
-    background-image: none;
-    color:white;
-}
-a.nav-link:active,
-a.nav-link:hover,
-.socialIcon:active,
-.socialIcon:hover {
-    color:#9A3CF4 !important;
-}
+
+    a.nav-link:visited,
+    a.nav-link:link,
+    .socialIcon {
+        background-image: none;
+        color: white;
+    }
+
+    a.nav-link:active,
+    a.nav-link:hover,
+    .socialIcon:active,
+    .socialIcon:hover {
+        color: #9A3CF4 !important;
+    }
 
 }
-
 
 a.nav-link:visited,
 a.nav-link:link {
@@ -246,7 +259,7 @@ a.nav-link:hover,
     transform: scale(1.1);
     background-position: 100%;
     color: transparent;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .socialIcon {

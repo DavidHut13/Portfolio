@@ -57,7 +57,12 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+body.modal-open {
+    overflow: hidden;
+
+}
+
 .placeHolder {
     width: 100%;
     height: 100%;
@@ -97,6 +102,8 @@ rect {
 .paragraph {
     color: rgb(88, 77, 99);
     width: 75%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
 ::v-deep button:focus {

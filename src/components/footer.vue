@@ -6,12 +6,6 @@
             <p class="my-2"> <i class="far fa-envelope-open"></i> dhutto_11@live.com</p>
             <p><i class="fas fa-phone"></i> 682-559-2836</p>
         </b-col>
-        <!-- <b-col>
-            <h4>Links</h4>
-            <i class="socialIcon fab fa-facebook-square fa-3x mx-2"></i>
-            <i class="socialIcon fab fa-linkedin fa-3x mx-2"></i>
-            <i class="socialIcon fab fa-github-square fa-3x mx-2"></i>
-        </b-col> -->
         <b-col cols="6" class="mt-5 mb-4">
             <h3 class="mb-1">Links</h3>
             <b-row>
@@ -55,7 +49,7 @@ export default {
 <style scoped>
 .color {
     color: white;
-   background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
+    background:#9a3cf4;
 }
 
 .vueLogo {

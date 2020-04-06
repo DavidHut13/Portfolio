@@ -1,7 +1,7 @@
 <template>
 <div class="backgroundColor">
     <b-container class="mainPageWrapper" fluid>
-        <b-row >
+        <b-row>
             <b-col cols="12" class="flexCenter">
                 <div class="titleWrapper">
                     <h4 class="subTitle">My</h4>
@@ -83,29 +83,29 @@ export default {
     data() {
         return {
             modalPics: [],
-            loaded:false,
+            loaded: false,
             modalData: {},
             eloanData: {
                 name: 'Eloan Logic',
                 urlLink: 'https://eloanlogic.firebaseapp.com/',
-                details: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel impedit adipisci earum labore laborum placeat nisi iusto inventore? Ea ex magni ratione, ipsa libero ipsum autem obcaecati officiis asperiores cupiditate.'
+                details: 'A tech company website focusing on IT solutions. Its a simple site created with Vue.js. and Bootstrap.'
             },
             eloanPics: ['/img/Work/websiteShots/Logic/Logic-1.png', '/img/Work/websiteShots/Logic/Logic-2.png', '/img/Work/websiteShots/Logic/Logic-3.png', '/img/Work/websiteShots/Logic/Logic-4.png'],
             streamerData: {
                 name: 'Streamer',
                 urlLink: 'https://streamerapp-fab47.firebaseapp.com/',
-                details: 'This is a project to tes the twitch api.'
+                details: 'This is a fun little project I started to play around with the Twitch api. This site was created with Vue.js,Twitch API, and Bootstrap-Vue.'
             },
             streamerPics: ['/img/Work/websiteShots/Streamer/streamer-1.png', '/img/Work/websiteShots/Streamer/streamer-2.png'],
             auctionData: {
                 name: 'Auction Network',
                 urlLink: 'https://auctionnetwork-1558556770854.firebaseapp.com/',
-                details: 'A zillow type mockup website. Made with vue,BootstrapVue, Google Maps API, Google Maps autocomple API'
+                details: 'A real estate website I created as a redesign proposal to replace an existing site. This site was created with vue,BootstrapVue, Google Maps API, Google Maps autocomple API'
             },
             auctionPics: ['/img/Work/websiteShots/ANetwork/ANetwork-1.png', '/img/Work/websiteShots/ANetwork/ANetwork-2.png', '/img/Work/websiteShots/ANetwork/ANetwork-3.png', '/img/Work/websiteShots/ANetwork/ANetwork-4.png', '/img/Work/websiteShots/ANetwork/ANetwork-5.png'],
             designData: {
                 name: 'Logo Creation',
-                details: "Over the years I have enjoyed all things branding"
+                details: "Over the years I have had several opportunities to help design logos."
             },
             designPics: ['/img/Work/Designs/Logos/billyCoder.jpg', '/img/Work/Designs/Logos/BlackBox.jpg', '/img/Work/Designs/Logos/GeekLogic.jpg', '/img/Work/Designs/Logos/candleLabel.jpg', '/img/Work/Designs/Logos/partTime.jpg', '/img/Work/Designs/Logos/smellys.jpg', '/img/Work/Designs/Logos/vividDigital.jpg']
         }
@@ -117,8 +117,8 @@ export default {
 
     methods: {
         showModal(data, pics) {
-            this.loaded=false,
-            this.modalData = data;
+            this.loaded = false,
+                this.modalData = data;
             this.modalPics = pics;
             this.$bvModal.show('detailsModal')
         },
@@ -130,30 +130,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+body.modal-open {
+    overflow: hidden;
+}
+
 @media all and (-ms-high-contrast: none),
 (-ms-high-contrast: active) {
-    .title{
-        background-image:none !important;
-        color:#9a3cf4 !important;
+    .title {
+        background-image: none !important;
+        color: #9a3cf4 !important;
     }
 
 }
 
-.flexCenter{
-    display:flex;
+.flexCenter {
+    display: flex;
     justify-content: center;
-    align-items:center;
-    height:100vh;
+    align-items: center;
+    height: 100vh;
 }
 
-.titleWrapper{
-    margin-left:-15rem;
+.titleWrapper {
+    margin-left: -15rem;
 }
+
 @media(max-width:990px) {
- .titleWrapper{
-    margin-left:0rem;
+    .titleWrapper {
+        margin-left: 0rem;
+    }
 }
-}
+
 .projectTools {
     color: #ba28f7;
     font-weight: bold;
@@ -162,11 +168,12 @@ export default {
 
 .projectTitle {
     font-weight: bold;
+    font-family: 'Roboto', sans-serif;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-left:.5rem;
-    margin-right:.5rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
 
 }
 
@@ -183,8 +190,6 @@ export default {
     transition: all .5s;
 }
 
-
-
 .title {
     font-size: 9rem;
     font-family: 'Staatliches', cursive;
@@ -195,9 +200,11 @@ export default {
     -moz-background-clip: text;
     background-clip: text;
 }
+
 .subTitle {
     font-size: 2.2rem;
     display: block;
+    margin-left: .3rem;
     margin-bottom: -4%;
     color: rgb(54, 54, 54);
     font-family: 'Open Sans', sans-serif;
@@ -205,7 +212,7 @@ export default {
 }
 
 @media(max-width:990px) {
-   .title {
+    .title {
         font-size: 8.3rem;
     }
 
@@ -228,8 +235,8 @@ export default {
 
 .cardWrapper {
     overflow: hidden;
-    margin:.5rem;
-      -webkit-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.75);
+    margin: .5rem;
+    -webkit-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.75);
 }
@@ -257,7 +264,7 @@ export default {
 }
 
 @media(max-width:540px) {
-       .titleWrapper {
+    .titleWrapper {
         margin-top: -3.5rem;
     }
 
@@ -269,6 +276,7 @@ export default {
         font-size: 2rem;
     }
 }
+
 .eloan-bg {
     background-image: url(/img/Work/AdobeStock_308186809.jpg);
 }
@@ -297,7 +305,6 @@ export default {
     border: none;
 }
 
-
 .mainTitle {
     font-size: 4.25em;
 }
@@ -305,8 +312,6 @@ export default {
 .subTitle {
     font-size: 2em;
 }
-
-
 
 .viewBtn {
     transition: all .2s ease-in-out;
@@ -339,15 +344,15 @@ export default {
 }
 
 .mainPageWrapper {
-    background-image:linear-gradient(to bottom,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 80%,rgb(240, 240,240)), url("/img/Work/workBG.jpg");
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 80%, rgb(240, 240, 240)), url("/img/Work/workBG.jpg");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
 }
 
-.backgroundColor{
-   background-color:rgb(240, 240,240);
+.backgroundColor {
+    background-color: rgb(240, 240, 240);
 }
 
 .catagoryHeader {

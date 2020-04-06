@@ -147,7 +147,7 @@ export default {
      border: none;
      border-radius: 0px 0px 10px 10px;
      color: rgb(54, 54, 54);
-     font-size: 2rem;
+     font-size: 1.75rem;
      background: white;
      font-weight: bold;
      margin-top: 4rem;

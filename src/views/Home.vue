@@ -148,9 +148,9 @@ export default {
 }
 
 .backgroundStripe {
-    //-webkit-box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
-    //-moz-box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
-    //box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
     // background-position: center;
     // background-repeat: no-repeat;
     // background-size: cover;
@@ -159,7 +159,7 @@ export default {
     top: 28%;
     z-index: 0;
     // background-image: url(/img/home/purpleStipe.svg);
-    background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);
+    background-image: linear-gradient(to bottom, #aa34f6, #a238f5, #9a3cf4);
     -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
 }
@@ -226,6 +226,7 @@ export default {
 .subTitle {
     font-size: 2.2rem;
     display: block;
+      margin-left:.3rem;
     margin-bottom: -4%;
     color: rgb(54, 54, 54);
     font-family: 'Open Sans', sans-serif;
