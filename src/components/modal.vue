@@ -63,6 +63,15 @@ body.modal-open {
 
 }
 
+@supports (-webkit-touch-callout: none) {
+  /* CSS specific to iOS devices */ 
+  body.modal-open {
+    overflow: hidden;
+    position:fixed;
+
+}
+}
+
 .placeHolder {
     width: 100%;
     height: 100%;
