@@ -17,7 +17,7 @@
                         <router-link id="navLink" tag="b-nav-item" to="/work"><span @click="toggleNav">Work</span></router-link>
                         <i @click="viewSite('https://www.linkedin.com/in/david-hutto-5a7b19139/')" class="socialIcon fab fa-linkedin ml-4"></i>
                         <i @click="viewSite('https://github.com/DavidHut13')" class="socialIcon fab fa-github-square mx-2"></i>
-                        <i @click="viewSite('https://codepen.io/dashboard/?cursor=ZD0wJm89MSZwPTEmdj0zOTM1OTA1NQ==')" class="socialIcon fab fa-codepen mx-2"></i>
+                        <i @click="viewSite('https://codepen.io/David_Hutt')" class="socialIcon fab fa-codepen mx-2"></i>
                     </div>
                 </b-nav>
             </div>

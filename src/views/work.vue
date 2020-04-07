@@ -164,6 +164,11 @@ body.modal-open {
     color: #ba28f7;
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+     margin-left: .35rem;
+    margin-right: .35rem;
 }
 
 .projectTitle {
