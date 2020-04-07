@@ -134,13 +134,13 @@ export default {
 }
 
 .aboutSection {
-    margin-top: 10%;
+    margin-top: 3%;
 }
 
 .skillsSection {
     position: relative;
-    margin-top: 10%;
-    margin-bottom: 20%;
+    margin-top: 5%;
+    margin-bottom: 25%;
 }
 
 .contactSection {
