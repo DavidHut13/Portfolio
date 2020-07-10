@@ -48,7 +48,7 @@ export default {
 }
 
 .progress-value {
-     animation: load 3s normal forwards;
+     animation: load 4s normal forwards;
      box-shadow: 0 10px 40px -10px #fff;
      border-radius: 100px;
      background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);

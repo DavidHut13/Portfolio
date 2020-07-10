@@ -22,7 +22,7 @@
         <b-row class="skillsSection ">
             <b-col cols="12" class="backgroundStripe"></b-col>
             <b-col cols="12">
-                <skill-card class=""></skill-card>
+                <skill-card></skill-card>
             </b-col>
         </b-row>
 
@@ -67,6 +67,10 @@ export default {
                 {
                     name: "Git",
                     src: "/img/home/langIcons/Git-Logo-Black.png"
+                },
+                   {
+                    name: "Python",
+                    src: "/img/home/langIcons/python-logo.png"
                 },
                 {
                     name: "Vue",

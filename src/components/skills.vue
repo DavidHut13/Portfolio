@@ -53,13 +53,13 @@ export default {
      data() {
           return {
                development: [{
-                    label: 'REACT',
-                    percent: '20%'
+                    label: 'Python',
+                    percent: '50%'
                }, {
-                    label: 'VUE',
-                    percent: '80%'
+                    label: 'React.js',
+                    percent: '70%'
                }, {
-                    label: 'CSS',
+                    label: 'Vue.js',
                     percent: '90%'
                }],
                design: [{
