@@ -33,25 +33,16 @@
             </b-col>
         </b-row>
         <!--========================== Tools Icons Section/ Programming language Icons ======================-->
-        <b-row class="toolsWrapper">
-            <b-col cols="12" class="m-4">
-                <carousel :paginationEnabled="false" :scrollPerPage="false" :autoplay="true" :perPageCustom="[[960, 8], [720, 5],[350,4]]">
-                    <slide v-for="(icon,index) in iconArray" :key="index" class="text-center">
-                        <div class="circle">
-                            <b-img fluid class="skillLogo " :src="icon.src"></b-img>
-                        </div>
-                    </slide>
-                </carousel>
-            </b-col>
-        </b-row>
+        <stack-Tools></stack-Tools>
     </b-container>
 </div>
 </template>
 
 <script>
-import contactSection from '../components/contact.vue';
-import skillCard from '../components/skills.vue'
-import aboutSection from '../components/about'
+const contactSection = () => import( /* webpackChunkName: "contactSection" */ '../components/contact.vue')
+const skillCard = () => import( /* webpackChunkName: "skillcard" */ '../components/skills.vue')
+const aboutSection = () => import( /* webpackChunkName: "aboutSection" */ '../components/about')
+const stackTools = () => import( /* webpackChunkName: "stackTools" */ '../components/stack-tools')
 
 export default {
 
@@ -59,56 +50,16 @@ export default {
     data() {
         return {
             IE: false,
-            view: 'isDeveloper',
-            iconArray: [{
-                    name: "npm",
-                    src: "/img/home/langIcons/npm-logo-red.svg"
-                },
-                {
-                    name: "Git",
-                    src: "/img/home/langIcons/Git-Logo-Black.png"
-                },
-                   {
-                    name: "Python",
-                    src: "/img/home/langIcons/python-logo.png"
-                },
-                {
-                    name: "Vue",
-                    src: "/img/home/langIcons/256px-Vue.js_Logo_2.svg.png"
-                },
-                {
-                    name: "Javascript",
-                    src: "/img/home/langIcons/javascript.svg"
-                },
-                {
-                    name: "HTML",
-                    src: "/img/home/langIcons/HTML5_Badge_512.png"
-                },
-                {
-                    name: "React",
-                    src: "/img/home/langIcons/react.svg"
-                },
-                {
-                    name: "CSS",
-                    src: "/img/home/langIcons/css3-logo.png"
-                },
-                {
-                    name: "Bootstrap Vue",
-                    src: "/img/home/langIcons/icon_512.67aef2.png"
-                },
-                {
-                    name: "Adobe Cloud",
-                    src: "/img/home/langIcons/Creative_Cloud.svg"
-                }
-            ]
+            loadStack: false
         }
     },
     components: {
         contactSection,
         skillCard,
         aboutSection,
+        stackTools
     },
-}
+    }
 </script>
 
 <style lang="scss" scoped>
@@ -155,14 +106,10 @@ export default {
     -webkit-box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
     box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.75);
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-size: cover;
     height: 100%;
     position: absolute;
     top: 28%;
     z-index: 0;
-    // background-image: url(/img/home/purpleStipe.svg);
     background-image: linear-gradient(to bottom, #aa34f6, #a238f5, #9a3cf4);
     -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
@@ -172,11 +119,12 @@ export default {
 (-ms-high-contrast: active) {
     .backgroundStripe {
         background-image: none;
+        box-shadow:none;
     }
 
-    .title{
-        background-image:none !important;
-        color:#9a3cf4 !important;
+    .title {
+        background-image: none !important;
+        color: #9a3cf4 !important;
     }
 
 }
@@ -189,20 +137,7 @@ export default {
     -moz-background-clip: text;
     background-clip: text;
     font-size: 5em;
-    font-family: 'Staatliches';
-}
-
-.toolsWrapper {
-    background-color: rgb(240, 240, 240);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.skillLogo {
-    width: 3.5em;
-    filter: grayscale(1) contrast(1);
-
+    font-family: 'Staatliches', Tahoma;
 }
 
 .flexCenter {
@@ -216,7 +151,7 @@ export default {
 }
 
 .homepage_background {
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 80%, rgb(240, 240, 240)), url("/img/Work/workBG.jpg");
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 80%, rgb(240, 240, 240)), url("/img/Work/workBg.jpg");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
@@ -230,16 +165,16 @@ export default {
 .subTitle {
     font-size: 2.2rem;
     display: block;
-      margin-left:.3rem;
+    margin-left: .3rem;
     margin-bottom: -4%;
     color: rgb(54, 54, 54);
-    font-family: 'Open Sans', sans-serif, 'Roboto', sans-serif;;
+    font-family: 'Open Sans', sans-serif, 'Roboto', sans-serif;
     text-transform: uppercase;
 }
 
 .title {
     font-size: 9rem;
-    font-family: 'Staatliches', cursive;
+    font-family: 'Staatliches', 'Roboto', sans-serif;
     color: transparent;
     text-transform: uppercase;
     background-image: linear-gradient(to bottom, #ba28f7, #b22ef7, #aa34f6, #a238f5, #9a3cf4);

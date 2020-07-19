@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import home from './views/Home.vue'
-import work from './views/Work.vue'
+const home = () => import( /* webpackChunkName: "homePage" */'./views/Home.vue')
+const work = () => import( /* webpackChunkName: "workPage" */'./views/Work.vue')
 
 Vue.use(Router)
 

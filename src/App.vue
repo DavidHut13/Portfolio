@@ -3,7 +3,7 @@
     <app-navbar id="navbar" class="navWrapper"></app-navbar>
     <router-view />
     <app-footer></app-footer>
-    <scroll-to-top></scroll-to-top>
+    <!-- <scroll-to-top></scroll-to-top> -->
 </div>
 </template>
 
@@ -12,7 +12,7 @@ import appNavbar from './components/Navbar.vue'
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import appFooter from './components/footer.vue';
-import ScrollToTop from './components//ScrollToTop';
+// import ScrollToTop from './components//ScrollToTop';
 import AOS from 'aos'
 export default {
     data() {
@@ -23,7 +23,7 @@ export default {
     components: {
         appNavbar: appNavbar,
         appFooter: appFooter,
-        ScrollToTop
+        // ScrollToTop
     },
     mounted() {
         import('aos').then(AOS => AOS.init({

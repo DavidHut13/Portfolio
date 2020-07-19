@@ -6,6 +6,7 @@ import store from './store'
 import 'bootstrap/dist/css/bootstrap.css';
 import BootstrapVue from 'bootstrap-vue'
 import VueCarousel from 'vue-carousel';
+
 import 'aos/dist/aos.css'
 
 

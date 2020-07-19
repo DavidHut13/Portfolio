@@ -13,11 +13,8 @@
         </b-col>
         <b-col cols="12" lg="6" class="mb-5 flexCenter">
             <div class="pictureFlip">
-                <div class="aboutPicWrapper-back">
-                    <b-img class="aboutPic" src="/img/Work/view-of-airport-247791.jpg" fluid></b-img>
-                </div>
                 <div class="aboutPicWrapper-front">
-                    <b-img class="aboutPic" src="/img/home/Hutto_David_DFW_Web Maintenance_500.jpg" fluid></b-img>
+                    <b-img class="aboutPic" src="/img/home/Hutto_David.jpg" fluid></b-img>
                 </div>
             </div>
         </b-col>
@@ -26,7 +23,7 @@
 </template>
 
 <script>
-import firebaseApp from './firebase/init.js';
+const firebaseApp  = () => import('./firebase/init.js')
 import axios from 'axios'
 export default {
     data() {
@@ -77,19 +74,6 @@ p {
 .aboutPicWrapper-back {
     transform: rotateY(180deg);
 }
-
-// .pictureFlip:hover, .pictureFlip:active  {
-//      .aboutPicWrapper-back {
-//           transform: rotateY(0deg);
-//           z-index: 1;
-//      }
-
-//      .aboutPicWrapper-front {
-//           transform: rotateY(-180deg);
-//           z-index: -1;
-
-//      }
-// }
 
 .aboutPicWrapper-back,
 .aboutPicWrapper-front {

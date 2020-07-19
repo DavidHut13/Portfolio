@@ -349,7 +349,7 @@ body.modal-open {
 }
 
 .mainPageWrapper {
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 80%, rgb(240, 240, 240)), url("/img/Work/workBG.jpg");
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 80%, rgb(240, 240, 240)), url("/img/Work/workBg.jpg");
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;

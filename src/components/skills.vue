@@ -53,33 +53,35 @@ export default {
      data() {
           return {
                development: [{
-                    label: 'Python',
-                    percent: '50%'
+                    label: 'Python: 3 months',
+                    percent: '30%'
                }, {
-                    label: 'React.js',
-                    percent: '70%'
+                    label: 'React: 4 months',
+                    percent: '40%'
                }, {
-                    label: 'Vue.js',
+                    label: 'Vue.js: 2 years',
                     percent: '90%'
                }],
                design: [{
-                    label: 'Illustrator',
-                    percent: '90%'
-               }, {
-                    label: 'PhotoShop',
-                    percent: '40%'
-               }, {
-                    label: 'Premiere Pro',
-                    percent: '80%'
-               }],
-               marketing: [{
-                    label: 'Facebook Ads',
-                    percent: '90%'
-               }, {
-                    label: 'Google Ads',
+                    label: 'PhotoShop: 1 year',
                     percent: '50%'
                }, {
-                    label: 'Instagram Ads',
+                    label: 'Premiere Pro: 1 year',
+                    percent: '50%'
+               },
+               {
+                    label: 'Illustrator: 2 years',
+                    percent: '90%'
+               }, ],
+               marketing: [
+                     {
+                    label: 'Google Ads: 2 months',
+                    percent: '20%'
+               },{
+                    label: 'Facebook Ads: 2 years',
+                    percent: '90%'
+               }, {
+                    label: 'Instagram Ads: 2 years',
                     percent: '90%'
                }]
           }

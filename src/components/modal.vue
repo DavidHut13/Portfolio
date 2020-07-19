@@ -16,9 +16,7 @@
 </template>
 
 <script>
-import {
-    ContentLoader
-} from 'vue-content-loader'
+import {ContentLoader} from 'vue-content-loader'
 import carousel from 'vue-owl-carousel'
 export default {
     name: 'detailsModal',
