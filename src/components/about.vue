@@ -23,7 +23,7 @@
 </template>
 
 <script>
-const firebaseApp  = () => import('./firebase/init.js')
+import firebaseApp from './firebase/init.js'
 import axios from 'axios'
 export default {
     data() {
@@ -38,7 +38,6 @@ export default {
             pathReference.getDownloadURL().then(function (url) {
                 window.open(url, '_blank');
             })
-
         }
     }
 }

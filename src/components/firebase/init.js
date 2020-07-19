@@ -1,8 +1,6 @@
-import * as firebase from "firebase/app";
-import 'firebase/firestore'
-import 'firebase/storage'
-
+import firebase from 'firebase'
   // Initialize Firebase
+
   const firebaseConfig = {
     apiKey: process.env.VUE_APP_Firebase_Key,
     authDomain: "portfolio-edfde.firebaseapp.com",
