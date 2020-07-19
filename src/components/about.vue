@@ -14,7 +14,7 @@
         <b-col cols="12" lg="6" class="mb-5 flexCenter">
             <div class="pictureFlip">
                 <div class="aboutPicWrapper-front">
-                    <b-img class="aboutPic" src="/img/home/Hutto_David.jpg" fluid></b-img>
+                    <b-img class="aboutPic" src="/img/home/Hutto_David.jpg" alt="Picture of David Hutto" fluid></b-img>
                 </div>
             </div>
         </b-col>

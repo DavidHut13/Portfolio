@@ -1,8 +1,8 @@
 <template>
 <b-modal v-model="modalOpen" size="lg" id="detailsModal" centered hide-footer hide-header>
     <carousel v-if="loaded" :nav="false" :items="1">
-        <div class="mx-2 p-2" v-for="(pic,index) in projectPics" :key="index">
-            <b-img class="screenShots" fluid :src="pic"></b-img>
+        <div class="mx-2 p-2" v-for="pic in projectPics" :key="pic">
+            <b-img class="screenShots" fluid :src="pic" alt="Screen shot of work"></b-img>
         </div>
     </carousel>
     <content-loader v-if="!loaded" class="loaderSquare" :width="810" :height="491" :speed="1" primaryColor="#bbbbbb" secondaryColor="#efefef">

@@ -45,7 +45,7 @@
                 </carousel>
             </b-col>
             <b-col cols="12">
-                <details-modal :projectInfo="modalData" :projectPics="modalPics" :loaded="loaded"></details-modal>
+                <details-modal :projectInfo="modalData" :projectPics="modalPics" :loaded="loaded" ></details-modal>
             </b-col>
             <b-col class="mt-5 mb-2" cols="12">
                 <h1 class="catagoryHeader">creative.</h1>
@@ -116,9 +116,10 @@ export default {
     },
 
     methods: {
-        showModal(data, pics) {
+        showModal(data, pics, picAlt) {
             this.loaded = false,
-                this.modalData = data;
+            this.modalData = data,
+            this.modalAlt = picAlt,
             this.modalPics = pics;
             this.$bvModal.show('detailsModal')
         },

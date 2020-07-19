@@ -9,19 +9,19 @@
                 <b-row>
                     <b-col id="LargeScreenMailWrapper" class="LargeScreenMailWrapper">
                         <div class="mailWrapper" key="messageOpen">
-                            <b-img fluid class="mailOpen" src="\img\contact\MessageOpen.svg"></b-img>
+                            <b-img fluid class="mailOpen" src="\img\contact\MessageOpen.svg" alt="Send email"></b-img>
                         </div>
                     </b-col>
                     <b-col cols="12" md="10" offset-md="1" lg="5" offset-lg="1">
                         <b-form-group class="input" id="name" label="Name">
-                            <b-form-input v-model="contactForm.name"></b-form-input>
+                            <b-form-input label="Name" v-model="contactForm.name"></b-form-input>
                         </b-form-group>
                         <b-form-group class="input" id="email" label="Email">
-                            <b-form-input v-model="contactForm.email"></b-form-input>
+                            <b-form-input label="email" v-model="contactForm.email"></b-form-input>
                         </b-form-group>
                         <b-form-group id="message" label="Message">
                             <div class="textAreaWrapper py-3 pr-2">
-                                <b-form-textarea class="textAreaInput" id="textarea" v-model="contactForm.message" placeholder="Enter your message here..." rows="6" max-rows="6"></b-form-textarea>
+                                <b-form-textarea label="message" class="textAreaInput" id="textarea" v-model="contactForm.message" placeholder="Enter your message here..." rows="6" max-rows="6"></b-form-textarea>
                             </div>
                         </b-form-group>
                         <div class="sendBtnWrapper">
@@ -32,7 +32,7 @@
             </b-card>
             <b-modal centered id="message-modal" hide-footer hide-header>
                 <div key="messageSent" class=" text-center">
-                    <b-img class="sentMailImg mt-5" fluid src="\img\contact\messageSent.svg"></b-img>
+                    <b-img class="sentMailImg mt-5" fluid src="\img\contact\messageSent.svg" alt="Sending Email"></b-img>
                     <h2 class="mt-4 messageSentText">Ready to Send?</h2>
                     <p>Thanks for reaching out!</p>
                     <div class="modalBtnWrapper">

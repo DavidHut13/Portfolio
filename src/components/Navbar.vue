@@ -4,17 +4,17 @@
         <b-col class="p-0">
             <div>
                 <div @click="toggleNav" target="nav-collapse" class="hamburgerButton">
-                    <div id="bar" :class="{active: navOpen }" class="mt-1 bar1"></div>
-                    <div id="bar" :class="{active: navOpen }" class="mt-1 bar2"></div>
-                    <div id="bar" :class="{active: navOpen }" class="mt-1 bar3"></div>
+                    <div :class="{active: navOpen }" class="mt-1 bar1"></div>
+                    <div :class="{active: navOpen }" class="mt-1 bar2"></div>
+                    <div :class="{active: navOpen }" class="mt-1 bar3"></div>
                 </div>
                 <router-link class="logoWrapper" to="/">
-                    <img class="navbar-logo" src="\img\Logos\Logo.png" fluid>
+                    <img class="navbar-logo" src="\img\Logos\Logo.png" alt="David Hutto Logo" fluid>
                 </router-link>
                 <b-nav id="navbarWrapper" vertical class="navbarWrapper">
                     <div class="linkWrapper">
-                        <router-link id="navLink" tag="b-nav-item" class="topNavItem" to="/"><span @click="toggleNav">Home</span></router-link>
-                        <router-link id="navLink" tag="b-nav-item" to="/work"><span @click="toggleNav">Work</span></router-link>
+                        <router-link tag="b-nav-item" class="topNavItem" to="/"><span @click="toggleNav">Home</span></router-link>
+                        <router-link tag="b-nav-item" to="/work"><span @click="toggleNav">Work</span></router-link>
                         <i @click="viewSite('https://www.linkedin.com/in/david-hutto-5a7b19139/')" class="socialIcon fab fa-linkedin ml-4"></i>
                         <i @click="viewSite('https://github.com/DavidHut13')" class="socialIcon fab fa-github-square mx-2"></i>
                         <i @click="viewSite('https://codepen.io/David_Hutt')" class="socialIcon fab fa-codepen mx-2"></i>

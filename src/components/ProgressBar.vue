@@ -2,7 +2,7 @@
 <div>
      <p class="progressLabel">{{prop.label}}</p>
      <div class="progressBackground my-1">
-          <div id="progress-value" class="progress-value" :style="{width:prop.percent}"></div>
+          <div class="progress-value" :style="{width:prop.percent}"></div>
      </div>
 </div>
 </template>

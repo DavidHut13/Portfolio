@@ -28,7 +28,7 @@
             </b-row>
         </b-col>
         <b-col cols="12" class="vueBadgeWrapper text-center">
-            <b-button variant="none" size="sm" href="https://vuejs.org/" target="_blank" class=" vueBadge py-0 my-3" pill>made with <b-img class="vueLogo" src="/img/home/langIcons/256px-Vue.js.png"></b-img>
+            <b-button variant="none" size="sm" href="https://vuejs.org/" target="_blank" class=" vueBadge py-0 my-3" pill>made with <b-img class="vueLogo" alt="Vue.js Framework" src="/img/home/langIcons/256px-Vue.js.png"></b-img>
             </b-button>
         </b-col>
     </b-row>
