@@ -19,6 +19,14 @@
             <b-col cols="12" lg="10">
                 <carousel :responsive="{0:{items:2},750:{items:3}}" :nav="false" :dots="false">
                     <b-card class="cardWrapper">
+                        <div class="websiteBackground bookee-bg"></div>
+                        <div class="projectInfo">
+                            <h3 class="projectTitle">Bookee</h3>
+                            <p class="projectTools">React | Node.js</p>
+                            <b-button @click="showModal(bookeeData,eloanPics)" variant="none" class="viewBtn d-inline-block" pill>View</b-button>
+                        </div>
+                    </b-card>
+                    <b-card class="cardWrapper">
                         <div class="websiteBackground eloan-bg"></div>
                         <div class="projectInfo">
                             <h3 class="projectTitle">Eloan Logic</h3>
@@ -85,6 +93,11 @@ export default {
             modalPics: [],
             loaded: false,
             modalData: {},
+            bookeeData: {
+                name: 'Bookee',
+                urlLink: 'http://thebookee.io/',
+                details: 'A Sports betting app bringing friends to compete and track sports bets.'
+            },
             eloanData: {
                 name: 'Eloan Logic',
                 urlLink: 'https://eloanlogic.firebaseapp.com/',
@@ -285,6 +298,10 @@ body.modal-open {
 
 .eloan-bg {
     background-image: url(/img/Work/AdobeStock_308186809.jpg);
+}
+
+.bookee-bg {
+    background-image: url(/img/Work/betting-pic.jpg)
 }
 
 .gaming-bg {

@@ -8,11 +8,12 @@
           <b-col data-aos="fade-right" data-aos-delay="300" cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mt-4">
                <b-card class=" skillCard">
                     <div class="circle mt-5 mb-4">
-                         <i class="icon fas fa-code fa-3x"></i>
+                         <i class="icon fab fa-html5 fa-3x"></i>
+                         
                     </div>
-                    <h4 class="cardHeader">Development.</h4>
+                    <h4 class="cardHeader">Frontend.</h4>
                     <hr class="underline text-left">
-                    <div v-for="(progress,index) in development" :key="index">
+                    <div v-for="(progress,index) in frontend" :key="index">
                          <progress-bar :key="index" :prop="progress"></progress-bar>
                     </div>
                </b-card>
@@ -21,11 +22,11 @@
           <b-col data-aos="fade-right" data-aos-delay="200" cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mt-4">
                <b-card class="skillCard">
                     <div class="circle mb-4 mt-5">
-                         <i class="icon fab fa-adobe fa-3x"></i>
+                         <i class="icon fas fa-code fa-3x"></i>
                     </div>
-                    <h4 class="cardHeader">Design.</h4>
+                    <h4 class="cardHeader">Backend.</h4>
                     <hr class="underline text-left">
-                    <div v-for="(progress,index) in design" :key="index">
+                    <div v-for="(progress,index) in backend" :key="index">
                          <progress-bar :key="index" :prop="progress"></progress-bar>
                     </div>
                </b-card>
@@ -34,11 +35,11 @@
           <b-col data-aos="fade-right" cols="12" md="8" offset-md="2" lg="4" offset-lg="0" class="mt-4">
                <b-card class=" skillCard">
                     <div class="circle mb-4 mt-5">
-                         <i class="icon fab fa-facebook-f fa-3x"></i>
+                         <i class="icon fas fa-database fa-3x"></i>
                     </div>
-                    <h4 class="cardHeader">Marketing.</h4>
+                    <h4 class="cardHeader">Database.</h4>
                     <hr class="underline text-left">
-                    <div v-for="(progress,index) in marketing" :key="index">
+                    <div v-for="(progress,index) in database" :key="index">
                          <progress-bar :key="index" :prop="progress"></progress-bar>
                     </div>
                </b-card>
@@ -52,37 +53,34 @@ import progressBar from '../components/ProgressBar.vue'
 export default {
      data() {
           return {
-               development: [{
-                    label: 'Python: 3 months',
-                    percent: '30%'
-               }, {
-                    label: 'React: 4 months',
-                    percent: '40%'
+               frontend: [ {
+                    label: 'React: 4 years',
+                    percent: '80%'
+               },{
+                    label: 'React Native: 3 years',
+                    percent: '60%'
                }, {
                     label: 'Vue.js: 2 years',
-                    percent: '90%'
+                    percent: '40%'
                }],
-               design: [{
-                    label: 'PhotoShop: 1 year',
-                    percent: '50%'
-               }, {
-                    label: 'Premiere Pro: 1 year',
-                    percent: '50%'
+               backend: [ {
+                    label: 'Node.js: 2 year',
+                    percent: '40%'
+               },{
+                    label: '.NET: 1 year',
+                    percent: '20%'
                },
                {
-                    label: 'Illustrator: 2 years',
-                    percent: '90%'
-               }, ],
-               marketing: [
-                     {
-                    label: 'Google Ads: 2 months',
+                    label: 'Python: 1 years',
                     percent: '20%'
+               }, ],
+               database: [
+                     {
+                    label: 'MySQL: 2 years',
+                    percent: '40%'
                },{
-                    label: 'Facebook Ads: 2 years',
-                    percent: '90%'
-               }, {
-                    label: 'Instagram Ads: 2 years',
-                    percent: '90%'
+                    label: 'MongoDB: 1 years',
+                    percent: '20%'
                }]
           }
      },

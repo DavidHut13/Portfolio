@@ -3,8 +3,8 @@
     <b-row>
         <b-col cols="6" md="4" offset-md="2" class="mt-5">
             <h3>David Hutto</h3>
-            <p class="my-2"> <i class="far fa-envelope-open"></i> dhutto_11@live.com</p>
-            <p><i class="fas fa-phone"></i> 682-559-2836</p>
+            <p class="my-2"><i class="fas fa-envelope-open mr-1"></i>dhutto_11@live.com</p>
+            <p><i class="fas fa-phone mr-1"></i>682-559-2836</p>
         </b-col>
         <b-col cols="6" class="mt-5 mb-4">
             <h3 class="mb-1">Links</h3>

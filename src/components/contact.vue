@@ -102,6 +102,9 @@ export default {
 .mailWrapper {
     margin-top: 5rem;
     width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
 ::v-deep .modal-content {

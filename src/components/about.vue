@@ -7,7 +7,7 @@
         <b-col cols="12" md="10" offset-md="1" lg="6" offset-lg="0" class="aboutWrapper">
             <div>
                 <h1 data-aos="fade-right" class="aboutName">David Hutto</h1>
-                <p data-aos="fade-right" data-aos-delay="100" class="aboutPara">I'm a Front-End Developer located in Fort Worth Texas. I can be a bit of a perfectionist, and a tad OCD.  I'm a big fan of modern, minimalist designs, but enjoy learning other techniques. I work primarily with Vue.js and currently learning React on my spare time. I love learning new skills, solving problems, and creating stunning visuals. I eventually see myself transitioning to a full-stack developer, but right now I focus more on the Front-End.</p>
+                <p data-aos="fade-right" data-aos-delay="100" class="aboutPara">An accomplished software engineer with hands-on experience in developing and delivering high-quality products using React, Redux, Node, and .NET. Contributed to projects in fast-paced environments, collaborating with cross-functional teams. Committed to continuous learning and professional growth.</p>
                 <b-button @click="downloadCV()" size="lg" class="downloadBtn" variant="none">View Resume</b-button>
             </div>
         </b-col>
