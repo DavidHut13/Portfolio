@@ -9,7 +9,7 @@
                 <b-row>
                     <b-col id="LargeScreenMailWrapper" class="LargeScreenMailWrapper">
                         <div class="mailWrapper" key="messageOpen">
-                            <b-img fluid class="mailOpen" src="\img\contact\MessageOpen.svg" alt="Send email"></b-img>
+                            <b-img fluid class="mailOpen" src="/img/contact\messageOpen.svg" alt="Send email"></b-img>
                         </div>
                     </b-col>
                     <b-col cols="12" md="10" offset-md="1" lg="5" offset-lg="1">

@@ -23,7 +23,7 @@
                         <div class="projectInfo">
                             <h3 class="projectTitle">Bookee</h3>
                             <p class="projectTools">React | Node.js</p>
-                            <b-button @click="showModal(bookeeData,eloanPics)" variant="none" class="viewBtn d-inline-block" pill>View</b-button>
+                            <b-button @click="showModal(bookeeData,bookeePics)" variant="none" class="viewBtn d-inline-block" pill>View</b-button>
                         </div>
                     </b-card>
                     <b-card class="cardWrapper">
@@ -95,9 +95,10 @@ export default {
             modalData: {},
             bookeeData: {
                 name: 'Bookee',
-                urlLink: 'http://thebookee.io/',
+                urlLink: 'http://thebookee.io/login',
                 details: 'A Sports betting app bringing friends to compete and track sports bets.'
             },
+            bookeePics: ['/img/Work/websiteShots/bookee/bookee-1.png', '/img/Work/websiteShots/bookee/bookee-2.png', '/img/Work/websiteShots/bookee/bookee-6.png', '/img/Work/websiteShots/bookee/bookee-4.png'],
             eloanData: {
                 name: 'Eloan Logic',
                 urlLink: 'https://eloanlogic.firebaseapp.com/',
@@ -301,7 +302,7 @@ body.modal-open {
 }
 
 .bookee-bg {
-    background-image: url(/img/Work/betting-pic.jpg)
+    background-image: url(/img/Work/sports-betting.jpeg)
 }
 
 .gaming-bg {
